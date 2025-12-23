@@ -1,0 +1,29 @@
+#!/bin/bash
+# RAScript CLI wrapper (macOS/Linux)
+#
+# Usage: ./rascript -i <script.rascript> -o <output-dir> [options]
+#
+# Environment variables:
+#   RATOOLS_DIR - Path to RATools repository (default: ~/RATools)
+#
+# Example:
+#   ./rascript -i gta-san-andreas-cheaters-paradise/cheaters-paradise.rascript -o gta-san-andreas-cheaters-paradise/
+
+RATOOLS_DIR="${RATOOLS_DIR:-$HOME/RATools}"
+RASCRIPT_DLL="$RATOOLS_DIR/bin/Release/net6.0/rascript-cli.dll"
+
+if [ ! -f "$RASCRIPT_DLL" ]; then
+    echo "Error: rascript-cli.dll not found at $RASCRIPT_DLL"
+    echo ""
+    echo "Please build RATools first:"
+    echo "  git clone https://github.com/Jamiras/RATools.git ~/RATools"
+    echo "  cd ~/RATools && git submodule update --init --recursive"
+    echo "  dotnet build --configuration Release"
+    echo ""
+    echo "Or set RATOOLS_DIR environment variable to your RATools location:"
+    echo "  export RATOOLS_DIR=/path/to/RATools"
+    exit 1
+fi
+
+# Use roll-forward to run .NET 6.0 app on newer .NET versions
+DOTNET_ROLL_FORWARD=Major dotnet "$RASCRIPT_DLL" "$@"

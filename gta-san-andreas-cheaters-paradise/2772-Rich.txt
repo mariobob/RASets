@@ -1,0 +1,30 @@
+Lookup:Vehicle
+409=Stretch Limo
+425=Hunter
+432=Rhino Tank
+444=Monster Truck
+457=Caddy
+471=Quad
+481=BMX
+486=Dozer
+504=Bloodring Banger
+509=Bike
+510=Mountain Bike
+513=Stuntplane
+520=Hydra
+539=Vortex
+*=a vehicle
+
+Format:CheatsUsed
+FormatType=VALUE
+
+Format:Money
+FormatType=VALUE
+
+Format:Wanted
+FormatType=VALUE
+
+Display:
+?I:0xX7095d0_0xX0005cc!=0_I:0xX7095d0_I:0xX0005cc_0x 000022!=0?CJ driving @Vehicle(I:0xX7095d0_I:0xX0005cc_M:0x 000022) | 🎮 @CheatsUsed(0xX8022f4) cheats used | ⭐ @Wanted(0xX19eb73c) | $@Money(0xX7096b4)
+?d0xX802384<0xX802384?CJ flying with Jetpack ✈️ | 🎮 @CheatsUsed(0xX8022f4) cheats used | ⭐ @Wanted(0xX19eb73c) | $@Money(0xX7096b4)
+CJ on foot | 🎮 @CheatsUsed(0xX8022f4) cheats used | ⭐ @Wanted(0xX19eb73c) | $@Money(0xX7096b4)

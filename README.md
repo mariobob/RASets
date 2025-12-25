@@ -4,6 +4,7 @@ Achievement sets and subsets in development.
 ## Sets
 | Platform | Game | Type | Status | Link |
 | --- | --- | --- | --- | --- |
+| Playstation 2 | Grand Theft Auto: San Andreas | Subset (Cheaters Paradise) | 🟨 In Development | [gta-san-andreas-cheaters-paradise/](./gta-san-andreas-cheaters-paradise/) |
 
 ## Tools
 Helper scripts in the `tools/` directory:

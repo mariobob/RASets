@@ -3,8 +3,8 @@
 
 | Set meta info | Value |
 | --- | --- |
-| Number of achievements | 73 |
-| Total score | 120 |
+| Number of achievements | 83 |
+| Total score | 149 |
 | Game ID | 2772 |
 | Subset type | Bonus/Challenge |
 
@@ -40,86 +40,153 @@ This subset celebrates GTA: San Andreas's legendary cheat code system. Instead o
 ---
 
 ## Achievements
-### 💰 Money & health cheats
+### 👤 Player cheats
 | Status | Title | Description | Points |
 | --- | --- | --- | --- |
+| | **Adrenaline Effects** | | |
+| 🟨🔴📈🔢 | TAKEACHILLPILL | Get 5 kills while Adrenaline/Chill Pill effect is active | 1 |
+| | **Health, Armor, and Money** | | |
 | 🟨🔴 | HESOYAM | Use the Health, Armor, and Money cheat when already maxed out ($999,999,999) | 5 |
 | 🟨🔴📈🔢 | Greedy Bastard | Use the Health, Armor, and Money cheat 100 times in a single session | 2 |
-| 🟨🔴📈🔢 | FULLCLIP | Fire 1000 bullets with Infinite Ammo active | 1 |
-
-### ⭐ Wanted level
-| Status | Title | Description | Points |
-| --- | --- | --- | --- |
-| 🟧🔴⚠️ | AEZAKMI | Complete a mission while the Lock Wanted Level cheat is active with 6-star wanted level | 2 |
-| 🟨🔴📈⏱️ | BRINGITON | Survive for 5 minutes with 6-star wanted level | 2 |
-| 🟨🔴 | TURNDOWNTHEHEAT | Escape a 6-star wanted level by using cheats | 1 |
-
-### 🔥 Pedestrian chaos
-| Status | Title | Description | Points |
-| --- | --- | --- | --- |
-| 🟨🔴📈⏱️ | State of Emergency | Survive for 5 minutes during a Pedestrian Riot | 1 |
-| 🟨🔴📈⏱️ | AJLOJYQY | Activate Chaos Mode and survive for 5 minutes | 1 |
-| 🟨🔴📈🔢 | The Purge | Kill 100 pedestrians during Chaos Mode | 2 |
-| 🟨🔴 | Viva Las Elvis | Activate All Pedestrians Are Elvis cheat | 1 |
-| 🟨🔴 | Spring Break Forever | Activate Beach Party Mode | 1 |
-| 🟨🔴 | Welcome to Chinatown | Activate Triad Theme (Ninja Town) | 1 |
-| 🟨🔴 | Send in the Clowns | Activate Funhouse Theme | 1 |
-| 🟨🔴 | 50 Shades of San Andreas | Activate Kinky Theme | 1 |
-
-### 🦘 Player abilities
-| Status | Title | Description | Points |
-| --- | --- | --- | --- |
+| | **Mega Jump** | | |
 | 🟨🔴 | KANGAROO | Activate Mega Jump and reach a height of 100+ meters | 1 |
 | 🟨🔴 | Leap of Faith | Fall from 100+ meters with Mega Jump active and survive | 1 |
+| | **Lock Wanted Level** | | |
+| 🟧🔴⚠️ | AEZAKMI | Complete a mission while the Lock Wanted Level cheat is active with 6-star wanted level | 2 |
+| | **Remove Wanted Level** | | |
+| 🟨🔴 | TURNDOWNTHEHEAT | Escape a 6-star wanted level by using cheats | 1 |
+| | **Maximum Wanted Level** | | |
+| 🟨🔴📈⏱️ | BRINGITON | Destroy 10 military vehicles during Maximum Wanted Level | 2 |
+| | **Infinite Lung Capacity** | | |
+| 🟧🔴📈⏱️ | Deep Diver | Stay underwater for 3 minutes using Infinite Lung Capacity | 2 |
+| 🟨🔴📈⏱️ | Submarine Mode | Drive underwater for 30 seconds with Infinite Lung Capacity active | 1 |
+| | **Maximum Respect** | | |
+| 🟨🔴 | WORSHIPME | Recruit 7 homies with Maximum Respect active | 2 |
+| | **Maximum Sex Appeal** | | |
+| 🟨🔴 | HELLOLADIES | Go on a date with Maximum Sex Appeal active | 2 |
+| | **Never Get Hungry** | | |
+| 🟨🔴 | Ironic Appetite | Eat until you vomit while Never Get Hungry is active | 2 |
+| | **Spawn Jetpack** | | |
+| 🟨🔴 | To Infinity and Beyond | Reach 300m altitude with the Jetpack | 3 |
+| 🟨🔴 | Jetpack Addict | Spend 30 minutes on the Jetpack with cheats active | 2 |
+| | **Super Punch** | | |
 | 🟨🔴📈🔢 | STINGLIKEABEE | Kill 50 pedestrians with Super Punch | 2 |
 | 🟨🔴 | Glass Jaw | Get killed by a pedestrian while Super Punch is active | 1 |
 | 🟨🔴📈🔢⏱️ | One Punch Man | Kill 15 pedestrians in 30 seconds with Super Punch active | 3 |
-| 🟧🔴📈⏱️ | Deep Diver | Stay underwater for 10 minutes using Infinite Lung Capacity | 2 |
-| 🟨🔴📈⏱️ | Submarine Mode | Drive underwater for 30 seconds with Infinite Lung Capacity active | 1 |
-| 🟨🔴📈🔢 | Bullet Time | Kill 10 enemies while Slow Motion is active | 1 |
-| 🟨🔴📈🔢 | TAKEACHILLPILL | Get 5 kills while Adrenaline/Slow Motion effect is active | 1 |
+| 🟨🔴📈🔢 | Untouchable Brawler | Kill 25 pedestrians with Super Punch while Infinite Health is active | 2 |
+| | **Infinite Ammo** | | |
+| 🟨🔴📈🔢 | FULLCLIP | Fire 1000 bullets with Infinite Ammo active | 1 |
+| 🟨🔴📈🔢 | Spray and Pray | Get 50 kills with the Minigun while Infinite Ammo is active | 2 |
+| | **(Almost) Infinite Health** | | |
+| 🟨🔴 | ONECANHURTME | Get killed while (Almost) Infinite Health is active | 1 |
+| 🟨🔴📈⏱️ | Untouchable | Survive 5 minutes with Infinite Health and 6-star wanted level | 1 |
 
 ### 🚗 Vehicle cheats
 | Status | Title | Description | Points |
 | --- | --- | --- | --- |
-| 🟨🔴📈⏱️ | CHITTYCHITTYBANGBANG | Fly for 20 minutes total with Flying Cars cheat active | 1 |
+| | **All Cars Have Nitrous** | | |
+| 🟨🔴 | SPEEDFREAK | Activate All Cars Have Nitro and use nitro 10 times | 2 |
+| | **Cars Drive on Water** | | |
 | 🟨🔴📈⏱️ | Jesus Mode | Drive on water for 1 minute with Drive on Water cheat active | 1 |
+| | **Flying Boats** | | |
 | 🟨🔴 | FLYINGFISH | Activate Flying Boats and take flight | 1 |
-| 🟨🔴📈⏱️ | Ghost Rider | Drive for 10 minutes total with Invisible Cars active | 1 |
+| | **Flying Cars** | | |
+| 🟨🔴📈⏱️ | CHITTYCHITTYBANGBANG | Fly for 20 minutes total with Flying Cars cheat active | 1 |
+| 🟨🔴 | Flying Dutchman | Reach 100m altitude with Flying Cars cheat active (in a car) | 2 |
+| 🟨🔴 | Need for Altitude | Reach maximum altitude (200m+) with Flying Cars | 3 |
+| | **Perfect Handling** | | |
+| 🟨🔴 | STICKLIKEGLUE | Activate Perfect Vehicle Handling | 1 |
+| | **Full Weapon Aiming in Vehicles** | | |
+| 🟨🔴📈🔢 | IWANNADRIVEBY | Get 25 drive-by kills with Full Weapon Aiming in Vehicles | 2 |
+| | **Super Bunny Hop** | | |
+| 🟨🔴 | E.T. Phone Home | Activate Super Bunny Hop and jump over a building on a bike | 2 |
+| | **CJ's Car Invincible (Destroy on Touch)** | | |
+| 🟨🔴📈🔢 | TOUCHMYCARYOUDIE | Destroy 100 vehicles by ramming with CJ's Car is Invincible active | 3 |
+
+### 🎭 Themes / Pedestrian behavior
+| Status | Title | Description | Points |
+| --- | --- | --- | --- |
+| | **Aggressive Traffic** | | |
+| 🟨🔴📈⏱️ | YLTEICZ | Activate Aggressive Traffic and survive 5 minutes | 2 |
+| | **Beach Party Mode** | | |
+| 🟨🔴📈🔢 | LIFESABEACH | Kill 10 pedestrians on the beach during Beach Party Mode | 2 |
+| | **Black Cars** | | |
+| 🟨🔴 | Murdered Out | Activate Black Cars cheat | 1 |
+| | **Funhouse Theme** | | |
+| 🟨🔴📈🔢 | Clown Fiesta | Cause 10 explosions with Funhouse Theme active | 2 |
+| | **Moon Car Gravity** | | |
 | 🟨🔴 | BUBBLECARS | Activate Moon Gravity and send a car flying | 1 |
 | 🟨🔴📈🔢 | It's Raining Cars | Activate Moon Gravity (BUBBLECARS) 5 times in one session | 1 |
+| | **Pedestrian Riot** | | |
+| 🟨🔴📈⏱️ | State of Emergency | Survive for 5 minutes during a Pedestrian Riot | 1 |
+| | **Blow Up All Cars** | | |
+| 🟨🔴 | ALLCARSGOBOOM | Survive the Explode All Cars cheat while driving a car | 2 |
+| 🟨🔴📈🔢⏱️ | Michael Bay Simulator | Cause 15 vehicle explosions in 1 minute with Explode All Cars cheat | 3 |
+| | **Invisible Cars** | | |
+| 🟨🔴📈⏱️ | Ghost Rider | Drive for 10 minutes total with Invisible Cars active | 1 |
+| 🟨🔴 | Invisible Chaos | Drive an invisible car during Chaos Mode | 1 |
+| | **Kinky Theme** | | |
+| 🟨🔴 | 50 Shades of San Andreas | Earn $1000 from prostitutes with Kinky Theme active | 2 |
+| | **Prostitutes Pay CJ** | | |
+| 🟨🔴📈🔢 | Paid for Services | Earn money 2 times with Prostitutes Pay CJ active | 1 |
+| | **No Pedestrians / Reduced Traffic** | | |
+| 🟨🔴📈🔢 | GHOSTTOWN | Enter 5 vehicles with No Pedestrians / Reduced Traffic active | 1 |
+| | **All Pedestrians Are Elvis** | | |
+| 🟨🔴 | Viva Las Elvis | Take a photo of an Elvis pedestrian | 2 |
+| | **Pedestrians Attack CJ** | | |
+| 🟨🔴📈⏱️ | STOPPICKINGONME | Survive 10 minutes with Pedestrians Attack CJ active | 2 |
+| | **Pedestrians Attack CJ (With Guns)** | | |
+| 🟨🔴📈⏱️ | ATTACKOFTHEVILLAGEPEOPLE | Survive 5 minutes with armed pedestrians attacking you | 3 |
+| | **Pedestrians Have Weapons** | | |
+| 🟨🔴📈🔢 | SURROUNDEDBYNUTTERS | Kill 25 armed pedestrians with Pedestrians Have Weapons active | 2 |
+| | **Chaos Mode** | | |
+| 🟨🔴📈⏱️ | ROUGHNEIGHBOURHOOD | Activate Chaos Mode and survive for 5 minutes | 1 |
+| 🟨🔴📈🔢 | The Purge | Kill 100 pedestrians during Chaos Mode | 2 |
+| 🟨🔴📈🔢 | San Andreas Chainsaw Massacre | Get 20 chainsaw kills during Chaos Mode | 2 |
+| 🟨🔴 | Maximum Carnage | Have Pedestrian Riot, Chaos Mode, and Aggressive Traffic all active at once | 1 |
+| 🟨🔴📈⏱️ | Apocalypse Now | Survive 2 minutes with Maximum Carnage combo active | 1 |
+| | **Pink Cars** | | |
 | 🟨🔴 | Fabulous | Activate Pink Cars cheat | 1 |
-| 🟨🔴 | Murdered Out | Activate Black Cars cheat | 1 |
-| 🟨🔴 | E.T. Phone Home | Activate Super Bunny Hop and jump over a building on a bike | 2 |
-| 🟨🔴 | SPEEDFREAK | Activate All Cars Have Nitro and use nitro 10 times | 2 |
-| 🟨🔴 | STICKLIKEGLUE | Activate Perfect Vehicle Handling | 1 |
+| 🟨🔴 | Pink Flying Circus | Fly a pink car with both Flying Cars and Pink Cars cheats active | 1 |
+| | **Rural Theme** | | |
+| 🟨🔴📈⏱️ | Country Roads | Drive for 10 minutes with Rural Theme active | 1 |
+| | **Sports Cars Traffic** | | |
+| 🟨🔴📈🔢 | EVERYONEISRICH | Steal 10 sports cars with Sports Cars Traffic active | 2 |
+| | **Traffic Lights Stay Green** | | |
 | 🟨🔴 | ZEIIVG | Activate Traffic Lights Stay Green | 1 |
-| 🟨🔴📈⏱️ | YLTEICZ | Activate Aggressive Traffic and survive 5 minutes | 2 |
+| | **Triad Theme** | | |
+| 🟨🔴📈🔢 | Ninja CJ | Get 15 katana kills with Triad Theme active | 2 |
 
-### 🌙 Time & weather
+### 👥 Gang cheats
 | Status | Title | Description | Points |
 | --- | --- | --- | --- |
-| 🟨🔴📈⏱️ | NIGHTPROWLER | Play for 30 real minutes with Always Midnight active | 2 |
-| 🟨🔴 | OFVIAC | Activate Always 21:00 (eternal dusk) | 1 |
-| 🟨🔴 | SLOWITDOWN | Complete a drive-by while Slow Motion is active | 1 |
-| 🟨🔴📈🔢 | YSOHNUL | Watch the sun set 3 times with Faster Clock active | 1 |
-
-### 📊 Stat cheats
-| Status | Title | Description | Points |
-| --- | --- | --- | --- |
-| 🟨🔴 | WORSHIPME | Activate Maximum Respect cheat | 1 |
-| 🟨🔴 | HELLOLADIES | Activate Maximum Sex Appeal cheat | 1 |
-| 🟨🔴 | AEDUWNV | Activate Never Get Hungry cheat | 1 |
-| 🟨🔴 | CVWKXAM | Activate Infinite Lung Capacity cheat | 1 |
-
-### 👥 Recruit cheats
-| Status | Title | Description | Points |
-| --- | --- | --- | --- |
-| 🟨🔴 | SJMAHPE | Activate Recruit Anyone (Pistol) cheat | 1 |
-| 🟨🔴 | ZSOXFSQ | Activate Recruit Anyone (Rocket Launcher) cheat | 1 |
+| | **Gang Members Spawn Faster** | | |
+| 🟨🔴📈🔢 | MROEMZH | Kill 20 gang members while Gang Spawn Faster is active | 2 |
+| | **Gang Wars Break Out** | | |
+| 🟨🔴 | ONLYHOMIESALLOWED | Win a gang war with Gang Wars Break Out active | 2 |
+| | **No Citizens Only Gang Gunfights** | | |
+| 🟨🔴📈⏱️ | BETTERSTAYINDOORS | Survive 3 minutes with No Citizens Only Gang Gunfights active | 2 |
+| | **Recruit Anyone (Pistol)** | | |
+| 🟨🔴 | Pistol Packin' Civilians | Recruit 7 pedestrians with pistols and start a gang war | 1 |
+| 🟨🔴 | WANNABEINMYGANG | Recruit 7 enemy gang members and start a gang war | 1 |
+| | **Recruit Anyone (Rocket Launcher)** | | |
+| 🟨🔴📈🔢 | ROCKETMAYHEM | Cause 15 vehicle explosions with Rocket Launcher recruits | 2 |
 | 🟨🔴 | Rocket Civilians | Get killed by friendly fire from rocket-launcher recruits | 3 |
 
-### 🎮 Meta tracking
+### 🌙 Time and Weather
+| Status | Title | Description | Points |
+| --- | --- | --- | --- |
+| | **Always Midnight** | | |
+| 🟨🔴📈⏱️ | NIGHTPROWLER | Play for 30 real minutes with Always Midnight active | 2 |
+| | **Always 21:00** | | |
+| 🟨🔴 | DONTBRINGONTHENIGHT | Activate Always 21:00 (eternal dusk) | 1 |
+| | **Slow Motion** | | |
+| 🟨🔴📈🔢 | Bullet Time | Kill 10 enemies while Slow Motion is active | 1 |
+| 🟨🔴 | SLOWITDOWN | Complete a drive-by while Slow Motion is active | 1 |
+| | **Faster Clock** | | |
+| 🟨🔴📈🔢 | YSOHNUL | Watch the sun set 3 times with Faster Clock active | 1 |
+
+### 🎮 Meta / Cheat tracking
 | Status | Title | Description | Points |
 | --- | --- | --- | --- |
 | 🟨🔴📈🔢 | Casual Cheater | Use cheats 10 times in a single playthrough | 1 |
@@ -128,42 +195,13 @@ This subset celebrates GTA: San Andreas's legendary cheat code system. Instead o
 | 🟨🔴📈🔢 | Cheat Code Encyclopedia | Use cheats 250 times in a single playthrough | 4 |
 | 🟨🔴📈🔢 | Cheat Master | Use cheats 500 times in a single playthrough - you've memorized them all! | 5 |
 
-### 🏆 Milestone stats (...with cheats active)
+### 🏆 Stats milestones (with cheats active)
 | Status | Title | Description | Points |
 | --- | --- | --- | --- |
 | 🟨🔴 | Cheater's Demolition Derby | Destroy 500 vehicles with cheats active | 3 |
 | 🟨🔴 | Cheater's Armageddon | Cause $5,000,000+ in property damage with cheats active | 2 |
 | 🟨🔴 | Cheater's Headhunter | Get 100 headshots with cheats active | 3 |
 | 🟨🔴 | Cheater's Escape Artist | Evade 50 wanted stars with cheats active | 2 |
-| 🟨🔴 | Jetpack Addict | Spend 30 minutes on the Jetpack with cheats active | 2 |
-
-### 🎪 Special combos
-| Status | Title | Description | Points |
-| --- | --- | --- | --- |
-| 🟨🔴 | Pink Flying Circus | Fly a pink car with both Flying Cars and Pink Cars cheats active | 1 |
-| 🟨🔴 | Invisible Chaos | Drive an invisible car during Chaos Mode | 1 |
-| 🟨🔴 | Maximum Carnage | Have Pedestrian Riot, Chaos Mode, and Aggressive Traffic all active at once | 1 |
-| 🟨🔴📈⏱️ | Apocalypse Now | Survive 2 minutes with Maximum Carnage combo active | 1 |
-| 🟨🔴📈⏱️ | Untouchable | Survive 5 minutes with Infinite Health and 6-star wanted level | 1 |
-| 🟨🔴📈🔢 | Untouchable Brawler | Kill 25 pedestrians with Super Punch while Infinite Health is active | 2 |
-| 🟨🔴 | Ironic Appetite | Eat until you vomit while Never Get Hungry is active | 2 |
-| 🟨🔴 | ALLCARSGOBOOM | Survive the Explode All Cars cheat while driving a car | 2 |
-
-### ✈️ Flying and explosions
-| Status | Title | Description | Points |
-| --- | --- | --- | --- |
-| 🟨🔴 | Flying Dutchman | Reach 100m altitude with Flying Cars cheat active (in a car) | 2 |
-| 🟨🔴 | Need for Altitude | Reach maximum altitude (200m+) with Flying Cars | 3 |
-| 🟨🔴📈🔢⏱️ | Michael Bay Simulator | Cause 15 vehicle explosions in 1 minute with Explode All Cars cheat | 3 |
-
-### 🗡️ Themed combat
-| Status | Title | Description | Points |
-| --- | --- | --- | --- |
-| 🟨🔴📈🔢 | Ninja CJ | Get 15 katana kills with Triad Theme active | 2 |
-| 🟨🔴📈🔢 | San Andreas Chainsaw Massacre | Get 20 chainsaw kills during Chaos Mode | 2 |
-| 🟨🔴📈🔢 | Spray and Pray | Get 50 kills with the Minigun while Infinite Ammo is active | 2 |
-| 🟨🔴📈🔢 | Clown Fiesta | Cause 10 explosions with Funhouse Theme active | 2 |
-| 🟨🔴📈⏱️ | Country Roads | Drive for 10 minutes with Rural Theme active | 1 |
 
 ---
 
@@ -172,12 +210,12 @@ Some achievements have incomplete trigger logic due to missing memory addresses:
 
 | Achievement | Missing | Status |
 | --- | --- | --- |
-| FULLCLIP | "Is Firing Weapon" detection | ⚠️ Currently just checks if cheat is active |
 | Deep Diver | "Is Underwater" detection | ⚠️ Currently just checks if cheat is active |
 | Jesus Mode | "Is On Water Surface" detection | ⚠️ Currently just checks if cheat is active |
 | Rocket Civilians | "Killed By Explosion" detection | ⚠️ Currently triggers on any death |
 | SPEEDFREAK | "Nitro Uses" counter | ⚠️ Currently just triggers on cheat activation |
 | BUBBLECARS | Vehicle height after collision | ⚠️ Currently just triggers on cheat activation |
+| E.T. Phone Home | Building detection | ⚠️ Currently just checks for 50m altitude |
 
 ## Memory addresses
 Key addresses used (PS2 NTSC):

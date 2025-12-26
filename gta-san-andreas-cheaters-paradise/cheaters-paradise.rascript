@@ -283,8 +283,22 @@ function minutes_to_frames(m) => m * 60 * 60
 function crossed_threshold(addr, threshold) => prev(dword(addr)) < threshold && dword(addr) >= threshold
 
 // =============================================================================
-// ACHIEVEMENTS - MONEY & HEALTH CHEATS
+// ACHIEVEMENTS - PLAYER CHEATS
 // =============================================================================
+
+// --- Adrenaline Effects  ---
+
+achievement(
+    title = "TAKEACHILLPILL",
+    description = "Get 5 kills while Adrenaline/Chill Pill effect is active",
+    points = 1,
+    trigger = trigger_when(measured(tally(5,
+                  kill_increased() &&
+                  cheat_active(CHEAT_ADRENALINE)
+              )))
+)
+
+// --- Health, Armor, and Money ---
 
 achievement(
     title = "HESOYAM",
@@ -301,189 +315,7 @@ achievement(
     trigger = measured(tally(100, hesoyam_used()))
 )
 
-achievement(
-    title = "FULLCLIP",
-    description = "Fire 1000 bullets with Infinite Ammo active",
-    points = 1,
-    trigger = trigger_when(measured(tally(1000,
-                  bullet_fired() &&
-                  cheat_active(CHEAT_INFINITE_AMMO)
-              )))
-)
-
-// =============================================================================
-// ACHIEVEMENTS - WANTED LEVEL
-// =============================================================================
-
-// TODO: Need to check if mission actually completed successfully, otherwise player can fail mission and unlock
-achievement(
-    title = "AEZAKMI",
-    description = "Complete a mission while the Lock Wanted Level cheat is active with 6-star wanted level",
-    points = 2,
-    trigger = once(cheat_active(CHEAT_WANTED_LOCK) && 
-                   player_wanted() >= 6 && 
-                   prev(dword(InActiveMission)) == 0 && 
-                   dword(InActiveMission) == 1) &&
-              trigger_when(prev(dword(InActiveMission)) == 1 && dword(InActiveMission) == 0) &&
-              never(!cheat_active(CHEAT_WANTED_LOCK)) &&
-              never(player_wanted() < 6)
-)
-
-// TODO: Need to check that Maximum Wanted Level was activated (once that is activated and player destroys at least 1 military vehicle - start challenge: while player wanted level is 6, not wasted (can be paused), needs to destroy 10 total military vehicles)
-achievement(
-    title = "BRINGITON",
-    description = "Destroy 10 military vehicles during Maximum Wanted Level",
-    points = 2,
-    trigger = once(player_wanted() >= 6) &&
-              trigger_when(measured(repeated(minutes_to_frames(5),
-                  player_wanted() >= 6 &&
-                  not_paused() &&
-                  !player_wasted()
-              ))) &&
-              never(player_wasted()) &&
-              never(player_wanted() < 6)
-)
-
-// TODO: Need to check that Remove Wanted Level cheat was used, otherwise player can escape the wanted level by dying or respraying vehicle
-achievement(
-    title = "TURNDOWNTHEHEAT",
-    description = "Escape a 6-star wanted level by using cheats",
-    points = 1,
-    trigger = prev(player_wanted()) >= 6 &&
-              player_wanted() < 6 &&
-              cheat_used()
-)
-
-// =============================================================================
-// ACHIEVEMENTS - PEDESTRIAN CHAOS
-// =============================================================================
-
-achievement(
-    title = "State of Emergency",
-    description = "Survive for 5 minutes during a Pedestrian Riot",
-    points = 1,
-    trigger = once(cheat_just_activated(CHEAT_PED_RIOT)) &&
-              trigger_when(measured(repeated(minutes_to_frames(5),
-                  cheat_active(CHEAT_PED_RIOT) &&
-                  not_paused() &&
-                  !player_wasted()
-              ))) &&
-              never(player_wasted())
-)
-
-achievement(
-    title = "AJLOJYQY",
-    description = "Activate Chaos Mode and survive for 5 minutes",
-    points = 1,
-    trigger = once(cheat_just_activated(CHEAT_CHAOS_MODE)) &&
-              trigger_when(measured(repeated(minutes_to_frames(5),
-                  cheat_active(CHEAT_CHAOS_MODE) &&
-                  not_paused() &&
-                  !player_wasted()
-              ))) &&
-              never(player_wasted())
-)
-
-achievement(
-    title = "The Purge",
-    description = "Kill 100 pedestrians during Chaos Mode",
-    points = 2,
-    trigger = trigger_when(measured(tally(100,
-                  kill_increased() &&
-                  cheat_active(CHEAT_CHAOS_MODE)
-              )))
-)
-
-// TODO: Need photo taken flag for proper Elvis detection
-achievement(
-    title = "Viva Las Elvis",
-    description = "Take a photo of an Elvis pedestrian",
-    points = 2,
-    trigger = cheat_active(CHEAT_ALL_ELVIS)
-              // TODO: Add && photo_taken() when address found
-)
-
-// TODO: Need beach area detection for full verification
-achievement(
-    title = "LIFESABEACH",
-    description = "Kill 10 pedestrians on the beach during Beach Party Mode",
-    points = 2,
-    trigger = trigger_when(measured(tally(10,
-                  kill_increased() &&
-                  cheat_active(CHEAT_BEACH_PARTY)
-              )))
-)
-
-// TODO: Need prostitute interaction detection for proper verification
-achievement(
-    title = "50 Shades of San Andreas",
-    description = "Earn $1000 from prostitutes with Kinky Theme active",
-    points = 2,
-    trigger = cheat_active(CHEAT_KINKY_THEME)
-              // TODO: Add && prostitute_earnings >= 1000 when address found
-)
-
-achievement(
-    title = "STOPPICKINGONME",
-    description = "Survive 10 minutes with Pedestrians Attack CJ active",
-    points = 2,
-    trigger = once(cheat_just_activated(CHEAT_PEDS_ATTACK)) &&
-              trigger_when(measured(repeated(minutes_to_frames(10),
-                  cheat_active(CHEAT_PEDS_ATTACK) &&
-                  not_paused() &&
-                  !player_wasted()
-              ))) &&
-              never(player_wasted())
-)
-
-achievement(
-    title = "ATTACKOFTHEVILLAGEPEOPLE",
-    description = "Survive 5 minutes with armed pedestrians attacking you",
-    points = 3,
-    trigger = once(cheat_just_activated(CHEAT_PEDS_ATTACK_GUNS)) &&
-              trigger_when(measured(repeated(minutes_to_frames(5),
-                  cheat_active(CHEAT_PEDS_ATTACK_GUNS) &&
-                  not_paused() &&
-                  !player_wasted()
-              ))) &&
-              never(player_wasted())
-)
-
-// TODO: Need detection when pedestrian is armed (maybe count when weapon is dropped from killed pedestrian?)
-achievement(
-    title = "SURROUNDEDBYNUTTERS",
-    description = "Kill 25 armed pedestrians with Pedestrians Have Weapons active",
-    points = 2,
-    trigger = trigger_when(measured(tally(25,
-                  kill_increased() &&
-                  cheat_active(CHEAT_PEDS_WEAPONS)
-              )))
-)
-
-// TODO: Need detection that vehicle is indeed a sports car
-achievement(
-    title = "EVERYONEISRICH",
-    description = "Steal 10 sports cars with Sports Cars Traffic active",
-    points = 2,
-    trigger = trigger_when(measured(tally(10,
-                  just_entered_vehicle() &&
-                  cheat_active(CHEAT_FAST_CARS)
-              )))
-)
-
-achievement(
-    title = "Paid for Services",
-    description = "Earn money 2 times with Prostitutes Pay CJ active",
-    points = 1,
-    trigger = trigger_when(measured(tally(2,
-                  prev(player_money()) < player_money() &&
-                  cheat_active(CHEAT_PROSTITUTES_PAY)
-              )))
-)
-
-// =============================================================================
-// ACHIEVEMENTS - PLAYER ABILITIES
-// =============================================================================
+// --- Mega Jump ---
 
 achievement(
     title = "KANGAROO",
@@ -502,6 +334,158 @@ achievement(
               player_above_ground() < 20.0 &&
               !player_wasted()
 )
+
+// --- Commit Suicide ---
+// TODO: Add achievements
+
+// --- Hitman Level For All Weapons ---
+// TODO: Add achievements
+
+// --- Lock Wanted Level ---
+
+// TODO: Need to check if mission actually completed successfully, otherwise player can fail mission and unlock
+achievement(
+    title = "AEZAKMI",
+    description = "Complete a mission while the Lock Wanted Level cheat is active with 6-star wanted level",
+    points = 2,
+    trigger = once(cheat_active(CHEAT_WANTED_LOCK) && 
+                   player_wanted() >= 6 && 
+                   prev(dword(InActiveMission)) == 0 && 
+                   dword(InActiveMission) == 1) &&
+              trigger_when(prev(dword(InActiveMission)) == 1 && dword(InActiveMission) == 0) &&
+              never(!cheat_active(CHEAT_WANTED_LOCK)) &&
+              never(player_wanted() < 6)
+)
+
+// --- Wanted Level Up (+2 Stars) ---
+// TODO: Add achievements
+
+// --- Remove Wanted Level ---
+
+// TODO: Need to check that Remove Wanted Level cheat was used, otherwise player can escape the wanted level by dying or respraying vehicle
+achievement(
+    title = "TURNDOWNTHEHEAT",
+    description = "Escape a 6-star wanted level by using cheats",
+    points = 1,
+    trigger = prev(player_wanted()) >= 6 &&
+              player_wanted() < 6 &&
+              cheat_used()
+)
+
+// --- Maximum Wanted Level ---
+
+// TODO: Need to check that Maximum Wanted Level was activated (once that is activated and player destroys at least 1 military vehicle - start challenge: while player wanted level is 6, not wasted (can be paused), needs to destroy 10 total military vehicles)
+achievement(
+    title = "BRINGITON",
+    description = "Destroy 10 military vehicles during Maximum Wanted Level",
+    points = 2,
+    trigger = once(player_wanted() >= 6) &&
+              trigger_when(measured(repeated(minutes_to_frames(5),
+                  player_wanted() >= 6 &&
+                  not_paused() &&
+                  !player_wasted()
+              ))) &&
+              never(player_wasted()) &&
+              never(player_wanted() < 6)
+)
+
+// --- Maximum Fat ---
+// TODO: Add achievements
+
+// --- Infinite Lung Capacity ---
+
+// TODO: Need "is underwater" memory address to properly detect being submerged
+achievement(
+    title = "Deep Diver",
+    description = "Stay underwater for 3 minutes using Infinite Lung Capacity",
+    points = 2,
+    trigger = measured(repeated(minutes_to_frames(3),
+                  cheat_active(CHEAT_INFINITE_LUNG) &&
+                  not_paused()
+                  // TODO: Add && is_underwater() when address found
+              ))
+)
+
+achievement(
+    title = "Submarine Mode",
+    description = "Drive underwater for 30 seconds with Infinite Lung Capacity active",
+    points = 1,
+    trigger = once(cheat_active(CHEAT_INFINITE_LUNG) && in_vehicle() && player_pos_z() < 0.0) &&
+              trigger_when(measured(repeated(seconds_to_frames(30),
+                  cheat_active(CHEAT_INFINITE_LUNG) &&
+                  in_vehicle() &&
+                  player_pos_z() < 0.0 &&
+                  not_paused()
+              )))
+)
+
+// --- Maximum Muscle ---
+// TODO: Add achievements
+
+// --- Maximum Respect ---
+
+// TODO: Need detection for number of recruited homies
+achievement(
+    title = "WORSHIPME",
+    description = "Recruit 7 homies with Maximum Respect active",
+    points = 2,
+    trigger = cheat_active(CHEAT_MAX_RESPECT)
+              // TODO: Add && recruited_homies >= 7 when address found
+)
+
+// --- Maximum Sex Appeal ---
+
+// TODO: Need girlfriend interaction/date detection
+achievement(
+    title = "HELLOLADIES",
+    description = "Go on a date with Maximum Sex Appeal active",
+    points = 2,
+    trigger = cheat_active(CHEAT_MAX_SEX_APPEAL)
+              // TODO: Add && on_date() when address found
+)
+
+// --- Maximum Stamina ---
+// TODO: Add achievements
+
+// --- Maximum Vehicle Skills ---
+// TODO: Add achievements
+
+// --- Minimum Muscle and Fat ---
+// TODO: Add achievements
+
+// --- Never Get Hungry ---
+
+achievement(
+    title = "Ironic Appetite",
+    description = "Eat until you vomit while Never Get Hungry is active",
+    points = 2,
+    trigger = cheat_active(CHEAT_NEVER_HUNGRY) &&
+              player_vomited()
+)
+
+// --- Spawn Jetpack ---
+
+achievement(
+    title = "To Infinity and Beyond",
+    description = "Reach 300m altitude with the Jetpack",
+    points = 3,
+    trigger = jetpack_time_ms() > 0 &&
+              player_above_ground() > 300.0 &&
+              times_cheated() > 0
+)
+
+achievement(
+    title = "Jetpack Addict",
+    description = "Spend 30 minutes on the Jetpack with cheats active",
+    points = 2,
+    trigger = times_cheated() > 0 &&
+              crossed_threshold(JetpackTime, 1800000)
+)
+
+// --- Spawn Parachute ---
+// TODO: Add achievements
+
+// --- Super Punch ---
 
 achievement(
     title = "STINGLIKEABEE",
@@ -535,75 +519,92 @@ achievement(
               never(repeated(seconds_to_frames(30), not_paused()))
 )
 
-// TODO: Need "is underwater" memory address to properly detect being submerged
 achievement(
-    title = "Deep Diver",
-    description = "Stay underwater for 3 minutes using Infinite Lung Capacity",
+    title = "Untouchable Brawler",
+    description = "Kill 25 pedestrians with Super Punch while Infinite Health is active",
     points = 2,
-    trigger = measured(repeated(minutes_to_frames(3),
-                  cheat_active(CHEAT_INFINITE_LUNG) &&
-                  not_paused()
-                  // TODO: Add && is_underwater() when address found
-              ))
-)
-
-achievement(
-    title = "Submarine Mode",
-    description = "Drive underwater for 30 seconds with Infinite Lung Capacity active",
-    points = 1,
-    trigger = once(cheat_active(CHEAT_INFINITE_LUNG) && in_vehicle() && player_pos_z() < 0.0) &&
-              trigger_when(measured(repeated(seconds_to_frames(30),
-                  cheat_active(CHEAT_INFINITE_LUNG) &&
-                  in_vehicle() &&
-                  player_pos_z() < 0.0 &&
-                  not_paused()
-              )))
-)
-
-achievement(
-    title = "Bullet Time",
-    description = "Kill 10 enemies while Slow Motion is active",
-    points = 1,
-    trigger = trigger_when(measured(tally(10,
+    trigger = trigger_when(measured(tally(25,
                   kill_increased() &&
-                  cheat_active(CHEAT_SLOW_MOTION)
+                  cheat_active(CHEAT_SUPER_PUNCH) &&
+                  cheat_active(CHEAT_INFINITE_HEALTH)
               )))
 )
 
+// --- Infinite Ammo ---
+
 achievement(
-    title = "TAKEACHILLPILL",
-    description = "Get 5 kills while Adrenaline/Slow Motion effect is active",
+    title = "FULLCLIP",
+    description = "Fire 1000 bullets with Infinite Ammo active",
     points = 1,
-    trigger = trigger_when(measured(tally(5,
-                  kill_increased() &&
-                  cheat_active(CHEAT_SLOW_MOTION)
+    trigger = trigger_when(measured(tally(1000,
+                  bullet_fired() &&
+                  cheat_active(CHEAT_INFINITE_AMMO)
               )))
 )
 
 achievement(
-    title = "To Infinity and Beyond",
-    description = "Reach 300m altitude with the Jetpack",
-    points = 3,
-    trigger = jetpack_time_ms() > 0 &&
-              player_above_ground() > 300.0 &&
-              times_cheated() > 0
+    title = "Spray and Pray",
+    description = "Get 50 kills with the Minigun while Infinite Ammo is active",
+    points = 2,
+    trigger = trigger_when(measured(tally(50,
+                  kill_increased() &&
+                  using_minigun() &&
+                  cheat_active(CHEAT_INFINITE_AMMO)
+              )))
 )
+
+// --- (Almost) Infinite Health ---
+
+achievement(
+    title = "ONECANHURTME",
+    description = "Get killed while (Almost) Infinite Health is active",
+    points = 1,
+    trigger = cheat_active(CHEAT_INFINITE_HEALTH) &&
+              player_wasted()
+)
+
+achievement(
+    title = "Untouchable",
+    description = "Survive 5 minutes with Infinite Health and 6-star wanted level",
+    points = 1,
+    trigger = once(cheat_active(CHEAT_INFINITE_HEALTH) && player_wanted() >= 6) &&
+              trigger_when(measured(repeated(minutes_to_frames(5),
+                  cheat_active(CHEAT_INFINITE_HEALTH) &&
+                  player_wanted() >= 6 &&
+                  not_paused() &&
+                  !player_wasted()
+              ))) &&
+              never(player_wasted()) &&
+              never(player_wanted() < 6) &&
+              never(!cheat_active(CHEAT_INFINITE_HEALTH))
+)
+
+// --- Weapons 1 (Brass Knuckles, Baseball Bat, Pistol, Shotgun, Micro SMG, AK47, Rifle, Rocket Launcher, Molotov, Spray Can) ---
+// TODO: Add achievements
+
+// --- Weapons 2 (Fist, Knife, Desert Eagle, Sawn-Off Shotgun, TEC 9, M4, Sniper Rifle, Flamethrower, Fire Extinguisher, Grenades) ---
+// TODO: Add achievements
+
+// --- Weapons 3 (Fist, Chainsaw, Silenced Pistol, SPAS 12, SMG, M4, Heat-Seeking Rocket Launcher, Satchel Charges) ---
+// TODO: Add achievements
 
 // =============================================================================
 // ACHIEVEMENTS - VEHICLE CHEATS
 // =============================================================================
 
+// --- All Cars Have Nitrous ---
+
+// TODO: Need "nitro active" or "nitro uses" memory address
+// Currently just triggers on cheat activation
 achievement(
-    title = "CHITTYCHITTYBANGBANG",
-    description = "Fly for 20 minutes total with Flying Cars cheat active",
-    points = 1,
-    trigger = measured(repeated(minutes_to_frames(20),
-                  cheat_active(CHEAT_FLYING_CARS) &&
-                  in_vehicle() &&
-                  player_above_ground() > 50.0 &&
-                  not_paused()
-              ))
+    title = "SPEEDFREAK",
+    description = "Activate All Cars Have Nitro and use nitro 10 times",
+    points = 2,
+    trigger = cheat_just_activated(CHEAT_ALL_NITRO)
+              // TODO: Change to measured(tally(10, nitro_used())) when address found
 )
+
+// --- Cars Drive on Water ---
 
 // TODO: Need "is on water" or water surface detection to verify driving on water
 achievement(
@@ -618,6 +619,8 @@ achievement(
               ))
 )
 
+// --- Flying Boats ---
+
 // TODO: Should verify player is in a boat vehicle type for proper detection
 achievement(
     title = "FLYINGFISH",
@@ -628,16 +631,211 @@ achievement(
               player_above_ground() > 30.0
 )
 
+// --- Flying Cars ---
+
 achievement(
-    title = "Ghost Rider",
-    description = "Drive for 10 minutes total with Invisible Cars active",
+    title = "CHITTYCHITTYBANGBANG",
+    description = "Fly for 20 minutes total with Flying Cars cheat active",
     points = 1,
-    trigger = measured(repeated(minutes_to_frames(10),
-                  cheat_active(CHEAT_INVISIBLE_CARS) &&
+    trigger = measured(repeated(minutes_to_frames(20),
+                  cheat_active(CHEAT_FLYING_CARS) &&
                   in_vehicle() &&
+                  player_above_ground() > 50.0 &&
                   not_paused()
               ))
 )
+
+achievement(
+    title = "Flying Dutchman",
+    description = "Reach 100m altitude with Flying Cars cheat active (in a car)",
+    points = 2,
+    trigger = cheat_active(CHEAT_FLYING_CARS) &&
+              in_vehicle() &&
+              !on_bicycle() &&
+              player_above_ground() > 100.0
+)
+
+achievement(
+    title = "Need for Altitude",
+    description = "Reach maximum altitude (200m+) with Flying Cars",
+    points = 3,
+    trigger = cheat_active(CHEAT_FLYING_CARS) &&
+              in_vehicle() &&
+              !on_bicycle() &&
+              player_above_ground() > 200.0
+)
+
+// --- Spawn Sport Cars ---
+// TODO: Add achievements
+
+// --- Improved Suspension ---
+// TODO: Add achievements
+
+// --- Perfect Handling ---
+
+achievement(
+    title = "STICKLIKEGLUE",
+    description = "Activate Perfect Vehicle Handling",
+    points = 1,
+    trigger = cheat_just_activated(CHEAT_PERFECT_HANDLING)
+)
+
+// --- Full Weapon Aiming in Vehicles ---
+
+// TODO: This triggers on any kill from vehicle, not specifically a drive-by shooting
+// Need "is shooting from vehicle" detection for proper drive-by verification
+achievement(
+    title = "IWANNADRIVEBY",
+    description = "Get 25 drive-by kills with Full Weapon Aiming in Vehicles",
+    points = 2,
+    trigger = trigger_when(measured(tally(25,
+                  kill_increased() &&
+                  in_vehicle() &&
+                  cheat_active(CHEAT_FREE_AIM)
+              )))
+)
+
+// --- Super Bunny Hop ---
+
+// TODO: No actual building detection - just checks for 50m altitude
+// Maybe change trigger to jump ON a specific building
+achievement(
+    title = "E.T. Phone Home",
+    description = "Activate Super Bunny Hop and jump over a building on a bike",
+    points = 2,
+    trigger = cheat_active(CHEAT_SUPER_BUNNY_HOP) &&
+              on_bicycle() &&
+              player_above_ground() > 50.0
+)
+
+// --- Spawn Bloodring Banger ---
+// TODO: Add achievements
+
+// --- Spawn Caddy ---
+// TODO: Add achievements
+
+// --- Spawn Dozer ---
+// TODO: Add achievements
+
+// --- Spawn Hunter ---
+// TODO: Add achievements
+
+// --- Spawn Hydra ---
+// TODO: Add achievements
+
+// --- Spawn Monster Truck ---
+// TODO: Add achievements
+
+// --- Spawn Quad ---
+// TODO: Add achievements
+
+// --- Spawn Hotring Racer #1 ---
+// TODO: Add achievements
+
+// --- Spawn Hotring Racer #2 ---
+// TODO: Add achievements
+
+// --- Spawn Rancher ---
+// TODO: Add achievements
+
+// --- Spawn Rhino ---
+// TODO: Add achievements
+
+// --- Spawn Romero ---
+// TODO: Add achievements
+
+// --- Spawn Stretch Limo ---
+// TODO: Add achievements
+
+// --- Spawn Stunt Plane ---
+// TODO: Add achievements
+
+// --- Spawn Tanker Truck ---
+// TODO: Add achievements
+
+// --- Spawn Trashmaster ---
+// TODO: Add achievements
+
+// --- Spawn Vortex ---
+// TODO: Add achievements
+
+// --- Taxi Missions Completed ---
+// TODO: Add achievements
+
+// --- CJ's Car Invincible (Destroy on Touch) ---
+
+// TODO: CHEAT_INVINCIBLE_CAR address needs verification
+achievement(
+    title = "TOUCHMYCARYOUDIE",
+    description = "Destroy 100 vehicles by ramming with CJ's Car is Invincible active",
+    points = 3,
+    trigger = trigger_when(measured(tally(100,
+                  prev(dword(VehiclesDestroyed)) < dword(VehiclesDestroyed) &&
+                  in_vehicle() &&
+                  cheat_active(CHEAT_INVINCIBLE_CAR)
+              )))
+)
+
+// =============================================================================
+// ACHIEVEMENTS - THEMES / PEDESTRIAN BEHAVIOR
+// =============================================================================
+
+// --- Aggressive Drivers ---
+// TODO: Add achievements
+
+// --- Aggressive Traffic ---
+
+achievement(
+    title = "YLTEICZ",
+    description = "Activate Aggressive Traffic and survive 5 minutes",
+    points = 2,
+    trigger = once(cheat_just_activated(CHEAT_AGGRESSIVE_TRAFFIC)) &&
+              measured(repeated(minutes_to_frames(5),
+                  cheat_active(CHEAT_AGGRESSIVE_TRAFFIC) &&
+                  not_paused() &&
+                  !player_wasted()
+              )) &&
+              never(player_wasted())
+)
+
+// --- Beach Party Mode ---
+
+// TODO: Need beach area detection for full verification
+achievement(
+    title = "LIFESABEACH",
+    description = "Kill 10 pedestrians on the beach during Beach Party Mode",
+    points = 2,
+    trigger = trigger_when(measured(tally(10,
+                  kill_increased() &&
+                  cheat_active(CHEAT_BEACH_PARTY)
+              )))
+)
+
+// --- Junk Cars Traffic ---
+// TODO: Add achievements
+
+// --- Black Cars ---
+
+achievement(
+    title = "Murdered Out",
+    description = "Activate Black Cars cheat",
+    points = 1,
+    trigger = cheat_just_activated(CHEAT_BLACK_CARS)
+)
+
+// --- Funhouse Theme ---
+
+achievement(
+    title = "Clown Fiesta",
+    description = "Cause 10 explosions with Funhouse Theme active",
+    points = 2,
+    trigger = trigger_when(measured(tally(10,
+                  prev(dword(VehiclesDestroyed)) < dword(VehiclesDestroyed) &&
+                  cheat_active(CHEAT_FUNHOUSE)
+              )))
+)
+
+// --- Moon Car Gravity ---
 
 // TODO: Should detect a car being launched into the air after collision
 // Currently just triggers on cheat activation
@@ -657,6 +855,229 @@ achievement(
     trigger = trigger_when(measured(tally(5, cheat_just_activated(CHEAT_MOON_GRAVITY))))
 )
 
+// --- Pedestrian Riot ---
+
+achievement(
+    title = "State of Emergency",
+    description = "Survive for 5 minutes during a Pedestrian Riot",
+    points = 1,
+    trigger = once(cheat_just_activated(CHEAT_PED_RIOT)) &&
+              trigger_when(measured(repeated(minutes_to_frames(5),
+                  cheat_active(CHEAT_PED_RIOT) &&
+                  not_paused() &&
+                  !player_wasted()
+              ))) &&
+              never(player_wasted())
+)
+
+// --- Blow Up All Cars ---
+
+achievement(
+    title = "ALLCARSGOBOOM",
+    description = "Survive the Explode All Cars cheat while driving a car",
+    points = 2,
+    trigger = in_vehicle() &&
+              !player_wasted() &&
+              cheat_used() &&
+              prev(dword(VehiclesDestroyed)) + 3 <= dword(VehiclesDestroyed)
+)
+
+achievement(
+    title = "Michael Bay Simulator",
+    description = "Cause 15 vehicle explosions in 1 minute with Explode All Cars cheat",
+    points = 3,
+    trigger = once(cheat_just_activated(CHEAT_CARS_EXPLODE_BUMP)) &&
+              trigger_when(measured(tally(15,
+                  cheat_active(CHEAT_CARS_EXPLODE_BUMP) &&
+                  prev(dword(VehiclesDestroyed)) < dword(VehiclesDestroyed)
+              ))) &&
+              never(repeated(minutes_to_frames(1),
+                  cheat_active(CHEAT_CARS_EXPLODE_BUMP) &&
+                  not_paused()
+              )) &&
+              never(!cheat_active(CHEAT_CARS_EXPLODE_BUMP))
+)
+
+// --- Invisible Cars ---
+
+achievement(
+    title = "Ghost Rider",
+    description = "Drive for 10 minutes total with Invisible Cars active",
+    points = 1,
+    trigger = measured(repeated(minutes_to_frames(10),
+                  cheat_active(CHEAT_INVISIBLE_CARS) &&
+                  in_vehicle() &&
+                  not_paused()
+              ))
+)
+
+achievement(
+    title = "Invisible Chaos",
+    description = "Drive an invisible car during Chaos Mode",
+    points = 1,
+    trigger = cheat_active(CHEAT_INVISIBLE_CARS) &&
+              cheat_active(CHEAT_CHAOS_MODE) &&
+              in_vehicle()
+)
+
+// --- Kinky Theme ---
+
+// TODO: Need prostitute interaction detection for proper verification
+achievement(
+    title = "50 Shades of San Andreas",
+    description = "Earn $1000 from prostitutes with Kinky Theme active",
+    points = 2,
+    trigger = cheat_active(CHEAT_KINKY_THEME)
+              // TODO: Add && prostitute_earnings >= 1000 when address found
+)
+
+// --- Prostitutes Pay CJ ---
+
+achievement(
+    title = "Paid for Services",
+    description = "Earn money 2 times with Prostitutes Pay CJ active",
+    points = 1,
+    trigger = trigger_when(measured(tally(2,
+                  prev(player_money()) < player_money() &&
+                  cheat_active(CHEAT_PROSTITUTES_PAY)
+              )))
+)
+
+// --- No Pedestrians / Reduced Traffic ---
+
+achievement(
+    title = "GHOSTTOWN",
+    description = "Enter 5 vehicles with No Pedestrians / Reduced Traffic active",
+    points = 1,
+    trigger = trigger_when(measured(tally(5,
+                  just_entered_vehicle() &&
+                  cheat_active(CHEAT_REDUCED_TRAFFIC)
+              )))
+)
+
+// --- All Pedestrians Are Elvis ---
+
+// TODO: Need photo taken flag for proper Elvis detection
+achievement(
+    title = "Viva Las Elvis",
+    description = "Take a photo of an Elvis pedestrian",
+    points = 2,
+    trigger = cheat_active(CHEAT_ALL_ELVIS)
+              // TODO: Add && photo_taken() when address found
+)
+
+// --- Pedestrians Attack CJ ---
+
+achievement(
+    title = "STOPPICKINGONME",
+    description = "Survive 10 minutes with Pedestrians Attack CJ active",
+    points = 2,
+    trigger = once(cheat_just_activated(CHEAT_PEDS_ATTACK)) &&
+              trigger_when(measured(repeated(minutes_to_frames(10),
+                  cheat_active(CHEAT_PEDS_ATTACK) &&
+                  not_paused() &&
+                  !player_wasted()
+              ))) &&
+              never(player_wasted())
+)
+
+// --- Pedestrians Attack CJ (With Guns) ---
+
+achievement(
+    title = "ATTACKOFTHEVILLAGEPEOPLE",
+    description = "Survive 5 minutes with armed pedestrians attacking you",
+    points = 3,
+    trigger = once(cheat_just_activated(CHEAT_PEDS_ATTACK_GUNS)) &&
+              trigger_when(measured(repeated(minutes_to_frames(5),
+                  cheat_active(CHEAT_PEDS_ATTACK_GUNS) &&
+                  not_paused() &&
+                  !player_wasted()
+              ))) &&
+              never(player_wasted())
+)
+
+// --- Pedestrians Have Weapons ---
+
+// TODO: Need detection when pedestrian is armed (maybe count when weapon is dropped from killed pedestrian?)
+achievement(
+    title = "SURROUNDEDBYNUTTERS",
+    description = "Kill 25 armed pedestrians with Pedestrians Have Weapons active",
+    points = 2,
+    trigger = trigger_when(measured(tally(25,
+                  kill_increased() &&
+                  cheat_active(CHEAT_PEDS_WEAPONS)
+              )))
+)
+
+// --- Chaos Mode ---
+
+achievement(
+    title = "ROUGHNEIGHBOURHOOD",
+    description = "Activate Chaos Mode and survive for 5 minutes",
+    points = 1,
+    trigger = once(cheat_just_activated(CHEAT_CHAOS_MODE)) &&
+              trigger_when(measured(repeated(minutes_to_frames(5),
+                  cheat_active(CHEAT_CHAOS_MODE) &&
+                  not_paused() &&
+                  !player_wasted()
+              ))) &&
+              never(player_wasted())
+)
+
+achievement(
+    title = "The Purge",
+    description = "Kill 100 pedestrians during Chaos Mode",
+    points = 2,
+    trigger = trigger_when(measured(tally(100,
+                  kill_increased() &&
+                  cheat_active(CHEAT_CHAOS_MODE)
+              )))
+)
+
+achievement(
+    title = "San Andreas Chainsaw Massacre",
+    description = "Get 20 chainsaw kills during Chaos Mode",
+    points = 2,
+    trigger = trigger_when(measured(tally(20,
+                  kill_increased() &&
+                  using_chainsaw() &&
+                  cheat_active(CHEAT_CHAOS_MODE)
+              )))
+)
+
+achievement(
+    title = "Maximum Carnage",
+    description = "Have Pedestrian Riot, Chaos Mode, and Aggressive Traffic all active at once",
+    points = 1,
+    trigger = cheat_active(CHEAT_PED_RIOT) &&
+              cheat_active(CHEAT_CHAOS_MODE) &&
+              cheat_active(CHEAT_AGGRESSIVE_TRAFFIC) &&
+              !player_wasted()
+)
+
+achievement(
+    title = "Apocalypse Now",
+    description = "Survive 2 minutes with Maximum Carnage combo active",
+    points = 1,
+    trigger = once(cheat_active(CHEAT_PED_RIOT) &&
+                   cheat_active(CHEAT_CHAOS_MODE) &&
+                   cheat_active(CHEAT_AGGRESSIVE_TRAFFIC)) &&
+              trigger_when(measured(repeated(minutes_to_frames(2),
+                  cheat_active(CHEAT_PED_RIOT) &&
+                  cheat_active(CHEAT_CHAOS_MODE) &&
+                  cheat_active(CHEAT_AGGRESSIVE_TRAFFIC) &&
+                  not_paused() &&
+                  !player_wasted()
+              ))) &&
+              never(player_wasted()) &&
+              // Reset if any cheat is turned off
+              never(!cheat_active(CHEAT_PED_RIOT)) &&
+              never(!cheat_active(CHEAT_CHAOS_MODE)) &&
+              never(!cheat_active(CHEAT_AGGRESSIVE_TRAFFIC))
+)
+
+// --- Pink Cars ---
+
 achievement(
     title = "Fabulous",
     description = "Activate Pink Cars cheat",
@@ -665,39 +1086,45 @@ achievement(
 )
 
 achievement(
-    title = "Murdered Out",
-    description = "Activate Black Cars cheat",
+    title = "Pink Flying Circus",
+    description = "Fly a pink car with both Flying Cars and Pink Cars cheats active",
     points = 1,
-    trigger = cheat_just_activated(CHEAT_BLACK_CARS)
+    trigger = cheat_active(CHEAT_FLYING_CARS) &&
+              cheat_active(CHEAT_PINK_CARS) &&
+              in_vehicle() &&
+              player_above_ground() > 30.0
 )
 
-// TODO: No actual building detection - just checks for 50m altitude
-// Maybe change trigger to jump ON a specific building
-achievement(
-    title = "E.T. Phone Home",
-    description = "Activate Super Bunny Hop and jump over a building on a bike",
-    points = 2,
-    trigger = cheat_active(CHEAT_SUPER_BUNNY_HOP) &&
-              on_bicycle() &&
-              player_above_ground() > 50.0
-)
+// --- Rural Traffic ---
+// TODO: Add achievements
 
-// TODO: Need "nitro active" or "nitro uses" memory address
-// Currently just triggers on cheat activation
-achievement(
-    title = "SPEEDFREAK",
-    description = "Activate All Cars Have Nitro and use nitro 10 times",
-    points = 2,
-    trigger = cheat_just_activated(CHEAT_ALL_NITRO)
-              // TODO: Change to measured(tally(10, nitro_used())) when address found
-)
+// --- Rural Theme ---
 
 achievement(
-    title = "STICKLIKEGLUE",
-    description = "Activate Perfect Vehicle Handling",
+    title = "Country Roads",
+    description = "Drive for 10 minutes with Rural Theme active",
     points = 1,
-    trigger = cheat_just_activated(CHEAT_PERFECT_HANDLING)
+    trigger = measured(repeated(minutes_to_frames(10),
+                  cheat_active(CHEAT_RURAL_THEME) &&
+                  in_vehicle() &&
+                  not_paused()
+              ))
 )
+
+// --- Sports Cars Traffic ---
+
+// TODO: Need detection that vehicle is indeed a sports car
+achievement(
+    title = "EVERYONEISRICH",
+    description = "Steal 10 sports cars with Sports Cars Traffic active",
+    points = 2,
+    trigger = trigger_when(measured(tally(10,
+                  just_entered_vehicle() &&
+                  cheat_active(CHEAT_FAST_CARS)
+              )))
+)
+
+// --- Traffic Lights Stay Green ---
 
 achievement(
     title = "ZEIIVG",
@@ -706,120 +1133,24 @@ achievement(
     trigger = cheat_just_activated(CHEAT_GREEN_LIGHTS)
 )
 
-achievement(
-    title = "YLTEICZ",
-    description = "Activate Aggressive Traffic and survive 5 minutes",
-    points = 2,
-    trigger = once(cheat_just_activated(CHEAT_AGGRESSIVE_TRAFFIC)) &&
-              measured(repeated(minutes_to_frames(5),
-                  cheat_active(CHEAT_AGGRESSIVE_TRAFFIC) &&
-                  not_paused() &&
-                  !player_wasted()
-              )) &&
-              never(player_wasted())
-)
+// --- Triad Theme ---
 
-// TODO: This triggers on any kill from vehicle, not specifically a drive-by shooting
-// Need "is shooting from vehicle" detection for proper drive-by verification
 achievement(
-    title = "IWANNADRIVEBY",
-    description = "Get 25 drive-by kills with Full Weapon Aiming in Vehicles",
+    title = "Ninja CJ",
+    description = "Get 15 katana kills with Triad Theme active",
     points = 2,
-    trigger = trigger_when(measured(tally(25,
+    trigger = trigger_when(measured(tally(15,
                   kill_increased() &&
-                  in_vehicle() &&
-                  cheat_active(CHEAT_FREE_AIM)
+                  using_katana() &&
+                  cheat_active(CHEAT_TRIAD_THEME)
               )))
-)
-
-// TODO: CHEAT_INVINCIBLE_CAR address needs verification
-achievement(
-    title = "TOUCHMYCARYOUDIE",
-    description = "Destroy 100 vehicles by ramming with CJ's Car is Invincible active",
-    points = 3,
-    trigger = trigger_when(measured(tally(100,
-                  prev(dword(VehiclesDestroyed)) < dword(VehiclesDestroyed) &&
-                  in_vehicle() &&
-                  cheat_active(CHEAT_INVINCIBLE_CAR)
-              )))
-)
-
-// =============================================================================
-// ACHIEVEMENTS - TIME/WEATHER
-// =============================================================================
-
-achievement(
-    title = "NIGHTPROWLER",
-    description = "Play for 30 real minutes with Always Midnight active",
-    points = 2,
-    trigger = measured(repeated(minutes_to_frames(30),
-                  cheat_active(CHEAT_ALWAYS_MIDNIGHT) &&
-                  not_paused()
-              ))
-)
-
-achievement(
-    title = "OFVIAC",
-    description = "Activate Always 21:00 (eternal dusk)",
-    points = 1,
-    trigger = cheat_just_activated(CHEAT_ALWAYS_2100)
-)
-
-// TODO: This triggers on any kill from vehicle, not specifically a drive-by shooting
-// Need "is shooting from vehicle" detection for proper drive-by verification
-achievement(
-    title = "SLOWITDOWN",
-    description = "Complete a drive-by while Slow Motion is active",
-    points = 1,
-    trigger = cheat_active(CHEAT_SLOW_MOTION) &&
-              in_vehicle() &&
-              kill_increased()
-)
-
-achievement(
-    title = "YSOHNUL",
-    description = "Watch the sun set 3 times with Faster Clock active",
-    points = 1,
-    trigger = trigger_when(measured(tally(3,
-                  prev(game_hour()) == 19 && game_hour() == 20 &&
-                  cheat_active(CHEAT_FASTER_CLOCK)
-              )))
-)
-
-// =============================================================================
-// ACHIEVEMENTS - STAT CHEATS
-// =============================================================================
-
-// TODO: Need decetion for number of recruited homies
-achievement(
-    title = "WORSHIPME",
-    description = "Recruit 7 homies with Maximum Respect active",
-    points = 2,
-    trigger = cheat_active(CHEAT_MAX_RESPECT)
-              // TODO: Add && recruited_homies >= 7 when address found
-)
-
-// TODO: Need girlfriend interaction/date detection
-achievement(
-    title = "HELLOLADIES",
-    description = "Go on a date with Maximum Sex Appeal active",
-    points = 2,
-    trigger = cheat_active(CHEAT_MAX_SEX_APPEAL)
-              // TODO: Add && on_date() when address found
-)
-
-// (Almost) Infinite Health - can still die from explosions, drowning, falling
-achievement(
-    title = "ONECANHURTME",
-    description = "Get killed while (Almost) Infinite Health is active",
-    points = 1,
-    trigger = cheat_active(CHEAT_INFINITE_HEALTH) &&
-              player_wasted()
 )
 
 // =============================================================================
 // ACHIEVEMENTS - GANG CHEATS
 // =============================================================================
+
+// --- Gang Members Spawn Faster ---
 
 // TODO: Need detection of gang members killed specifically instead of general kills
 achievement(
@@ -832,6 +1163,8 @@ achievement(
               )))
 )
 
+// --- Gang Wars Break Out ---
+
 // TODO: Need gang territory ownership change detection
 achievement(
     title = "ONLYHOMIESALLOWED",
@@ -840,6 +1173,8 @@ achievement(
     trigger = cheat_active(CHEAT_GANG_WARS)
               // TODO: Add && gang_war_won() when address found
 )
+
+// --- No Citizens Only Gang Gunfights ---
 
 achievement(
     title = "BETTERSTAYINDOORS",
@@ -854,9 +1189,7 @@ achievement(
               never(player_wasted())
 )
 
-// =============================================================================
-// ACHIEVEMENTS - RECRUIT CHEATS
-// =============================================================================
+// --- Recruit Anyone (Pistol) ---
 
 // TODO: Implementation missing
 achievement(
@@ -873,6 +1206,8 @@ achievement(
     points = 1,
     trigger = cheat_just_activated(CHEAT_RECRUIT_PISTOL)
 )
+
+// --- Recruit Anyone (Rocket Launcher) ---
 
 achievement(
     title = "ROCKETMAYHEM",
@@ -896,7 +1231,94 @@ achievement(
 )
 
 // =============================================================================
-// ACHIEVEMENTS - META/TRACKING
+// ACHIEVEMENTS - TIME AND WEATHER
+// =============================================================================
+
+// --- Always Midnight ---
+
+achievement(
+    title = "NIGHTPROWLER",
+    description = "Play for 30 real minutes with Always Midnight active",
+    points = 2,
+    trigger = measured(repeated(minutes_to_frames(30),
+                  cheat_active(CHEAT_ALWAYS_MIDNIGHT) &&
+                  not_paused()
+              ))
+)
+
+// --- Always 21:00 ---
+
+achievement(
+    title = "DONTBRINGONTHENIGHT",
+    description = "Activate Always 21:00 (eternal dusk)",
+    points = 1,
+    trigger = cheat_just_activated(CHEAT_ALWAYS_2100)
+)
+
+// --- Cloudy Weather ---
+// TODO: Add achievements
+
+// --- Fast Motion ---
+// TODO: Add achievements
+
+// --- Slow Motion ---
+
+achievement(
+    title = "Bullet Time",
+    description = "Kill 10 enemies while Slow Motion is active",
+    points = 1,
+    trigger = trigger_when(measured(tally(10,
+                  kill_increased() &&
+                  cheat_active(CHEAT_SLOW_MOTION)
+              )))
+)
+
+// TODO: This triggers on any kill from vehicle, not specifically a drive-by shooting
+// Need "is shooting from vehicle" detection for proper drive-by verification
+achievement(
+    title = "SLOWITDOWN",
+    description = "Complete a drive-by while Slow Motion is active",
+    points = 1,
+    trigger = cheat_active(CHEAT_SLOW_MOTION) &&
+              in_vehicle() &&
+              kill_increased()
+)
+
+// --- Faster Clock ---
+
+achievement(
+    title = "YSOHNUL",
+    description = "Watch the sun set 3 times with Faster Clock active",
+    points = 1,
+    trigger = trigger_when(measured(tally(3,
+                  prev(game_hour()) == 19 && game_hour() == 20 &&
+                  cheat_active(CHEAT_FASTER_CLOCK)
+              )))
+)
+
+// --- Foggy Weather ---
+// TODO: Add achievements
+
+// --- Overcast Weather ---
+// TODO: Add achievements
+
+// --- Sandstorm ---
+// TODO: Add achievements
+
+// --- Rainy Weather ---
+// TODO: Add achievements
+
+// --- Stormy Weather ---
+// TODO: Add achievements
+
+// --- Sunny Weather ---
+// TODO: Add achievements
+
+// --- Very Sunny Weather ---
+// TODO: Add achievements
+
+// =============================================================================
+// ACHIEVEMENTS - META / CHEAT TRACKING
 // =============================================================================
 
 achievement(
@@ -935,7 +1357,7 @@ achievement(
 )
 
 // =============================================================================
-// ACHIEVEMENTS - STATS MILESTONES WITH CHEATS
+// ACHIEVEMENTS - STATS MILESTONES (with cheats active)
 // =============================================================================
 
 achievement(
@@ -968,222 +1390,6 @@ achievement(
     points = 2,
     trigger = times_cheated() > 0 &&
               crossed_threshold(StarsEvaded, 50)
-)
-
-achievement(
-    title = "Jetpack Addict",
-    description = "Spend 30 minutes on the Jetpack with cheats active",
-    points = 2,
-    trigger = times_cheated() > 0 &&
-              crossed_threshold(JetpackTime, 1800000)
-)
-
-// =============================================================================
-// ACHIEVEMENTS - SPECIAL COMBOS
-// =============================================================================
-
-achievement(
-    title = "GHOSTTOWN",
-    description = "Enter 5 vehicles with No Pedestrians / Reduced Traffic active",
-    points = 1,
-    trigger = trigger_when(measured(tally(5,
-                  just_entered_vehicle() &&
-                  cheat_active(CHEAT_REDUCED_TRAFFIC)
-              )))
-)
-
-achievement(
-    title = "Pink Flying Circus",
-    description = "Fly a pink car with both Flying Cars and Pink Cars cheats active",
-    points = 1,
-    trigger = cheat_active(CHEAT_FLYING_CARS) &&
-              cheat_active(CHEAT_PINK_CARS) &&
-              in_vehicle() &&
-              player_above_ground() > 30.0
-)
-
-achievement(
-    title = "Invisible Chaos",
-    description = "Drive an invisible car during Chaos Mode",
-    points = 1,
-    trigger = cheat_active(CHEAT_INVISIBLE_CARS) &&
-              cheat_active(CHEAT_CHAOS_MODE) &&
-              in_vehicle()
-)
-
-achievement(
-    title = "Maximum Carnage",
-    description = "Have Pedestrian Riot, Chaos Mode, and Aggressive Traffic all active at once",
-    points = 1,
-    trigger = cheat_active(CHEAT_PED_RIOT) &&
-              cheat_active(CHEAT_CHAOS_MODE) &&
-              cheat_active(CHEAT_AGGRESSIVE_TRAFFIC) &&
-              !player_wasted()
-)
-
-// Maximum Carnage combo: Riot + Chaos + Aggressive Traffic = pure mayhem
-achievement(
-    title = "Apocalypse Now",
-    description = "Survive 2 minutes with Maximum Carnage combo active",
-    points = 1,
-    trigger = once(cheat_active(CHEAT_PED_RIOT) &&
-                   cheat_active(CHEAT_CHAOS_MODE) &&
-                   cheat_active(CHEAT_AGGRESSIVE_TRAFFIC)) &&
-              trigger_when(measured(repeated(minutes_to_frames(2),
-                  cheat_active(CHEAT_PED_RIOT) &&
-                  cheat_active(CHEAT_CHAOS_MODE) &&
-                  cheat_active(CHEAT_AGGRESSIVE_TRAFFIC) &&
-                  not_paused() &&
-                  !player_wasted()
-              ))) &&
-              never(player_wasted()) &&
-              // Reset if any cheat is turned off
-              never(!cheat_active(CHEAT_PED_RIOT)) &&
-              never(!cheat_active(CHEAT_CHAOS_MODE)) &&
-              never(!cheat_active(CHEAT_AGGRESSIVE_TRAFFIC))
-)
-
-achievement(
-    title = "Untouchable",
-    description = "Survive 5 minutes with Infinite Health and 6-star wanted level",
-    points = 1,
-    trigger = once(cheat_active(CHEAT_INFINITE_HEALTH) && player_wanted() >= 6) &&
-              trigger_when(measured(repeated(minutes_to_frames(5),
-                  cheat_active(CHEAT_INFINITE_HEALTH) &&
-                  player_wanted() >= 6 &&
-                  not_paused() &&
-                  !player_wasted()
-              ))) &&
-              never(player_wasted()) &&
-              never(player_wanted() < 6) &&
-              never(!cheat_active(CHEAT_INFINITE_HEALTH))
-)
-
-achievement(
-    title = "Untouchable Brawler",
-    description = "Kill 25 pedestrians with Super Punch while Infinite Health is active",
-    points = 2,
-    trigger = trigger_when(measured(tally(25,
-                  kill_increased() &&
-                  cheat_active(CHEAT_SUPER_PUNCH) &&
-                  cheat_active(CHEAT_INFINITE_HEALTH)
-              )))
-)
-
-achievement(
-    title = "Ironic Appetite",
-    description = "Eat until you vomit while Never Get Hungry is active",
-    points = 2,
-    trigger = cheat_active(CHEAT_NEVER_HUNGRY) &&
-              player_vomited()
-)
-
-achievement(
-    title = "ALLCARSGOBOOM",
-    description = "Survive the Explode All Cars cheat while driving a car",
-    points = 2,
-    trigger = in_vehicle() &&
-              !player_wasted() &&
-              cheat_used() &&
-              prev(dword(VehiclesDestroyed)) + 3 <= dword(VehiclesDestroyed)
-)
-
-// =============================================================================
-// ACHIEVEMENTS - FLYING AND EXPLOSIONS
-// =============================================================================
-
-achievement(
-    title = "Flying Dutchman",
-    description = "Reach 100m altitude with Flying Cars cheat active (in a car)",
-    points = 2,
-    trigger = cheat_active(CHEAT_FLYING_CARS) &&
-              in_vehicle() &&
-              !on_bicycle() &&
-              player_above_ground() > 100.0
-)
-
-achievement(
-    title = "Need for Altitude",
-    description = "Reach maximum altitude (200m+) with Flying Cars",
-    points = 3,
-    trigger = cheat_active(CHEAT_FLYING_CARS) &&
-              in_vehicle() &&
-              !on_bicycle() &&
-              player_above_ground() > 200.0
-)
-
-achievement(
-    title = "Michael Bay Simulator",
-    description = "Cause 15 vehicle explosions in 1 minute with Explode All Cars cheat",
-    points = 3,
-    trigger = once(cheat_just_activated(CHEAT_CARS_EXPLODE_BUMP)) &&
-              trigger_when(measured(tally(15,
-                  cheat_active(CHEAT_CARS_EXPLODE_BUMP) &&
-                  prev(dword(VehiclesDestroyed)) < dword(VehiclesDestroyed)
-              ))) &&
-              never(repeated(minutes_to_frames(1),
-                  cheat_active(CHEAT_CARS_EXPLODE_BUMP) &&
-                  not_paused()
-              )) &&
-              never(!cheat_active(CHEAT_CARS_EXPLODE_BUMP))
-)
-
-// =============================================================================
-// ACHIEVEMENTS - PEDESTRIAN THEME COMBOS
-// =============================================================================
-
-achievement(
-    title = "Ninja CJ",
-    description = "Get 15 katana kills with Triad Theme active",
-    points = 2,
-    trigger = trigger_when(measured(tally(15,
-                  kill_increased() &&
-                  using_katana() &&
-                  cheat_active(CHEAT_TRIAD_THEME)
-              )))
-)
-
-achievement(
-    title = "San Andreas Chainsaw Massacre",
-    description = "Get 20 chainsaw kills during Chaos Mode",
-    points = 2,
-    trigger = trigger_when(measured(tally(20,
-                  kill_increased() &&
-                  using_chainsaw() &&
-                  cheat_active(CHEAT_CHAOS_MODE)
-              )))
-)
-
-achievement(
-    title = "Spray and Pray",
-    description = "Get 50 kills with the Minigun while Infinite Ammo is active",
-    points = 2,
-    trigger = trigger_when(measured(tally(50,
-                  kill_increased() &&
-                  using_minigun() &&
-                  cheat_active(CHEAT_INFINITE_AMMO)
-              )))
-)
-
-achievement(
-    title = "Clown Fiesta",
-    description = "Cause 10 explosions with Funhouse Theme active",
-    points = 2,
-    trigger = trigger_when(measured(tally(10,
-                  prev(dword(VehiclesDestroyed)) < dword(VehiclesDestroyed) &&
-                  cheat_active(CHEAT_FUNHOUSE)
-              )))
-)
-
-achievement(
-    title = "Country Roads",
-    description = "Drive for 10 minutes with Rural Theme active",
-    points = 1,
-    trigger = measured(repeated(minutes_to_frames(10),
-                  cheat_active(CHEAT_RURAL_THEME) &&
-                  in_vehicle() &&
-                  not_paused()
-              ))
 )
 
 // =============================================================================
@@ -1266,12 +1472,14 @@ rich_presence_display(
 // PLAYER CHEATS (need body stat/location detection):
 // - GOODBYECRUELWORLD: Commit suicide using the cheat while on parachute
 // - PROFESSIONALKILLER: Get a kill with each weapon class after activating Hitman Level
+// - TURNUPTHEHEAT: Use the Wanted Level Up cheat while inside a Police Station
+// - Too Hot To Handle: Use the Wanted Level Down cheat 20 times in a single session
 // - WHOATEALLTHEPIES: Enter a restaurant after activating Maximum Fat
 // - BUFFMEUP: Activate Maximum Muscle while inside the gym
 // - ICANGOALLNIGHT: Activate Maximum Stamina and fall off the treadmill in the gym
+// - NATURALTALENT: Flip your vehicle after activating Maximum Vehicle Skills
 // - Speedrun Diet: Go from maximum fat to minimum using cheats in under 5 seconds
 // - Skeleton Mode: Activate Minimum Muscle and Fat cheat and have one of your homies take a picture of you
-// - NATURALTALENT: Flip your vehicle after activating Maximum Vehicle Skills
 // - ROCKETMAN: Fly from Los Santos to Las Venturas using only the Jetpack
 // - LETSGOBASEJUMPING: Spawn a Parachute and land on Maze Bank Tower
 // - Skyfall Survivor: Deploy a spawned Parachute mid-air after jumping without one
@@ -1346,9 +1554,5 @@ rich_presence_display(
 // - SCOTTISHSUMMER: Activate Stormy Weather and (TODO)
 // - PLEASANTLYWARM: Activate Sunny Weather and (TODO)
 // - TOODAMNHOT: Activate Very Sunny Weather on beach wearing only boxers
-//
-// WANTED LEVEL CHEATS (need location detection):
-// - TURNUPTHEHEAT: Use the Wanted Level Up cheat while inside a Police Station
-// - Too Hot To Handle: Use the Wanted Level Down cheat 20 times in a single session
 //
 // =============================================================================

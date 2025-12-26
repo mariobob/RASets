@@ -337,9 +337,11 @@ achievement(
 
 // --- Commit Suicide ---
 // TODO: Add achievements
+// - GOODBYECRUELWORLD: Commit suicide using the cheat while on parachute
 
 // --- Hitman Level For All Weapons ---
 // TODO: Add achievements
+// - PROFESSIONALKILLER: Get a kill with each weapon class after activating Hitman Level
 
 // --- Lock Wanted Level ---
 
@@ -359,8 +361,11 @@ achievement(
 
 // --- Wanted Level Up (+2 Stars) ---
 // TODO: Add achievements
+// - TURNUPTHEHEAT: Use the Wanted Level Up cheat while inside a Police Station
 
 // --- Remove Wanted Level ---
+// TODO: Add achievements
+// - Too Hot To Handle: Use the Wanted Level Down cheat 20 times in a single session
 
 // TODO: Need to check that Remove Wanted Level cheat was used, otherwise player can escape the wanted level by dying or respraying vehicle
 achievement(
@@ -391,6 +396,7 @@ achievement(
 
 // --- Maximum Fat ---
 // TODO: Add achievements
+// - WHOATEALLTHEPIES: Enter a restaurant after activating Maximum Fat
 
 // --- Infinite Lung Capacity ---
 
@@ -421,6 +427,7 @@ achievement(
 
 // --- Maximum Muscle ---
 // TODO: Add achievements
+// - BUFFMEUP: Activate Maximum Muscle while inside the gym
 
 // --- Maximum Respect ---
 
@@ -446,12 +453,16 @@ achievement(
 
 // --- Maximum Stamina ---
 // TODO: Add achievements
+// - ICANGOALLNIGHT: Activate Maximum Stamina and fall off the treadmill in the gym
 
 // --- Maximum Vehicle Skills ---
 // TODO: Add achievements
+// - NATURALTALENT: Flip your vehicle after activating Maximum Vehicle Skills
 
 // --- Minimum Muscle and Fat ---
 // TODO: Add achievements
+// - Speedrun Diet: Go from maximum fat to minimum using cheats in under 5 seconds
+// - Skeleton Mode: Activate Minimum Muscle and Fat cheat and have one of your homies take a picture of you
 
 // --- Never Get Hungry ---
 
@@ -464,6 +475,8 @@ achievement(
 )
 
 // --- Spawn Jetpack ---
+// TODO: Add achievements
+// - ROCKETMAN: Fly from Los Santos to Las Venturas using only the Jetpack
 
 achievement(
     title = "To Infinity and Beyond",
@@ -484,6 +497,8 @@ achievement(
 
 // --- Spawn Parachute ---
 // TODO: Add achievements
+// - LETSGOBASEJUMPING: Spawn a Parachute and land on Maze Bank Tower
+// - Skyfall Survivor: Deploy a spawned Parachute mid-air after jumping without one
 
 // --- Super Punch ---
 
@@ -581,12 +596,16 @@ achievement(
 
 // --- Weapons 1 (Brass Knuckles, Baseball Bat, Pistol, Shotgun, Micro SMG, AK47, Rifle, Rocket Launcher, Molotov, Spray Can) ---
 // TODO: Add achievements
+// - THUGSARMOURY: Get 10 Molotov kills within 20 seconds of activating Weapons 1 cheat
 
 // --- Weapons 2 (Fist, Knife, Desert Eagle, Sawn-Off Shotgun, TEC 9, M4, Sniper Rifle, Flamethrower, Fire Extinguisher, Grenades) ---
 // TODO: Add achievements
+// - PROFESSIONALSKIT: Get a Fire Extinguisher kill within 10 seconds of activating Weapons 2
 
 // --- Weapons 3 (Fist, Chainsaw, Silenced Pistol, SPAS 12, SMG, M4, Heat-Seeking Rocket Launcher, Satchel Charges) ---
 // TODO: Add achievements
+// - NUTTERSTOYS: Get a Chainsaw kill within 10 seconds of activating Weapons 3 cheat
+// - UZUMYMW: Blow yourself up with Bazooka within 5 seconds of activating Weapons 3
 
 // =============================================================================
 // ACHIEVEMENTS - VEHICLE CHEATS
@@ -710,54 +729,84 @@ achievement(
 
 // --- Spawn Bloodring Banger ---
 // TODO: Add achievements
+// - OLDSPEEDDEMON: Destroy your spawned Bloodring Banger within 5 seconds
 
 // --- Spawn Caddy ---
 // TODO: Add achievements
+// - 18HOLES: Spawn a Caddy on the golf course
+// - Hole in One: Drive a spawned Caddy into the ocean
 
 // --- Spawn Dozer ---
 // TODO: Add achievements
+// - ITSALLBULL: Hit 50 vehicles with a spawned Dozer
+// - Bob the Destroyer: Drive into oncoming traffic for 2 minutes using a spawned Dozer
 
 // --- Spawn Hunter ---
 // TODO: Add achievements
+// - OHDUDE: Spawn a Hunter and crash it within 20 seconds
+// - Apache Warfare: Complete a Vigilante mission using a spawned Hunter
+// - Gatling Gunner: Get 50 kills with a spawned Hunter
 
 // --- Spawn Hydra ---
 // TODO: Add achievements
+// - JUMPJET: Spawn a Hydra in the middle of Grove Street
+// - Top Gun: Destroy 10 police helicopters with a spawned Hydra
+// - Kamikaze: Crash a spawned Hydra into a police boat
 
 // --- Spawn Monster Truck ---
 // TODO: Add achievements
+// - MONSTERMASH: Crush 20 vehicles with a spawned Monster Truck
 
 // --- Spawn Quad ---
 // TODO: Add achievements
+// - FOURWHEELFUN: Perform a stoppie front flip on a spawned Quad
 
 // --- Spawn Hotring Racer #1 ---
 // TODO: Add achievements
+// - NOTFORPUBLICROADS: Flip your spawned Hotring Racer within 20 seconds
 
 // --- Spawn Hotring Racer #2 ---
 // TODO: Add achievements
+// - JUSTTRYANDSTOPME: TODO
 
 // --- Spawn Rancher ---
 // TODO: Add achievements
+// - DOUGHNUTHANDICAP: Get a longest 2 wheels time of 3 seconds with a spawned Rancher
 
 // --- Spawn Rhino ---
 // TODO: Add achievements
+// - TIMETOKICKASS: Destroy 100 vehicles with a spawned Rhino Tank
+// - Tank You Very Much: Spawn a Rhino Tank inside a Pay 'N' Spray
 
 // --- Spawn Romero ---
 // TODO: Add achievements
+// - WHERESTHEFUNERAL: Drive a spawned Romero to the cemetery
+// - Death Delivery: Run over 10 pedestrians with a spawned Romero
 
 // --- Spawn Stretch Limo ---
 // TODO: Add achievements
+// - CELEBRITYSTATUS: Pick up a girlfriend in a spawned Stretch limousine
+// - Celebrity Status Achieved: Drive a spawned Stretch into a Pay 'N' Spray with 5+ stars
 
 // --- Spawn Stunt Plane ---
 // TODO: Add achievements
+// - FLYINGTOSTUNT: Fly under the Gant Bridge with a spawned Stunt Plane
+// - Stunt Coordinator: Perform 10 barrel rolls with a spawned Stunt Plane in one flight
 
 // --- Spawn Tanker Truck ---
 // TODO: Add achievements
+// - HITTHEROADJACK: Do a stunt jump with a spawned Tanker
+// - Hazmat Havoc: Drive a spawned Tanker into a gas station
 
 // --- Spawn Trashmaster ---
 // TODO: Add achievements
+// - TRUEGRIME: (TODO: Think of interesting achievement with Trashmaster)
+// - Garbage Day: Run over 25 pedestrians with a spawned Trashmaster
 
 // --- Spawn Vortex ---
 // TODO: Add achievements
+// - IWANTTOHOVER: Take a spawned Vortex from land to water to land again in one continuous journey
+// - Hover Lord: Fly a Vortex from the top of the Maze Bank Tower to (TODO: Place to land Vortex)
 
 // --- Taxi Missions Completed ---
 // TODO: Add achievements
@@ -813,6 +862,7 @@ achievement(
 
 // --- Junk Cars Traffic ---
 // TODO: Add achievements
+// - BGKGTJH: Activate Junk Cars Traffic and (TODO)
 
 // --- Black Cars ---
 
@@ -1257,9 +1307,11 @@ achievement(
 
 // --- Cloudy Weather ---
 // TODO: Add achievements
+// - DULLDULLDAY: Activate Cloudy Weather and (TODO)
 
 // --- Fast Motion ---
 // TODO: Add achievements
+// - SPEEDITUP: Activate Fast Motion and (TODO)
 
 // --- Slow Motion ---
 
@@ -1298,24 +1350,31 @@ achievement(
 
 // --- Foggy Weather ---
 // TODO: Add achievements
+// - CANTSEEWHEREIMGOING: Activate Foggy Weather and (TODO)
 
 // --- Overcast Weather ---
 // TODO: Add achievements
+// - ALNSFMZO: Activate Overcast Weather and (TODO)
 
 // --- Sandstorm ---
 // TODO: Add achievements
+// - Darude: Drive through the Sandstorm for 3 minutes and 52 seconds without damaging your vehicle
 
 // --- Rainy Weather ---
 // TODO: Add achievements
+// - STAYINANDWATCHTV: Activate Rainy Weather and (TODO) (TODO: Cheat doesn't work, code is overridden by "Foggy Weather")
 
 // --- Stormy Weather ---
 // TODO: Add achievements
+// - SCOTTISHSUMMER: Activate Stormy Weather and (TODO)
 
 // --- Sunny Weather ---
 // TODO: Add achievements
+// - PLEASANTLYWARM: Activate Sunny Weather and (TODO)
 
 // --- Very Sunny Weather ---
 // TODO: Add achievements
+// - TOODAMNHOT: Activate Very Sunny Weather on beach wearing only boxers
 
 // =============================================================================
 // ACHIEVEMENTS - META / CHEAT TRACKING

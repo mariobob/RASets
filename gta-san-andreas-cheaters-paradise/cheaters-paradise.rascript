@@ -208,6 +208,7 @@ function player_above_ground() => player_pos_z()
 function current_vehicle_ptr() => dword(dword(PlayerPointer) + 0x5cc)
 function in_vehicle() => current_vehicle_ptr() != 0
 function on_foot() => current_vehicle_ptr() == 0
+function just_entered_vehicle() => prev(current_vehicle_ptr()) == 0 && current_vehicle_ptr() != 0
 
 // Bicycle detection
 function on_bicycle() => current_vehicle_id() == VEHICLE_BMX ||
@@ -393,39 +394,91 @@ achievement(
               )))
 )
 
+// TODO: Need photo taken flag for proper Elvis detection
 achievement(
     title = "Viva Las Elvis",
-    description = "Activate All Pedestrians Are Elvis cheat",
-    points = 1,
-    trigger = cheat_just_activated(CHEAT_ALL_ELVIS)
+    description = "Take a photo of an Elvis pedestrian",
+    points = 2,
+    trigger = cheat_active(CHEAT_ALL_ELVIS)
+              // TODO: Add && photo_taken() when address found
 )
 
+// TODO: Need beach area detection for full verification
 achievement(
-    title = "Spring Break Forever",
-    description = "Activate Beach Party Mode",
-    points = 1,
-    trigger = cheat_just_activated(CHEAT_BEACH_PARTY)
+    title = "LIFESABEACH",
+    description = "Kill 10 pedestrians on the beach during Beach Party Mode",
+    points = 2,
+    trigger = trigger_when(measured(tally(10,
+                  kill_increased() &&
+                  cheat_active(CHEAT_BEACH_PARTY)
+              )))
 )
 
-achievement(
-    title = "Welcome to Chinatown",
-    description = "Activate Triad Theme (Ninja Town)",
-    points = 1,
-    trigger = cheat_just_activated(CHEAT_TRIAD_THEME)
-)
-
-achievement(
-    title = "Send in the Clowns",
-    description = "Activate Funhouse Theme",
-    points = 1,
-    trigger = cheat_just_activated(CHEAT_FUNHOUSE)
-)
-
+// TODO: Need prostitute interaction detection for proper verification
 achievement(
     title = "50 Shades of San Andreas",
-    description = "Activate Kinky Theme",
+    description = "Earn $1000 from prostitutes with Kinky Theme active",
+    points = 2,
+    trigger = cheat_active(CHEAT_KINKY_THEME)
+              // TODO: Add && prostitute_earnings >= 1000 when address found
+)
+
+achievement(
+    title = "STOPPICKINGONME",
+    description = "Survive 10 minutes with Pedestrians Attack CJ active",
+    points = 2,
+    trigger = once(cheat_just_activated(CHEAT_PEDS_ATTACK)) &&
+              trigger_when(measured(repeated(minutes_to_frames(10),
+                  cheat_active(CHEAT_PEDS_ATTACK) &&
+                  not_paused() &&
+                  !player_wasted()
+              ))) &&
+              never(player_wasted())
+)
+
+achievement(
+    title = "ATTACKOFTHEVILLAGEPEOPLE",
+    description = "Survive 5 minutes with armed pedestrians attacking you",
+    points = 3,
+    trigger = once(cheat_just_activated(CHEAT_PEDS_ATTACK_GUNS)) &&
+              trigger_when(measured(repeated(minutes_to_frames(5),
+                  cheat_active(CHEAT_PEDS_ATTACK_GUNS) &&
+                  not_paused() &&
+                  !player_wasted()
+              ))) &&
+              never(player_wasted())
+)
+
+// TODO: Need detection when pedestrian is armed (maybe count when weapon is dropped from killed pedestrian?)
+achievement(
+    title = "SURROUNDEDBYNUTTERS",
+    description = "Kill 25 armed pedestrians with Pedestrians Have Weapons active",
+    points = 2,
+    trigger = trigger_when(measured(tally(25,
+                  kill_increased() &&
+                  cheat_active(CHEAT_PEDS_WEAPONS)
+              )))
+)
+
+// TODO: Need detection that vehicle is indeed a sports car
+achievement(
+    title = "EVERYONEISRICH",
+    description = "Steal 10 sports cars with Sports Cars Traffic active",
+    points = 2,
+    trigger = trigger_when(measured(tally(10,
+                  just_entered_vehicle() &&
+                  cheat_active(CHEAT_FAST_CARS)
+              )))
+)
+
+achievement(
+    title = "Paid for Services",
+    description = "Earn money 2 times with Prostitutes Pay CJ active",
     points = 1,
-    trigger = cheat_just_activated(CHEAT_KINKY_THEME)
+    trigger = trigger_when(measured(tally(2,
+                  prev(player_money()) < player_money() &&
+                  cheat_active(CHEAT_PROSTITUTES_PAY)
+              )))
 )
 
 // =============================================================================
@@ -485,9 +538,9 @@ achievement(
 // TODO: Need "is underwater" memory address to properly detect being submerged
 achievement(
     title = "Deep Diver",
-    description = "Stay underwater for 10 minutes using Infinite Lung Capacity",
+    description = "Stay underwater for 3 minutes using Infinite Lung Capacity",
     points = 2,
-    trigger = measured(repeated(minutes_to_frames(10),
+    trigger = measured(repeated(minutes_to_frames(3),
                   cheat_active(CHEAT_INFINITE_LUNG) &&
                   not_paused()
                   // TODO: Add && is_underwater() when address found
@@ -525,6 +578,15 @@ achievement(
                   kill_increased() &&
                   cheat_active(CHEAT_SLOW_MOTION)
               )))
+)
+
+achievement(
+    title = "To Infinity and Beyond",
+    description = "Reach 300m altitude with the Jetpack",
+    points = 3,
+    trigger = jetpack_time_ms() > 0 &&
+              player_above_ground() > 300.0 &&
+              times_cheated() > 0
 )
 
 // =============================================================================
@@ -657,6 +719,31 @@ achievement(
               never(player_wasted())
 )
 
+// TODO: This triggers on any kill from vehicle, not specifically a drive-by shooting
+// Need "is shooting from vehicle" detection for proper drive-by verification
+achievement(
+    title = "IWANNADRIVEBY",
+    description = "Get 25 drive-by kills with Full Weapon Aiming in Vehicles",
+    points = 2,
+    trigger = trigger_when(measured(tally(25,
+                  kill_increased() &&
+                  in_vehicle() &&
+                  cheat_active(CHEAT_FREE_AIM)
+              )))
+)
+
+// TODO: CHEAT_INVINCIBLE_CAR address needs verification
+achievement(
+    title = "TOUCHMYCARYOUDIE",
+    description = "Destroy 100 vehicles by ramming with CJ's Car is Invincible active",
+    points = 3,
+    trigger = trigger_when(measured(tally(100,
+                  prev(dword(VehiclesDestroyed)) < dword(VehiclesDestroyed) &&
+                  in_vehicle() &&
+                  cheat_active(CHEAT_INVINCIBLE_CAR)
+              )))
+)
+
 // =============================================================================
 // ACHIEVEMENTS - TIME/WEATHER
 // =============================================================================
@@ -703,50 +790,98 @@ achievement(
 // ACHIEVEMENTS - STAT CHEATS
 // =============================================================================
 
+// TODO: Need decetion for number of recruited homies
 achievement(
     title = "WORSHIPME",
-    description = "Activate Maximum Respect cheat",
-    points = 1,
-    trigger = cheat_just_activated(CHEAT_MAX_RESPECT)
+    description = "Recruit 7 homies with Maximum Respect active",
+    points = 2,
+    trigger = cheat_active(CHEAT_MAX_RESPECT)
+              // TODO: Add && recruited_homies >= 7 when address found
 )
 
+// TODO: Need girlfriend interaction/date detection
 achievement(
     title = "HELLOLADIES",
-    description = "Activate Maximum Sex Appeal cheat",
+    description = "Go on a date with Maximum Sex Appeal active",
+    points = 2,
+    trigger = cheat_active(CHEAT_MAX_SEX_APPEAL)
+              // TODO: Add && on_date() when address found
+)
+
+// (Almost) Infinite Health - can still die from explosions, drowning, falling
+achievement(
+    title = "ONECANHURTME",
+    description = "Get killed while (Almost) Infinite Health is active",
     points = 1,
-    trigger = cheat_just_activated(CHEAT_MAX_SEX_APPEAL)
+    trigger = cheat_active(CHEAT_INFINITE_HEALTH) &&
+              player_wasted()
+)
+
+// =============================================================================
+// ACHIEVEMENTS - GANG CHEATS
+// =============================================================================
+
+// TODO: Need detection of gang members killed specifically instead of general kills
+achievement(
+    title = "MROEMZH",
+    description = "Kill 20 gang members while Gang Spawn Faster is active",
+    points = 2,
+    trigger = trigger_when(measured(tally(20,
+                  kill_increased() &&
+                  cheat_active(CHEAT_GANG_MODE)
+              )))
+)
+
+// TODO: Need gang territory ownership change detection
+achievement(
+    title = "ONLYHOMIESALLOWED",
+    description = "Win a gang war with Gang Wars Break Out active",
+    points = 2,
+    trigger = cheat_active(CHEAT_GANG_WARS)
+              // TODO: Add && gang_war_won() when address found
 )
 
 achievement(
-    title = "AEDUWNV",
-    description = "Activate Never Get Hungry cheat",
-    points = 1,
-    trigger = cheat_just_activated(CHEAT_NEVER_HUNGRY)
-)
-
-achievement(
-    title = "CVWKXAM",
-    description = "Activate Infinite Lung Capacity cheat",
-    points = 1,
-    trigger = cheat_just_activated(CHEAT_INFINITE_LUNG)
+    title = "BETTERSTAYINDOORS",
+    description = "Survive 3 minutes with No Citizens Only Gang Gunfights active",
+    points = 2,
+    trigger = once(cheat_just_activated(CHEAT_GANGS_ONLY)) &&
+              trigger_when(measured(repeated(minutes_to_frames(3),
+                  cheat_active(CHEAT_GANGS_ONLY) &&
+                  not_paused() &&
+                  !player_wasted()
+              ))) &&
+              never(player_wasted())
 )
 
 // =============================================================================
 // ACHIEVEMENTS - RECRUIT CHEATS
 // =============================================================================
 
+// TODO: Implementation missing
 achievement(
-    title = "SJMAHPE",
-    description = "Activate Recruit Anyone (Pistol) cheat",
+    title = "Pistol Packin' Civilians",
+    description = "Recruit 7 pedestrians with pistols and start a gang war",
+    points = 1,
+    trigger = cheat_just_activated(CHEAT_RECRUIT_PISTOL)
+)
+
+// TODO: Implementation missing
+achievement(
+    title = "WANNABEINMYGANG",
+    description = "Recruit 7 enemy gang members and start a gang war",
     points = 1,
     trigger = cheat_just_activated(CHEAT_RECRUIT_PISTOL)
 )
 
 achievement(
-    title = "ZSOXFSQ",
-    description = "Activate Recruit Anyone (Rocket Launcher) cheat",
-    points = 1,
-    trigger = cheat_just_activated(CHEAT_RECRUIT_ROCKET)
+    title = "ROCKETMAYHEM",
+    description = "Cause 15 vehicle explosions with Rocket Launcher recruits",
+    points = 2,
+    trigger = trigger_when(measured(tally(15,
+                  prev(dword(VehiclesDestroyed)) < dword(VehiclesDestroyed) &&
+                  cheat_active(CHEAT_RECRUIT_ROCKET)
+              )))
 )
 
 // TODO: Need "last damage source" or "killed by explosion" address to verify rocket kill
@@ -846,6 +981,16 @@ achievement(
 // =============================================================================
 // ACHIEVEMENTS - SPECIAL COMBOS
 // =============================================================================
+
+achievement(
+    title = "GHOSTTOWN",
+    description = "Enter 5 vehicles with No Pedestrians / Reduced Traffic active",
+    points = 1,
+    trigger = trigger_when(measured(tally(5,
+                  just_entered_vehicle() &&
+                  cheat_active(CHEAT_REDUCED_TRAFFIC)
+              )))
+)
 
 achievement(
     title = "Pink Flying Circus",
@@ -1100,7 +1245,7 @@ rich_presence_display(
 // Nitro Active/Uses Counter - for SPEEDFREAK
 //
 // MEDIUM PRIORITY:
-// Weapon spawn cheat flags (LXGIWYL, PROFESSIONALSKIT, UZUMYMW)
+// Weapon spawn cheat flags (THUGSARMOURY, PROFESSIONALSKIT, NUTTERSTOYS)
 // Vehicle spawn cheat flags/detection (Rhino, Hydra, Hunter, Jetpack spawn)
 // Weather cheat flags (Foggy, Stormy, Sunny, Very Sunny, Sandstorm)
 // Body stat cheat flags (Max Muscle, Max Fat, Min Muscle/Fat)
@@ -1118,32 +1263,26 @@ rich_presence_display(
 // TODO - ADDITIONAL ACHIEVEMENT IDEAS
 // =============================================================================
 //
-// PLAYER CHEATS:
+// PLAYER CHEATS (need body stat/location detection):
 // - GOODBYECRUELWORLD: Commit suicide using the cheat while on parachute
-// - PROFESSIONALKILLER: Activate Hitman Level For All Weapons and get a kill with each weapon class
-// - WHOATEALLTHEPIES: Activate Maximum Fat
-// - BUFFMEUP: Activate the Maximum Muscle cheat while inside the gym
+// - PROFESSIONALKILLER: Get a kill with each weapon class after activating Hitman Level
+// - WHOATEALLTHEPIES: Enter a restaurant after activating Maximum Fat
+// - BUFFMEUP: Activate Maximum Muscle while inside the gym
 // - ICANGOALLNIGHT: Activate Maximum Stamina and fall off the treadmill in the gym
 // - Speedrun Diet: Go from maximum fat to minimum using cheats in under 5 seconds
 // - Skeleton Mode: Activate Minimum Muscle and Fat cheat and have one of your homies take a picture of you
-// - NATURALTALENT: Activate Maximum Vehicle Skills and flip over your vehicle
-// - ONECANHURTME: Get CJ killed while having the (Almost) Infinite Health cheat active
-// Jetpack:
+// - NATURALTALENT: Flip your vehicle after activating Maximum Vehicle Skills
 // - ROCKETMAN: Fly from Los Santos to Las Venturas using only the Jetpack
-// - To Infinity and Beyond: Reach maximum altitude with the Jetpack
-// Parachute:
-// - LETSGOBASEJUMPING: Spawn a Parachute and use it to land on the Maze Bank Tower
-// - Skyfall Survivor: Jump from an aircraft without a parachute, activate the Spawn Parachute cheat mid-air and deploy the parachute
+// - LETSGOBASEJUMPING: Spawn a Parachute and land on Maze Bank Tower
+// - Skyfall Survivor: Deploy a spawned Parachute mid-air after jumping without one
 //
-// WEAPON SPAWN CHEATS (need cheat detection + weapon tracking):
-// - THUGSARMOURY: Get 10 kills with the Molotov Cocktail within 20 seconds of activating the Weapons 1 cheat
-// - PROFESSIONALSKIT: Get a kill with the Fire Extinguisher within 10 seconds of activating the Weapons 2 cheat
-// - NUTTERSTOYS: Get a kill with the Chainsaw within 10 seconds of activating the Weapons 3 cheat
-// - UZUMYMW: Blow yourself up with the Bazooka within 5 seconds of activating the Weapons 3 cheat
+// WEAPON SPAWN CHEATS (need weapon spawn cheat flags):
+// - THUGSARMOURY: Get 10 Molotov kills within 20 seconds of activating Weapons 1 cheat
+// - PROFESSIONALSKIT: Get a Fire Extinguisher kill within 10 seconds of activating Weapons 2
+// - NUTTERSTOYS: Get a Chainsaw kill within 10 seconds of activating Weapons 3 cheat
+// - UZUMYMW: Blow yourself up with Bazooka within 5 seconds of activating Weapons 3
 //
 // VEHICLE CHEATS:
-// - IWANNADRIVEBY: Activate Full Weapon Aiming in Vehicles and get 10 drive-by kills
-// - TOUCHMYCARYOUDIE: Activate CJ's Car is Invincible and destroy 100 vehicles by ramming
 // - Improved Suspension: (TODO: How is this cheat different from "Perfect Handling"?)
 // - Taxi Missions Completed: (TODO: Why is this cheat code same as "Maximum Stamina"?)
 //
@@ -1196,21 +1335,6 @@ rich_presence_display(
 //
 // THEMES / PEDESTRIAN BEHAVIOR:
 // - BGKGTJH: Activate Junk Cars Traffic and (TODO)
-// - Prostitutes Pay CJ: Activate Prostitutes Pay CJ and earn $1000 from prostitutes
-// - GHOSTTOWN: Activate No Pedestrians / Reduced Traffic and find a vehicle
-// - The King Lives!: Take a photo of an Elvis pedestrian
-// - STOPPICKINGONME: Activate Pedestrians Attack CJ and (TODO)
-// - ATTACKOFTHEVILLAGEPEOPLE: Activate Pedestrians Attack CJ (With Guns) and (TODO)
-// - SURROUNDEDBYNUTTERS: Activate Pedestrians Have Weapons and (TODO)
-// - EVERYONEISRICH: Activate Sports Cars Traffic and steal 10 sports cars
-//
-// GANG CHEATS:
-// - MROEMZH: Activate Gang Members Spawn Faster and (TODO)
-// - ONLYHOMIESALLOWED: Activate Gang Wars Break Out and (TODO)
-// - BETTERSTAYINDOORS: Activate No Citizens Only Gang Gunfights and (TODO)
-// - Pistol Packin' Civilians: Recruit 7 pedestrians with pistols and start a gang war
-// - WANNABEINMYGANG: Recruit 7 enemy gang members and start a gang war
-// - ROCKETMAYHEM: Destroy a tank using only your rocket-launcher-wielding recruited civilians
 //
 // WEATHER CHEATS (need weather cheat flags):
 // - DULLDULLDAY: Activate Cloudy Weather and (TODO)
@@ -1221,9 +1345,9 @@ rich_presence_display(
 // - STAYINANDWATCHTV: Activate Rainy Weather and (TODO) (TODO: Cheat doesn't work, code is overridden by "Foggy Weather")
 // - SCOTTISHSUMMER: Activate Stormy Weather and (TODO)
 // - PLEASANTLYWARM: Activate Sunny Weather and (TODO)
-// - TOODAMNHOT: Activate Very Sunny Weather while on the beach and wearing only boxers
+// - TOODAMNHOT: Activate Very Sunny Weather on beach wearing only boxers
 //
-// WANTED LEVEL CHEATS:
+// WANTED LEVEL CHEATS (need location detection):
 // - TURNUPTHEHEAT: Use the Wanted Level Up cheat while inside a Police Station
 // - Too Hot To Handle: Use the Wanted Level Down cheat 20 times in a single session
 //

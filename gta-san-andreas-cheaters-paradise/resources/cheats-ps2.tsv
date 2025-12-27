@@ -38,6 +38,9 @@ Improved Suspension	SQUARE, SQUARE, R2, LEFT, UP, SQUARE, R2, X, X, X
 Perfect Handling	TRIANGLE, R1, R1, LEFT, R1, L1, R2, L1
 Full Weapon Aiming in Vehicles	UP, UP, SQUARE, L2, RIGHT, X, R1, DOWN, R2, CIRCLE
 Super Bunny Hop (100ft Jump)	TRIANGLE, SQUARE, CIRCLE, CIRCLE, SQUARE, CIRCLE, CIRCLE, L1, L2, L2, R1, R2
+Taxi Missions Completed	UP, X, TRIANGLE, X, TRIANGLE, X, SQUARE, R2, RIGHT	# Cheat code same as "Maximum Stamina"
+CJ's Car Invincible (Destroy on Touch)	L1, L2, L2, UP, DOWN, DOWN, UP, R1, R2, R2
+#	VEHICLE SPAWN CHEATS
 Spawn Bloodring Banger	DOWN, R1, CIRCLE, L2, L2, X, R1, L1, LEFT, LEFT
 Spawn Caddy	CIRCLE, L1, UP, R1, L2, X, R1, L1, CIRCLE, X
 Spawn Dozer	R2, L1, L1, RIGHT, RIGHT, UP, UP, X, L1, LEFT
@@ -55,8 +58,6 @@ Spawn Stunt Plane	CIRCLE, UP, L1, L2, DOWN, R1, L1, L1, LEFT, LEFT, X, TRIANGLE
 Spawn Tanker Truck	R1, UP, LEFT, RIGHT, R2, UP, RIGHT, SQUARE, RIGHT, L2, L1, L1
 Spawn Trashmaster	CIRCLE, R1, CIRCLE, R1, LEFT, LEFT, R1, L1, CIRCLE, RIGHT
 Spawn Vortex	TRIANGLE, TRIANGLE, SQUARE, CIRCLE, X, L1, L2, DOWN, DOWN
-Taxi Missions Completed	UP, X, TRIANGLE, X, TRIANGLE, X, SQUARE, R2, RIGHT	# Cheat code same as "Maximum Stamina"
-CJ's Car Invincible (Destroy on Touch)	L1, L2, L2, UP, DOWN, DOWN, UP, R1, R2, R2
 #	THEMES / PEDESTRIAN BEHAVIOR
 Aggressive Drivers	RIGHT, R2, UP, UP, R2, CIRCLE, SQUARE, R2, L1, RIGHT, DOWN, L1	# Cheat effect same as "Aggressive Traffic"
 Aggressive Traffic	R2, CIRCLE, R1, L2, LEFT, R1, L1, R2, L2	# Cheat effect same as "Aggressive Drivers"

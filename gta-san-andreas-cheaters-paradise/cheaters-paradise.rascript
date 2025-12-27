@@ -727,6 +727,27 @@ achievement(
               player_above_ground() > 50.0
 )
 
+// --- Taxi Missions Completed ---
+// TODO: Add achievements
+
+// --- CJ's Car Invincible (Destroy on Touch) ---
+
+// TODO: CHEAT_INVINCIBLE_CAR address needs verification
+achievement(
+    title = "TOUCHMYCARYOUDIE",
+    description = "Destroy 100 vehicles by ramming with CJ's Car is Invincible active",
+    points = 3,
+    trigger = trigger_when(measured(tally(100,
+                  prev(dword(VehiclesDestroyed)) < dword(VehiclesDestroyed) &&
+                  in_vehicle() &&
+                  cheat_active(CHEAT_INVINCIBLE_CAR)
+              )))
+)
+
+// =============================================================================
+// ACHIEVEMENTS - VEHICLE SPAWN CHEATS
+// =============================================================================
+
 // --- Spawn Bloodring Banger ---
 // TODO: Add achievements
 // - OLDSPEEDDEMON: Destroy your spawned Bloodring Banger within 5 seconds
@@ -807,23 +828,6 @@ achievement(
 // TODO: Add achievements
 // - IWANTTOHOVER: Take a spawned Vortex from land to water to land again in one continuous journey
 // - Hover Lord: Fly a Vortex from the top of the Maze Bank Tower to (TODO: Place to land Vortex)
-
-// --- Taxi Missions Completed ---
-// TODO: Add achievements
-
-// --- CJ's Car Invincible (Destroy on Touch) ---
-
-// TODO: CHEAT_INVINCIBLE_CAR address needs verification
-achievement(
-    title = "TOUCHMYCARYOUDIE",
-    description = "Destroy 100 vehicles by ramming with CJ's Car is Invincible active",
-    points = 3,
-    trigger = trigger_when(measured(tally(100,
-                  prev(dword(VehiclesDestroyed)) < dword(VehiclesDestroyed) &&
-                  in_vehicle() &&
-                  cheat_active(CHEAT_INVINCIBLE_CAR)
-              )))
-)
 
 // =============================================================================
 // ACHIEVEMENTS - THEMES / PEDESTRIAN BEHAVIOR

@@ -128,6 +128,12 @@ This subset celebrates GTA: San Andreas's legendary cheat code system. Instead o
 | 🟨🔴📈🔢 | IWANNADRIVEBY | Get 25 drive-by kills with Full Weapon Aiming in Vehicles | 2 |
 | | **Super Bunny Hop** | | |
 | 🟨🔴 | E.T. Phone Home | Activate Super Bunny Hop and jump over a building on a bike | 2 |
+| | **CJ's Car Invincible (Destroy on Touch)** | | |
+| 🟨🔴📈🔢 | TOUCHMYCARYOUDIE | Destroy 100 vehicles by ramming with CJ's Car is Invincible active | 3 |
+
+### 🚀 Vehicle spawn cheats
+| Status | Title | Description | Points |
+| --- | --- | --- | --- |
 | | **Spawn Bloodring Banger** | | |
 | 🟥🔴 | *(TODO)* | *(Achievements to be added)* | - |
 | | **Spawn Caddy** | | |
@@ -164,8 +170,6 @@ This subset celebrates GTA: San Andreas's legendary cheat code system. Instead o
 | 🟥🔴 | *(TODO)* | *(Achievements to be added)* | - |
 | | **Taxi Missions Completed** | | |
 | 🟥🔴 | *(TODO)* | *(Achievements to be added)* | - |
-| | **CJ's Car Invincible (Destroy on Touch)** | | |
-| 🟨🔴📈🔢 | TOUCHMYCARYOUDIE | Destroy 100 vehicles by ramming with CJ's Car is Invincible active | 3 |
 
 ### 🎭 Themes / Pedestrian behavior
 | Status | Title | Description | Points |

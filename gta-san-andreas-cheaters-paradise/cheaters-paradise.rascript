@@ -776,7 +776,7 @@ achievement(
 
 // --- Spawn Monster Truck ---
 // TODO: Add achievements
-// - MONSTERMASH: Crush 20 vehicles with a spawned Monster Truck
+// - MONSTERMASH: Run over 20 vehicles with a spawned Monster Truck
 
 // --- Spawn Quad ---
 // TODO: Add achievements
@@ -835,6 +835,7 @@ achievement(
 
 // --- Aggressive Drivers ---
 // TODO: Add achievements
+// - ALLDRIVERSARECRIMINALS: TODO
 
 // --- Aggressive Traffic ---
 
@@ -871,7 +872,7 @@ achievement(
 // --- Black Cars ---
 
 achievement(
-    title = "Murdered Out",
+    title = "SOLONGASITSBLACK",
     description = "Activate Black Cars cheat",
     points = 1,
     trigger = cheat_just_activated(CHEAT_BLACK_CARS)
@@ -904,7 +905,7 @@ achievement(
 // Activating too many times causes cars to spawn in midair
 achievement(
     title = "It's Raining Cars",
-    description = "Activate Moon Gravity (BUBBLECARS) 5 times in one session",
+    description = "Activate Moon Gravity 5 times in one session",
     points = 1,
     trigger = trigger_when(measured(tally(5, cheat_just_activated(CHEAT_MOON_GRAVITY))))
 )
@@ -955,7 +956,7 @@ achievement(
 // --- Invisible Cars ---
 
 achievement(
-    title = "Ghost Rider",
+    title = "WHEELSONLYPLEASE",
     description = "Drive for 10 minutes total with Invisible Cars active",
     points = 1,
     trigger = measured(repeated(minutes_to_frames(10),
@@ -966,7 +967,7 @@ achievement(
 )
 
 achievement(
-    title = "Invisible Chaos",
+    title = "Ghost Rider",
     description = "Drive an invisible car during Chaos Mode",
     points = 1,
     trigger = cheat_active(CHEAT_INVISIBLE_CARS) &&
@@ -1151,6 +1152,7 @@ achievement(
 
 // --- Rural Traffic ---
 // TODO: Add achievements
+// - EVERYONEISPOOR: TODO
 
 // --- Rural Theme ---
 
@@ -1181,7 +1183,7 @@ achievement(
 // --- Traffic Lights Stay Green ---
 
 achievement(
-    title = "ZEIIVG",
+    title = "DONTTRYANDSTOPME",
     description = "Activate Traffic Lights Stay Green",
     points = 1,
     trigger = cheat_just_activated(CHEAT_GREEN_LIGHTS)
@@ -1319,16 +1321,6 @@ achievement(
 
 // --- Slow Motion ---
 
-achievement(
-    title = "Bullet Time",
-    description = "Kill 10 enemies while Slow Motion is active",
-    points = 1,
-    trigger = trigger_when(measured(tally(10,
-                  kill_increased() &&
-                  cheat_active(CHEAT_SLOW_MOTION)
-              )))
-)
-
 // TODO: This triggers on any kill from vehicle, not specifically a drive-by shooting
 // Need "is shooting from vehicle" detection for proper drive-by verification
 achievement(
@@ -1338,6 +1330,16 @@ achievement(
     trigger = cheat_active(CHEAT_SLOW_MOTION) &&
               in_vehicle() &&
               kill_increased()
+)
+
+achievement(
+    title = "Bullet Time",
+    description = "Kill 10 enemies while Slow Motion is active",
+    points = 1,
+    trigger = trigger_when(measured(tally(10,
+                  kill_increased() &&
+                  cheat_active(CHEAT_SLOW_MOTION)
+              )))
 )
 
 // --- Faster Clock ---
@@ -1378,7 +1380,7 @@ achievement(
 
 // --- Very Sunny Weather ---
 // TODO: Add achievements
-// - TOODAMNHOT: Activate Very Sunny Weather on beach wearing only boxers
+// - TOODAMNHOT: Activate Very Sunny Weather on the beach wearing only boxers
 
 // =============================================================================
 // ACHIEVEMENTS - META / CHEAT TRACKING
@@ -1575,7 +1577,7 @@ rich_presence_display(
 // - Top Gun: Destroy 10 police helicopters with a spawned Hydra
 // - Kamikaze: Crash a spawned Hydra into a police boat
 // Monster Truck:
-// - MONSTERMASH: Crush 20 vehicles with a spawned Monster Truck
+// - MONSTERMASH: Run over 20 vehicles with a spawned Monster Truck
 // Quad:
 // - FOURWHEELFUN: Perform a stoppie front flip on a spawned Quad
 // Hotring Racer:

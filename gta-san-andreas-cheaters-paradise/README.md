@@ -52,41 +52,45 @@ This subset celebrates GTA: San Andreas's legendary cheat code system. Instead o
 | 🟨🔴 | KANGAROO | Activate Mega Jump and reach a height of 100+ meters | 1 |
 | 🟨🔴 | Leap of Faith | Fall from 100+ meters with Mega Jump active and survive | 1 |
 | | **Commit Suicide** | | |
-| 🟥🔴 | *(TODO)* | *(Achievements to be added)* | - |
+| 🟥🔴 | GOODBYECRUELWORLD | Commit suicide using the cheat while on parachute | - |
 | | **Hitman Level For All Weapons** | | |
-| 🟥🔴 | *(TODO)* | *(Achievements to be added)* | - |
+| 🟥🔴 | PROFESSIONALKILLER | Get a kill with each weapon class after activating Hitman Level | - |
 | | **Lock Wanted Level** | | |
 | 🟧🔴⚠️ | AEZAKMI | Complete a mission while the Lock Wanted Level cheat is active with 6-star wanted level | 2 |
 | | **Wanted Level Up (+2 Stars)** | | |
-| 🟥🔴 | *(TODO)* | *(Achievements to be added)* | - |
+| 🟥🔴 | TURNUPTHEHEAT | Use the Wanted Level Up cheat while inside a Police Station | - |
 | | **Remove Wanted Level** | | |
 | 🟨🔴 | TURNDOWNTHEHEAT | Escape a 6-star wanted level by using cheats | 1 |
+| 🟥🔴 | Too Hot To Handle | Use the Wanted Level Down cheat 20 times in a single session | - |
 | | **Maximum Wanted Level** | | |
 | 🟨🔴📈⏱️ | BRINGITON | Destroy 10 military vehicles during Maximum Wanted Level | 2 |
 | | **Maximum Fat** | | |
-| 🟥🔴 | *(TODO)* | *(Achievements to be added)* | - |
+| 🟥🔴 | WHOATEALLTHEPIES | Enter a restaurant after activating Maximum Fat | - |
 | | **Infinite Lung Capacity** | | |
 | 🟧🔴📈⏱️ | Deep Diver | Stay underwater for 3 minutes using Infinite Lung Capacity | 2 |
 | 🟨🔴📈⏱️ | Submarine Mode | Drive underwater for 30 seconds with Infinite Lung Capacity active | 1 |
 | | **Maximum Muscle** | | |
-| 🟥🔴 | *(TODO)* | *(Achievements to be added)* | - |
+| 🟥🔴 | BUFFMEUP | Activate Maximum Muscle while inside the gym | - |
 | | **Maximum Respect** | | |
 | 🟨🔴 | WORSHIPME | Recruit 7 homies with Maximum Respect active | 2 |
 | | **Maximum Sex Appeal** | | |
 | 🟨🔴 | HELLOLADIES | Go on a date with Maximum Sex Appeal active | 2 |
 | | **Maximum Stamina** | | |
-| 🟥🔴 | *(TODO)* | *(Achievements to be added)* | - |
+| 🟥🔴 | ICANGOALLNIGHT | Activate Maximum Stamina and fall off the treadmill in the gym | - |
 | | **Maximum Vehicle Skills** | | |
-| 🟥🔴 | *(TODO)* | *(Achievements to be added)* | - |
+| 🟥🔴 | NATURALTALENT | Flip your vehicle after activating Maximum Vehicle Skills | - |
 | | **Minimum Muscle and Fat** | | |
-| 🟥🔴 | *(TODO)* | *(Achievements to be added)* | - |
+| 🟥🔴 | Speedrun Diet | Go from maximum fat to minimum using cheats in under 5 seconds | - |
+| 🟥🔴 | Skeleton Mode | Have one of your homies take a picture of you with Minimum Muscle and Fat | - |
 | | **Never Get Hungry** | | |
 | 🟨🔴 | Ironic Appetite | Eat until you vomit while Never Get Hungry is active | 2 |
 | | **Spawn Jetpack** | | |
+| 🟥🔴 | ROCKETMAN | Fly from Los Santos to Las Venturas using only the Jetpack | - |
 | 🟨🔴 | To Infinity and Beyond | Reach 300m altitude with the Jetpack | 3 |
 | 🟨🔴 | Jetpack Addict | Spend 30 minutes on the Jetpack with cheats active | 2 |
 | | **Spawn Parachute** | | |
-| 🟥🔴 | *(TODO)* | *(Achievements to be added)* | - |
+| 🟥🔴 | LETSGOBASEJUMPING | Spawn a Parachute and land on Maze Bank Tower | - |
+| 🟥🔴 | Skyfall Survivor | Deploy a spawned Parachute mid-air after jumping without one | - |
 | | **Super Punch** | | |
 | 🟨🔴📈🔢 | STINGLIKEABEE | Kill 50 pedestrians with Super Punch | 2 |
 | 🟨🔴 | Glass Jaw | Get killed by a pedestrian while Super Punch is active | 1 |
@@ -99,11 +103,12 @@ This subset celebrates GTA: San Andreas's legendary cheat code system. Instead o
 | 🟨🔴 | ONECANHURTME | Get killed while (Almost) Infinite Health is active | 1 |
 | 🟨🔴📈⏱️ | Untouchable | Survive 5 minutes with Infinite Health and 6-star wanted level | 1 |
 | | **Weapons 1** | | |
-| 🟥🔴 | *(TODO)* | *(Achievements to be added)* | - |
+| 🟥🔴 | THUGSARMOURY | Get 10 Molotov kills within 20 seconds of activating Weapons 1 cheat | - |
 | | **Weapons 2** | | |
-| 🟥🔴 | *(TODO)* | *(Achievements to be added)* | - |
+| 🟥🔴 | PROFESSIONALSKIT | Get a Fire Extinguisher kill within 10 seconds of activating Weapons 2 | - |
 | | **Weapons 3** | | |
-| 🟥🔴 | *(TODO)* | *(Achievements to be added)* | - |
+| 🟥🔴 | NUTTERSTOYS | Get a Chainsaw kill within 10 seconds of activating Weapons 3 cheat | - |
+| 🟥🔴 | UZUMYMW | Blow yourself up with Bazooka within 5 seconds of activating Weapons 3 | - |
 
 ### 🚗 Vehicle cheats
 | Status | Title | Description | Points |
@@ -135,39 +140,52 @@ This subset celebrates GTA: San Andreas's legendary cheat code system. Instead o
 | Status | Title | Description | Points |
 | --- | --- | --- | --- |
 | | **Spawn Bloodring Banger** | | |
-| 🟥🔴 | *(TODO)* | *(Achievements to be added)* | - |
+| 🟥🔴 | OLDSPEEDDEMON | Destroy your spawned Bloodring Banger within 5 seconds | - |
 | | **Spawn Caddy** | | |
-| 🟥🔴 | *(TODO)* | *(Achievements to be added)* | - |
+| 🟥🔴 | 18HOLES | Spawn a Caddy on the golf course | - |
+| 🟥🔴 | Hole in One | Drive a spawned Caddy into the ocean | - |
 | | **Spawn Dozer** | | |
-| 🟥🔴 | *(TODO)* | *(Achievements to be added)* | - |
+| 🟥🔴 | ITSALLBULL | Hit 50 vehicles with a spawned Dozer | - |
+| 🟥🔴 | Bob the Destroyer | Drive into oncoming traffic for 2 minutes using a spawned Dozer | - |
 | | **Spawn Hunter** | | |
-| 🟥🔴 | *(TODO)* | *(Achievements to be added)* | - |
+| 🟥🔴 | OHDUDE | Spawn a Hunter and crash it within 20 seconds | - |
+| 🟥🔴 | Apache Warfare | Complete a Vigilante mission using a spawned Hunter | - |
+| 🟥🔴 | Gatling Gunner | Get 50 kills with a spawned Hunter | - |
 | | **Spawn Hydra** | | |
-| 🟥🔴 | *(TODO)* | *(Achievements to be added)* | - |
+| 🟥🔴 | JUMPJET | Spawn a Hydra in the middle of Grove Street | - |
+| 🟥🔴 | Top Gun | Destroy 10 police helicopters with a spawned Hydra | - |
+| 🟥🔴 | Kamikaze | Crash a spawned Hydra into a police boat | - |
 | | **Spawn Monster Truck** | | |
-| 🟥🔴 | *(TODO)* | *(Achievements to be added)* | - |
+| 🟥🔴 | MONSTERMASH | Run over 20 vehicles with a spawned Monster Truck | - |
 | | **Spawn Quad** | | |
-| 🟥🔴 | *(TODO)* | *(Achievements to be added)* | - |
+| 🟥🔴 | FOURWHEELFUN | Perform a stoppie front flip on a spawned Quad | - |
 | | **Spawn Hotring Racer #1** | | |
-| 🟥🔴 | *(TODO)* | *(Achievements to be added)* | - |
+| 🟥🔴 | NOTFORPUBLICROADS | Flip your spawned Hotring Racer within 20 seconds | - |
 | | **Spawn Hotring Racer #2** | | |
-| 🟥🔴 | *(TODO)* | *(Achievements to be added)* | - |
+| 🟥🔴 | JUSTTRYANDSTOPME | *(Achievements to be added)* | - |
 | | **Spawn Rancher** | | |
-| 🟥🔴 | *(TODO)* | *(Achievements to be added)* | - |
+| 🟥🔴 | DOUGHNUTHANDICAP | Get a longest 2 wheels time of 3 seconds with a spawned Rancher | - |
 | | **Spawn Rhino** | | |
-| 🟥🔴 | *(TODO)* | *(Achievements to be added)* | - |
+| 🟥🔴 | TIMETOKICKASS | Destroy 100 vehicles with a spawned Rhino Tank | - |
+| 🟥🔴 | Tank You Very Much | Spawn a Rhino Tank inside a Pay 'N' Spray | - |
 | | **Spawn Romero** | | |
-| 🟥🔴 | *(TODO)* | *(Achievements to be added)* | - |
+| 🟥🔴 | WHERESTHEFUNERAL | Drive a spawned Romero to the cemetery | - |
+| 🟥🔴 | Death Delivery | Run over 10 pedestrians with a spawned Romero | - |
 | | **Spawn Stretch Limo** | | |
-| 🟥🔴 | *(TODO)* | *(Achievements to be added)* | - |
+| 🟥🔴 | CELEBRITYSTATUS | Pick up a girlfriend in a spawned Stretch limousine | - |
+| 🟥🔴 | Celebrity Status Achieved | Drive a spawned Stretch into a Pay 'N' Spray with 5+ stars | - |
 | | **Spawn Stunt Plane** | | |
-| 🟥🔴 | *(TODO)* | *(Achievements to be added)* | - |
+| 🟥🔴 | FLYINGTOSTUNT | Fly under the Gant Bridge with a spawned Stunt Plane | - |
+| 🟥🔴 | Stunt Coordinator | Perform 10 barrel rolls with a spawned Stunt Plane in one flight | - |
 | | **Spawn Tanker Truck** | | |
-| 🟥🔴 | *(TODO)* | *(Achievements to be added)* | - |
+| 🟥🔴 | HITTHEROADJACK | Do a stunt jump with a spawned Tanker | - |
+| 🟥🔴 | Hazmat Havoc | Drive a spawned Tanker into a gas station | - |
 | | **Spawn Trashmaster** | | |
-| 🟥🔴 | *(TODO)* | *(Achievements to be added)* | - |
+| 🟥🔴 | TRUEGRIME | Run over 25 pedestrians with a spawned Trashmaster | - |
+| 🟥🔴 | Garbage Day | Run over 25 pedestrians with a spawned Trashmaster | - |
 | | **Spawn Vortex** | | |
-| 🟥🔴 | *(TODO)* | *(Achievements to be added)* | - |
+| 🟥🔴 | IWANTTOHOVER | Take a spawned Vortex from land to water to land again in one continuous journey | - |
+| 🟥🔴 | Hover Lord | Fly a Vortex from the top of the Maze Bank Tower to *(TODO: Place to land Vortex)* | - |
 | | **Taxi Missions Completed** | | |
 | 🟥🔴 | *(TODO)* | *(Achievements to be added)* | - |
 
@@ -175,28 +193,28 @@ This subset celebrates GTA: San Andreas's legendary cheat code system. Instead o
 | Status | Title | Description | Points |
 | --- | --- | --- | --- |
 | | **Aggressive Drivers** | | |
-| 🟥🔴 | *(TODO)* | *(Achievements to be added)* | - |
+| 🟥🔴 | ALLDRIVERSARECRIMINALS | *(Achievements to be added)* | - |
 | | **Aggressive Traffic** | | |
 | 🟨🔴📈⏱️ | YLTEICZ | Activate Aggressive Traffic and survive 5 minutes | 2 |
 | | **Beach Party Mode** | | |
 | 🟨🔴📈🔢 | LIFESABEACH | Kill 10 pedestrians on the beach during Beach Party Mode | 2 |
 | | **Junk Cars Traffic** | | |
-| 🟥🔴 | *(TODO)* | *(Achievements to be added)* | - |
+| 🟥🔴 | BGKGTJH | *(Achievements to be added)* | - |
 | | **Black Cars** | | |
-| 🟨🔴 | Murdered Out | Activate Black Cars cheat | 1 |
+| 🟨🔴 | SOLONGASITSBLACK | Activate Black Cars cheat | 1 |
 | | **Funhouse Theme** | | |
 | 🟨🔴📈🔢 | Clown Fiesta | Cause 10 explosions with Funhouse Theme active | 2 |
 | | **Moon Car Gravity** | | |
 | 🟨🔴 | BUBBLECARS | Activate Moon Gravity and send a car flying | 1 |
-| 🟨🔴📈🔢 | It's Raining Cars | Activate Moon Gravity (BUBBLECARS) 5 times in one session | 1 |
+| 🟨🔴📈🔢 | It's Raining Cars | Activate Moon Gravity 5 times in one session | 1 |
 | | **Pedestrian Riot** | | |
 | 🟨🔴📈⏱️ | State of Emergency | Survive for 5 minutes during a Pedestrian Riot | 1 |
 | | **Blow Up All Cars** | | |
 | 🟨🔴 | ALLCARSGOBOOM | Survive the Explode All Cars cheat while driving a car | 2 |
 | 🟨🔴📈🔢⏱️ | Michael Bay Simulator | Cause 15 vehicle explosions in 1 minute with Explode All Cars cheat | 3 |
 | | **Invisible Cars** | | |
-| 🟨🔴📈⏱️ | Ghost Rider | Drive for 10 minutes total with Invisible Cars active | 1 |
-| 🟨🔴 | Invisible Chaos | Drive an invisible car during Chaos Mode | 1 |
+| 🟨🔴📈⏱️ | WHEELSONLYPLEASE | Drive for 10 minutes total with Invisible Cars active | 1 |
+| 🟨🔴 | Ghost Rider | Drive an invisible car during Chaos Mode | 1 |
 | | **Kinky Theme** | | |
 | 🟨🔴 | 50 Shades of San Andreas | Earn $1000 from prostitutes with Kinky Theme active | 2 |
 | | **Prostitutes Pay CJ** | | |
@@ -221,13 +239,13 @@ This subset celebrates GTA: San Andreas's legendary cheat code system. Instead o
 | 🟨🔴 | Fabulous | Activate Pink Cars cheat | 1 |
 | 🟨🔴 | Pink Flying Circus | Fly a pink car with both Flying Cars and Pink Cars cheats active | 1 |
 | | **Rural Traffic** | | |
-| 🟥🔴 | *(TODO)* | *(Achievements to be added)* | - |
+| 🟥🔴 | EVERYONEISPOOR | *(Achievements to be added)* | - |
 | | **Rural Theme** | | |
 | 🟨🔴📈⏱️ | Country Roads | Drive for 10 minutes with Rural Theme active | 1 |
 | | **Sports Cars Traffic** | | |
 | 🟨🔴📈🔢 | EVERYONEISRICH | Steal 10 sports cars with Sports Cars Traffic active | 2 |
 | | **Traffic Lights Stay Green** | | |
-| 🟨🔴 | ZEIIVG | Activate Traffic Lights Stay Green | 1 |
+| 🟨🔴 | DONTTRYANDSTOPME | Activate Traffic Lights Stay Green | 1 |
 | | **Triad Theme** | | |
 | 🟨🔴📈🔢 | Ninja CJ | Get 15 katana kills with Triad Theme active | 2 |
 
@@ -255,28 +273,28 @@ This subset celebrates GTA: San Andreas's legendary cheat code system. Instead o
 | | **Always 21:00** | | |
 | 🟨🔴 | DONTBRINGONTHENIGHT | Activate Always 21:00 (eternal dusk) | 1 |
 | | **Cloudy Weather** | | |
-| 🟥🔴 | *(TODO)* | *(Achievements to be added)* | - |
+| 🟥🔴 | DULLDULLDAY | *(Achievements to be added)* | - |
 | | **Fast Motion** | | |
-| 🟥🔴 | *(TODO)* | *(Achievements to be added)* | - |
+| 🟥🔴 | SPEEDITUP | *(Achievements to be added)* | - |
 | | **Slow Motion** | | |
-| 🟨🔴📈🔢 | Bullet Time | Kill 10 enemies while Slow Motion is active | 1 |
 | 🟨🔴 | SLOWITDOWN | Complete a drive-by while Slow Motion is active | 1 |
+| 🟨🔴📈🔢 | Bullet Time | Kill 10 enemies while Slow Motion is active | 1 |
 | | **Faster Clock** | | |
 | 🟨🔴📈🔢 | YSOHNUL | Watch the sun set 3 times with Faster Clock active | 1 |
 | | **Foggy Weather** | | |
-| 🟥🔴 | *(TODO)* | *(Achievements to be added)* | - |
+| 🟥🔴 | CANTSEEWHEREIMGOING | *(Achievements to be added)* | - |
 | | **Overcast Weather** | | |
-| 🟥🔴 | *(TODO)* | *(Achievements to be added)* | - |
+| 🟥🔴 | ALNSFMZO | *(Achievements to be added)* | - |
 | | **Sandstorm** | | |
-| 🟥🔴 | *(TODO)* | *(Achievements to be added)* | - |
+| 🟥🔴 | Darude | Drive through the Sandstorm for 3 minutes and 52 seconds without damaging your vehicle | - |
 | | **Rainy Weather** | | |
-| 🟥🔴 | *(TODO)* | *(Achievements to be added)* | - |
+| 🟥🔴 | STAYINANDWATCHTV| *(Achievements to be added)* | - |
 | | **Stormy Weather** | | |
-| 🟥🔴 | *(TODO)* | *(Achievements to be added)* | - |
+| 🟥🔴 | SCOTTISHSUMMER | *(Achievements to be added)* | - |
 | | **Sunny Weather** | | |
-| 🟥🔴 | *(TODO)* | *(Achievements to be added)* | - |
+| 🟥🔴 | PLEASANTLYWARM | *(Achievements to be added)* | - |
 | | **Very Sunny Weather** | | |
-| 🟥🔴 | *(TODO)* | *(Achievements to be added)* | - |
+| 🟥🔴 | TOODAMNHOT | Activate Very Sunny Weather on the beach wearing only boxers | - |
 
 ### 🎮 Meta / Cheat tracking
 | Status | Title | Description | Points |

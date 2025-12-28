@@ -35,15 +35,15 @@
 111000033:"1=1SN:d0xX8022b8<0xX8022b8_I:0xX7095d0_N:0xX0005cc!=0_M:0xH88d733=1.100.ST:0=1":"TOUCHMYCARYOUDIE":"Destroy 100 vehicles by ramming with CJ's Car is Invincible active": : ::Author:3:0:0:0:0:0
 111000034:"N:d0xH88d71f=0_0xH88d71f=1.1._N:0xH88d71f=1_N:0xH6ffab0=0_I:0xX7095d0_M:0xH000568!=55.18000._I:0xX7095d0_R:0xH000568=55":"YLTEICZ":"Activate Aggressive Traffic and survive 5 minutes": : ::Author:2:0:0:0:0:0
 111000035:"1=1SN:d0xX8022b4<0xX8022b4_M:0xH88d729=1.10.ST:0=1":"LIFESABEACH":"Kill 10 pedestrians on the beach during Beach Party Mode": : ::Author:2:0:0:0:0:0
-111000036:"d0xH88d721=0_0xH88d721=1":"Murdered Out":"Activate Black Cars cheat": : ::Author:1:0:0:0:0:0
+111000036:"d0xH88d721=0_0xH88d721=1":"SOLONGASITSBLACK":"Activate Black Cars cheat": : ::Author:1:0:0:0:0:0
 111000037:"1=1SN:d0xX8022b8<0xX8022b8_M:0xH88d746=1.10.ST:0=1":"Clown Fiesta":"Cause 10 explosions with Funhouse Theme active": : ::Author:2:0:0:0:0:0
 111000038:"d0xH88d736=0_0xH88d736=1":"BUBBLECARS":"Activate Moon Gravity and send a car flying": : ::Author:1:0:0:0:0:0
-111000039:"1=1SN:d0xH88d736=0_M:0xH88d736=1.5.ST:0=1":"It's Raining Cars":"Activate Moon Gravity (BUBBLECARS) 5 times in one session": : ::Author:1:0:0:0:0:0
+111000039:"1=1SN:d0xH88d736=0_M:0xH88d736=1.5.ST:0=1":"It's Raining Cars":"Activate Moon Gravity 5 times in one session": : ::Author:1:0:0:0:0:0
 111000040:"N:d0xH88d70e=0_0xH88d70e=1.1._I:0xX7095d0_R:0xH000568=55SN:0xH88d70e=1_N:0xH6ffab0=0_I:0xX7095d0_M:0xH000568!=55.18000.ST:0=1":"State of Emergency":"Survive for 5 minutes during a Pedestrian Riot": : ::Author:1:0:0:0:0:0
 111000041:"I:0xX7095d0_0xX0005cc!=0_I:0xX7095d0_0xH000568!=55_d0xX8022f4<0xX8022f4_A:3_d0xX8022b8<=0xX8022b8":"ALLCARSGOBOOM":"Survive the Explode All Cars cheat while driving a car": : ::Author:2:0:0:0:0:0
 111000042:"N:d0xH88d734=0_0xH88d734=1.1._N:0xH88d734=1_R:0xH6ffab0=0.3600._R:0xH88d734!=1SN:0xH88d734=1_M:d0xX8022b8<0xX8022b8.15.ST:0=1":"Michael Bay Simulator":"Cause 15 vehicle explosions in 1 minute with Explode All Cars cheat": : ::Author:3:0:0:0:0:0
-111000043:"N:0xH88d71b=1_I:0xX7095d0_N:0xX0005cc!=0_M:0xH6ffab0=0.36000.":"Ghost Rider":"Drive for 10 minutes total with Invisible Cars active": : ::Author:1:0:0:0:0:0
-111000044:"0xH88d71b=1_0xH88d745=1_I:0xX7095d0_0xX0005cc!=0":"Invisible Chaos":"Drive an invisible car during Chaos Mode": : ::Author:1:0:0:0:0:0
+111000043:"N:0xH88d71b=1_I:0xX7095d0_N:0xX0005cc!=0_M:0xH6ffab0=0.36000.":"WHEELSONLYPLEASE":"Drive for 10 minutes total with Invisible Cars active": : ::Author:1:0:0:0:0:0
+111000044:"0xH88d71b=1_0xH88d745=1_I:0xX7095d0_0xX0005cc!=0":"Ghost Rider":"Drive an invisible car during Chaos Mode": : ::Author:1:0:0:0:0:0
 111000045:"0xH88d72d=1":"50 Shades of San Andreas":"Earn $1000 from prostitutes with Kinky Theme active": : ::Author:2:0:0:0:0:0
 111000046:"1=1SN:d0xX7096b4<0xX7096b4_M:0xH88d75a=1.2.ST:0=1":"Paid for Services":"Earn money 2 times with Prostitutes Pay CJ active": : ::Author:1:0:0:0:0:0
 111000047:"1=1SI:0xX7095d0_N:d0xX0005cc=0_I:0xX7095d0_N:0xX0005cc!=0_M:0xH88d74a=1.5.ST:0=1":"GHOSTTOWN":"Enter 5 vehicles with No Pedestrians / Reduced Traffic active": : ::Author:1:0:0:0:0:0
@@ -60,7 +60,7 @@
 111000058:"0xH88d730=1_0xH88d720=1_I:0xX7095d0_0xX0005cc!=0_I:0xX7095d0_I:0xX000014_fF000038>f30.0":"Pink Flying Circus":"Fly a pink car with both Flying Cars and Pink Cars cheats active": : ::Author:1:0:0:0:0:0
 111000059:"N:0xH88d74b=1_I:0xX7095d0_N:0xX0005cc!=0_M:0xH6ffab0=0.36000.":"Country Roads":"Drive for 10 minutes with Rural Theme active": : ::Author:1:0:0:0:0:0
 111000060:"1=1SI:0xX7095d0_N:d0xX0005cc=0_I:0xX7095d0_N:0xX0005cc!=0_M:0xH88d72f=1.10.ST:0=1":"EVERYONEISRICH":"Steal 10 sports cars with Sports Cars Traffic active": : ::Author:2:0:0:0:0:0
-111000061:"d0xH88d71e=0_0xH88d71e=1":"ZEIIVG":"Activate Traffic Lights Stay Green": : ::Author:1:0:0:0:0:0
+111000061:"d0xH88d71e=0_0xH88d71e=1":"DONTTRYANDSTOPME":"Activate Traffic Lights Stay Green": : ::Author:1:0:0:0:0:0
 111000062:"1=1SN:d0xX8022b4<0xX8022b4_N:0xH7095f4=2_I:0xX7095d0_N:0x 000618=339_M:0xH88d72c=1.15.ST:0=1":"Ninja CJ":"Get 15 katana kills with Triad Theme active": : ::Author:2:0:0:0:0:0
 111000063:"1=1SN:d0xX8022b4<0xX8022b4_M:0xH88d72a=1.20.ST:0=1":"MROEMZH":"Kill 20 gang members while Gang Spawn Faster is active": : ::Author:2:0:0:0:0:0
 111000064:"0xH88d72b=1":"ONLYHOMIESALLOWED":"Win a gang war with Gang Wars Break Out active": : ::Author:2:0:0:0:0:0
@@ -71,8 +71,8 @@
 111000069:"0xH88d74e=1_I:0xX7095d0_0xH000568=55":"Rocket Civilians":"Get killed by friendly fire from rocket-launcher recruits": : ::Author:3:0:0:0:0:0
 111000070:"N:0xH88d737=1_M:0xH6ffab0=0.108000.":"NIGHTPROWLER":"Play for 30 real minutes with Always Midnight active": : ::Author:2:0:0:0:0:0
 111000071:"d0xH88d738=0_0xH88d738=1":"DONTBRINGONTHENIGHT":"Activate Always 21:00 (eternal dusk)": : ::Author:1:0:0:0:0:0
-111000072:"1=1SN:d0xX8022b4<0xX8022b4_M:0xH88d747=1.10.ST:0=1":"Bullet Time":"Kill 10 enemies while Slow Motion is active": : ::Author:1:0:0:0:0:0
-111000073:"0xH88d747=1_I:0xX7095d0_0xX0005cc!=0_d0xX8022b4<0xX8022b4":"SLOWITDOWN":"Complete a drive-by while Slow Motion is active": : ::Author:1:0:0:0:0:0
+111000072:"0xH88d747=1_I:0xX7095d0_0xX0005cc!=0_d0xX8022b4<0xX8022b4":"SLOWITDOWN":"Complete a drive-by while Slow Motion is active": : ::Author:1:0:0:0:0:0
+111000073:"1=1SN:d0xX8022b4<0xX8022b4_M:0xH88d747=1.10.ST:0=1":"Bullet Time":"Kill 10 enemies while Slow Motion is active": : ::Author:1:0:0:0:0:0
 111000074:"1=1SN:d0xH66b7ac=19_N:0xH66b7ac=20_M:0xH88d70b=1.3.ST:0=1":"YSOHNUL":"Watch the sun set 3 times with Faster Clock active": : ::Author:1:0:0:0:0:0
 111000075:"M:d0xX8022f4<0xX8022f4.10.":"Casual Cheater":"Use cheats 10 times in a single playthrough": : ::Author:1:0:0:0:0:0
 111000076:"M:d0xX8022f4<0xX8022f4.50.":"Serial Cheater":"Use cheats 50 times in a single playthrough": : ::Author:2:0:0:0:0:0

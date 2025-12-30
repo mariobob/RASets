@@ -184,8 +184,6 @@ This subset celebrates GTA: San Andreas's legendary cheat code system. Instead o
 | | **Spawn Vortex** | | |
 | 🟥🔴 | IWANTTOHOVER | Take a spawned Vortex from land to water to land again in one continuous journey | - |
 | 🟥🔴 | Hover Lord | Fly a Vortex from the top of the Maze Bank Tower to *(TODO: Place to land Vortex)* | - |
-| | **Taxi Missions Completed** | | |
-| 🟥🔴 | *(TODO)* | *(Achievements to be added)* | - |
 
 ### 🎭 Themes / Pedestrian behavior
 | Status | Title | Description | Points |

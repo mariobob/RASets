@@ -728,7 +728,7 @@ achievement(
 )
 
 // --- Taxi Missions Completed ---
-// TODO: Add achievements
+// NOTE: This cheat code is the same as "Maximum Stamina" on PS2. Skipping.
 
 // --- CJ's Car Invincible (Destroy on Touch) ---
 

@@ -685,7 +685,7 @@ achievement(
 )
 
 // --- Spawn Sport Cars ---
-// TODO: Add achievements
+// NOTE: This cheat code is the same as "Sports Cars Traffic" on PS2. Skipping.
 
 // --- Improved Suspension ---
 // TODO: Add achievements

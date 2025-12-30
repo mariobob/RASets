@@ -123,8 +123,6 @@ This subset celebrates GTA: San Andreas's legendary cheat code system. Instead o
 | 🟨🔴📈⏱️ | CHITTYCHITTYBANGBANG | Fly for 20 minutes total with Flying Cars cheat active | 1 |
 | 🟨🔴 | Flying Dutchman | Reach 100m altitude with Flying Cars cheat active (in a car) | 2 |
 | 🟨🔴 | Need for Altitude | Reach maximum altitude (200m+) with Flying Cars | 3 |
-| | **Spawn Sport Cars** | | |
-| 🟥🔴 | *(TODO)* | *(Achievements to be added)* | - |
 | | **Improved Suspension** | | |
 | 🟥🔴 | *(TODO)* | *(Achievements to be added)* | - |
 | | **Perfect Handling** | | |

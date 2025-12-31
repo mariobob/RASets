@@ -3,8 +3,8 @@
 
 | Set meta info | Value |
 | --- | --- |
-| Number of achievements | 83 |
-| Total score | 149 |
+| Number of achievements | 129 |
+| Total score | 237 |
 | Game ID | 2772 |
 | Subset type | Bonus/Challenge |
 
@@ -47,68 +47,68 @@ This subset celebrates GTA: San Andreas's legendary cheat code system. Instead o
 | 🟨🔴📈🔢 | TAKEACHILLPILL | Get 5 kills while Adrenaline/Chill Pill effect is active | 1 |
 | | **Health, Armor, and Money** | | |
 | 🟨🔴 | HESOYAM | Use the Health, Armor, and Money cheat when already maxed out ($999,999,999) | 5 |
-| 🟨🔴📈🔢 | Greedy Bastard | Use the Health, Armor, and Money cheat 100 times in a single session | 2 |
+| 🟨🔴📈🔢 | Greedy Bastard | Use the Health, Armor, and Money cheat 100 times in a single session | 3 |
 | | **Mega Jump** | | |
 | 🟨🔴 | KANGAROO | Activate Mega Jump and reach a height of 100+ meters | 1 |
 | 🟨🔴 | Leap of Faith | Fall from 100+ meters with Mega Jump active and survive | 1 |
 | | **Commit Suicide** | | |
-| 🟥🔴 | GOODBYECRUELWORLD | Commit suicide using the cheat while on parachute | - |
+| 🟥🔴 | GOODBYECRUELWORLD | Commit suicide using the cheat while on parachute | 1 |
 | | **Hitman Level For All Weapons** | | |
-| 🟥🔴 | PROFESSIONALKILLER | Get a kill with each weapon class after activating Hitman Level | - |
+| 🟥🔴 | PROFESSIONALKILLER | Get a kill with each weapon class after activating Hitman Level | 2 |
 | | **Lock Wanted Level** | | |
-| 🟧🔴⚠️ | AEZAKMI | Complete a mission while the Lock Wanted Level cheat is active with 6-star wanted level | 2 |
+| 🟧🔴⚠️ | AEZAKMI | Complete a mission while the Lock Wanted Level cheat is active with 6-star wanted level | 3 |
 | | **Wanted Level Up (+2 Stars)** | | |
-| 🟥🔴 | TURNUPTHEHEAT | Use the Wanted Level Up cheat while inside a Police Station | - |
+| 🟥🔴 | TURNUPTHEHEAT | Use the Wanted Level Up cheat while inside a Police Station | 1 |
 | | **Remove Wanted Level** | | |
 | 🟨🔴 | TURNDOWNTHEHEAT | Escape a 6-star wanted level by using cheats | 1 |
-| 🟥🔴 | Too Hot To Handle | Use the Wanted Level Down cheat 20 times in a single session | - |
+| 🟥🔴 | Too Hot To Handle | Use the Wanted Level Down cheat 20 times in a single session | 1 |
 | | **Maximum Wanted Level** | | |
 | 🟨🔴📈⏱️ | BRINGITON | Destroy 10 military vehicles during Maximum Wanted Level | 2 |
 | | **Maximum Fat** | | |
-| 🟥🔴 | WHOATEALLTHEPIES | Enter a restaurant after activating Maximum Fat | - |
+| 🟥🔴 | WHOATEALLTHEPIES | Enter a restaurant after activating Maximum Fat | 1 |
 | | **Infinite Lung Capacity** | | |
 | 🟧🔴📈⏱️ | Deep Diver | Stay underwater for 3 minutes using Infinite Lung Capacity | 2 |
 | 🟨🔴📈⏱️ | Submarine Mode | Drive underwater for 30 seconds with Infinite Lung Capacity active | 1 |
 | | **Maximum Muscle** | | |
-| 🟥🔴 | BUFFMEUP | Activate Maximum Muscle while inside the gym | - |
+| 🟥🔴 | BUFFMEUP | Activate Maximum Muscle while inside the gym | 1 |
 | | **Maximum Respect** | | |
-| 🟨🔴 | WORSHIPME | Recruit 7 homies with Maximum Respect active | 2 |
+| 🟨🔴 | WORSHIPME | Recruit 7 homies with Maximum Respect active | 1 |
 | | **Maximum Sex Appeal** | | |
-| 🟨🔴 | HELLOLADIES | Go on a date with Maximum Sex Appeal active | 2 |
+| 🟨🔴 | HELLOLADIES | Go on a date with Maximum Sex Appeal active | 1 |
 | | **Maximum Stamina** | | |
-| 🟥🔴 | ICANGOALLNIGHT | Activate Maximum Stamina and fall off the treadmill in the gym | - |
+| 🟥🔴 | ICANGOALLNIGHT | Activate Maximum Stamina and fall off the treadmill in the gym | 1 |
 | | **Maximum Vehicle Skills** | | |
-| 🟥🔴 | NATURALTALENT | Flip your vehicle after activating Maximum Vehicle Skills | - |
+| 🟥🔴 | NATURALTALENT | Flip your vehicle after activating Maximum Vehicle Skills | 1 |
 | | **Minimum Muscle and Fat** | | |
-| 🟥🔴 | Speedrun Diet | Go from maximum fat to minimum using cheats in under 5 seconds | - |
-| 🟥🔴 | Skeleton Mode | Have one of your homies take a picture of you with Minimum Muscle and Fat | - |
+| 🟥🔴 | Speedrun Diet | Go from maximum fat to minimum using cheats in under 5 seconds | 1 |
+| 🟥🔴 | Skeleton Mode | Have one of your homies take a picture of you with Minimum Muscle and Fat | 1 |
 | | **Never Get Hungry** | | |
-| 🟨🔴 | Ironic Appetite | Eat until you vomit while Never Get Hungry is active | 2 |
+| 🟨🔴 | Ironic Appetite | Eat until you vomit while Never Get Hungry is active | 1 |
 | | **Spawn Jetpack** | | |
-| 🟥🔴 | ROCKETMAN | Fly from Los Santos to Las Venturas using only the Jetpack | - |
-| 🟨🔴 | To Infinity and Beyond | Reach 300m altitude with the Jetpack | 3 |
-| 🟨🔴 | Jetpack Addict | Spend 30 minutes on the Jetpack with cheats active | 2 |
+| 🟥🔴 | ROCKETMAN | Fly from Los Santos to Las Venturas using only the Jetpack | 2 |
+| 🟨🔴 | To Infinity and Beyond | Reach 300m altitude with the Jetpack | 1 |
+| 🟨🔴 | Jetpack Addict | Spend 30 minutes on the Jetpack with cheats active | 3 |
 | | **Spawn Parachute** | | |
-| 🟥🔴 | LETSGOBASEJUMPING | Spawn a Parachute and land on Maze Bank Tower | - |
-| 🟥🔴 | Skyfall Survivor | Deploy a spawned Parachute mid-air after jumping without one | - |
+| 🟥🔴 | LETSGOBASEJUMPING | Spawn a Parachute and land on Maze Bank Tower | 2 |
+| 🟥🔴 | Skyfall Survivor | Deploy a spawned Parachute mid-air after jumping without one | 1 |
 | | **Super Punch** | | |
-| 🟨🔴📈🔢 | STINGLIKEABEE | Kill 50 pedestrians with Super Punch | 2 |
+| 🟨🔴📈🔢 | STINGLIKEABEE | Kill 50 pedestrians with Super Punch | 3 |
 | 🟨🔴 | Glass Jaw | Get killed by a pedestrian while Super Punch is active | 1 |
 | 🟨🔴📈🔢⏱️ | One Punch Man | Kill 15 pedestrians in 30 seconds with Super Punch active | 3 |
 | 🟨🔴📈🔢 | Untouchable Brawler | Kill 25 pedestrians with Super Punch while Infinite Health is active | 2 |
 | | **Infinite Ammo** | | |
-| 🟨🔴📈🔢 | FULLCLIP | Fire 1000 bullets with Infinite Ammo active | 1 |
+| 🟨🔴📈🔢 | FULLCLIP | Fire 1000 bullets with Infinite Ammo active | 2 |
 | 🟨🔴📈🔢 | Spray and Pray | Get 50 kills with the Minigun while Infinite Ammo is active | 2 |
 | | **(Almost) Infinite Health** | | |
-| 🟨🔴 | ONECANHURTME | Get killed while (Almost) Infinite Health is active | 1 |
-| 🟨🔴📈⏱️ | Untouchable | Survive 5 minutes with Infinite Health and 6-star wanted level | 1 |
+| 🟨🔴 | ONECANHURTME | Get killed while (Almost) Infinite Health is active | 2 |
+| 🟨🔴📈⏱️ | Untouchable | Survive 5 minutes with Infinite Health and 6-star wanted level | 2 |
 | | **Weapons 1** | | |
-| 🟥🔴 | THUGSARMOURY | Get 10 Molotov kills within 20 seconds of activating Weapons 1 cheat | - |
+| 🟥🔴 | THUGSARMOURY | Get 10 Molotov kills within 20 seconds of activating Weapons 1 cheat | 2 |
 | | **Weapons 2** | | |
-| 🟥🔴 | PROFESSIONALSKIT | Get a Fire Extinguisher kill within 10 seconds of activating Weapons 2 | - |
+| 🟥🔴 | PROFESSIONALSKIT | Get a Fire Extinguisher kill within 10 seconds of activating Weapons 2 | 2 |
 | | **Weapons 3** | | |
-| 🟥🔴 | NUTTERSTOYS | Get a Chainsaw kill within 10 seconds of activating Weapons 3 cheat | - |
-| 🟥🔴 | UZUMYMW | Blow yourself up with Bazooka within 5 seconds of activating Weapons 3 | - |
+| 🟥🔴 | NUTTERSTOYS | Get a Chainsaw kill within 10 seconds of activating Weapons 3 cheat | 2 |
+| 🟥🔴 | UZUMYMW | Blow yourself up with Bazooka within 5 seconds of activating Weapons 3 | 2 |
 
 ### 🚗 Vehicle cheats
 | Status | Title | Description | Points |
@@ -120,7 +120,7 @@ This subset celebrates GTA: San Andreas's legendary cheat code system. Instead o
 | | **Flying Boats** | | |
 | 🟨🔴 | FLYINGFISH | Activate Flying Boats and take flight | 1 |
 | | **Flying Cars** | | |
-| 🟨🔴📈⏱️ | CHITTYCHITTYBANGBANG | Fly for 20 minutes total with Flying Cars cheat active | 1 |
+| 🟨🔴📈⏱️ | CHITTYCHITTYBANGBANG | Fly for 20 minutes total with Flying Cars cheat active | 2 |
 | 🟨🔴 | Flying Dutchman | Reach 100m altitude with Flying Cars cheat active (in a car) | 2 |
 | 🟨🔴 | Need for Altitude | Reach maximum altitude (200m+) with Flying Cars | 3 |
 | | **Improved Suspension** | | |
@@ -138,51 +138,51 @@ This subset celebrates GTA: San Andreas's legendary cheat code system. Instead o
 | Status | Title | Description | Points |
 | --- | --- | --- | --- |
 | | **Spawn Bloodring Banger** | | |
-| 🟥🔴 | OLDSPEEDDEMON | Destroy your spawned Bloodring Banger within 5 seconds | - |
+| 🟥🔴 | OLDSPEEDDEMON | Destroy your spawned Bloodring Banger within 5 seconds | 2 |
 | | **Spawn Caddy** | | |
-| 🟥🔴 | 18HOLES | Spawn a Caddy on the golf course | - |
-| 🟥🔴 | Hole in One | Drive a spawned Caddy into the ocean | - |
+| 🟥🔴 | 18HOLES | Spawn a Caddy on the golf course | 1 |
+| 🟥🔴 | Hole in One | Drive a spawned Caddy into the ocean | 1 |
 | | **Spawn Dozer** | | |
-| 🟥🔴 | ITSALLBULL | Hit 50 vehicles with a spawned Dozer | - |
-| 🟥🔴 | Bob the Destroyer | Drive into oncoming traffic for 2 minutes using a spawned Dozer | - |
+| 🟥🔴 | ITSALLBULL | Hit 50 vehicles with a spawned Dozer | 3 |
+| 🟥🔴 | Bob the Destroyer | Drive into oncoming traffic for 2 minutes using a spawned Dozer | 2 |
 | | **Spawn Hunter** | | |
-| 🟥🔴 | OHDUDE | Spawn a Hunter and crash it within 20 seconds | - |
-| 🟥🔴 | Apache Warfare | Complete a Vigilante mission using a spawned Hunter | - |
-| 🟥🔴 | Gatling Gunner | Get 50 kills with a spawned Hunter | - |
+| 🟥🔴 | OHDUDE | Spawn a Hunter and crash it within 20 seconds | 2 |
+| 🟥🔴 | Apache Warfare | Complete a Vigilante mission using a spawned Hunter | 2 |
+| 🟥🔴 | Gatling Gunner | Get 50 kills with a spawned Hunter | 3 |
 | | **Spawn Hydra** | | |
-| 🟥🔴 | JUMPJET | Spawn a Hydra in the middle of Grove Street | - |
-| 🟥🔴 | Top Gun | Destroy 10 police helicopters with a spawned Hydra | - |
-| 🟥🔴 | Kamikaze | Crash a spawned Hydra into a police boat | - |
+| 🟥🔴 | JUMPJET | Spawn a Hydra in the middle of Grove Street | 1 |
+| 🟥🔴 | Top Gun | Destroy 10 police helicopters with a spawned Hydra | 3 |
+| 🟥🔴 | Kamikaze | Crash a spawned Hydra into a police boat | 3 |
 | | **Spawn Monster Truck** | | |
-| 🟥🔴 | MONSTERMASH | Run over 20 vehicles with a spawned Monster Truck | - |
+| 🟥🔴 | MONSTERMASH | Run over 20 vehicles with a spawned Monster Truck | 2 |
 | | **Spawn Quad** | | |
-| 🟥🔴 | FOURWHEELFUN | Perform a stoppie front flip on a spawned Quad | - |
+| 🟥🔴 | FOURWHEELFUN | Perform a stoppie front flip on a spawned Quad | 2 |
 | | **Spawn Hotring Racer #1** | | |
-| 🟥🔴 | NOTFORPUBLICROADS | Flip your spawned Hotring Racer within 20 seconds | - |
+| 🟥🔴 | NOTFORPUBLICROADS | Flip your spawned Hotring Racer within 20 seconds | 2 |
 | | **Spawn Hotring Racer #2** | | |
 | 🟥🔴 | JUSTTRYANDSTOPME | *(Achievements to be added)* | - |
 | | **Spawn Rancher** | | |
-| 🟥🔴 | DOUGHNUTHANDICAP | Get a longest 2 wheels time of 3 seconds with a spawned Rancher | - |
+| 🟥🔴 | DOUGHNUTHANDICAP | Get a longest 2 wheels time of 3 seconds with a spawned Rancher | 3 |
 | | **Spawn Rhino** | | |
-| 🟥🔴 | TIMETOKICKASS | Destroy 100 vehicles with a spawned Rhino Tank | - |
-| 🟥🔴 | Tank You Very Much | Spawn a Rhino Tank inside a Pay 'N' Spray | - |
+| 🟥🔴 | TIMETOKICKASS | Destroy 100 vehicles with a spawned Rhino Tank | 3 |
+| 🟥🔴 | Tank You Very Much | Spawn a Rhino Tank inside a Pay 'N' Spray | 1 |
 | | **Spawn Romero** | | |
-| 🟥🔴 | WHERESTHEFUNERAL | Drive a spawned Romero to the cemetery | - |
-| 🟥🔴 | Death Delivery | Run over 10 pedestrians with a spawned Romero | - |
+| 🟥🔴 | WHERESTHEFUNERAL | Drive a spawned Romero to the cemetery | 1 |
+| 🟥🔴 | Death Delivery | Run over 10 pedestrians with a spawned Romero | 2 |
 | | **Spawn Stretch Limo** | | |
-| 🟥🔴 | CELEBRITYSTATUS | Pick up a girlfriend in a spawned Stretch limousine | - |
-| 🟥🔴 | Celebrity Status Achieved | Drive a spawned Stretch into a Pay 'N' Spray with 5+ stars | - |
+| 🟥🔴 | CELEBRITYSTATUS | Pick up a girlfriend in a spawned Stretch limousine | 1 |
+| 🟥🔴 | Celebrity Status Achieved | Drive a spawned Stretch into a Pay 'N' Spray with 5+ stars | 2 |
 | | **Spawn Stunt Plane** | | |
-| 🟥🔴 | FLYINGTOSTUNT | Fly under the Gant Bridge with a spawned Stunt Plane | - |
-| 🟥🔴 | Stunt Coordinator | Perform 10 barrel rolls with a spawned Stunt Plane in one flight | - |
+| 🟥🔴 | FLYINGTOSTUNT | Fly under the Gant Bridge with a spawned Stunt Plane | 2 |
+| 🟥🔴 | Stunt Coordinator | Perform 10 barrel rolls with a spawned Stunt Plane in one flight | 2 |
 | | **Spawn Tanker Truck** | | |
-| 🟥🔴 | HITTHEROADJACK | Do a stunt jump with a spawned Tanker | - |
-| 🟥🔴 | Hazmat Havoc | Drive a spawned Tanker into a gas station | - |
+| 🟥🔴 | HITTHEROADJACK | Do a stunt jump with a spawned Tanker | 2 |
+| 🟥🔴 | Hazmat Havoc | Drive a spawned Tanker into a gas station | 1 |
 | | **Spawn Trashmaster** | | |
-| 🟥🔴 | TRUEGRIME | Run over 25 pedestrians with a spawned Trashmaster | - |
-| 🟥🔴 | Garbage Day | Run over 25 pedestrians with a spawned Trashmaster | - |
+| 🟥🔴 | TRUEGRIME | *(Achievements to be added)* | - |
+| 🟥🔴 | Garbage Day | Run over 25 pedestrians with a spawned Trashmaster | 2 |
 | | **Spawn Vortex** | | |
-| 🟥🔴 | IWANTTOHOVER | Take a spawned Vortex from land to water to land again in one continuous journey | - |
+| 🟥🔴 | IWANTTOHOVER | Take a spawned Vortex from land to water to land again in one continuous journey | 2 |
 | 🟥🔴 | Hover Lord | Fly a Vortex from the top of the Maze Bank Tower to *(TODO: Place to land Vortex)* | - |
 
 ### 🎭 Themes / Pedestrian behavior
@@ -207,16 +207,16 @@ This subset celebrates GTA: San Andreas's legendary cheat code system. Instead o
 | 🟨🔴📈⏱️ | State of Emergency | Survive for 5 minutes during a Pedestrian Riot | 1 |
 | | **Blow Up All Cars** | | |
 | 🟨🔴 | ALLCARSGOBOOM | Survive the Explode All Cars cheat while driving a car | 2 |
-| 🟨🔴📈🔢⏱️ | Michael Bay Simulator | Cause 15 vehicle explosions in 1 minute with Explode All Cars cheat | 3 |
+| 🟨🔴📈🔢⏱️ | Michael Bay Simulator | Cause 15 vehicle explosions in 1 minute with Explode All Cars cheat | 2 |
 | | **Invisible Cars** | | |
-| 🟨🔴📈⏱️ | WHEELSONLYPLEASE | Drive for 10 minutes total with Invisible Cars active | 1 |
+| 🟨🔴📈⏱️ | WHEELSONLYPLEASE | Drive for 10 minutes total with Invisible Cars active | 2 |
 | 🟨🔴 | Ghost Rider | Drive an invisible car during Chaos Mode | 1 |
 | | **Kinky Theme** | | |
 | 🟨🔴 | 50 Shades of San Andreas | Earn $1000 from prostitutes with Kinky Theme active | 2 |
 | | **Prostitutes Pay CJ** | | |
 | 🟨🔴📈🔢 | Paid for Services | Earn money 2 times with Prostitutes Pay CJ active | 1 |
 | | **No Pedestrians / Reduced Traffic** | | |
-| 🟨🔴📈🔢 | GHOSTTOWN | Enter 5 vehicles with No Pedestrians / Reduced Traffic active | 1 |
+| 🟨🔴📈🔢 | GHOSTTOWN | Enter 5 vehicles with No Pedestrians / Reduced Traffic active | 2 |
 | | **All Pedestrians Are Elvis** | | |
 | 🟨🔴 | Viva Las Elvis | Take a photo of an Elvis pedestrian | 2 |
 | | **Pedestrians Attack CJ** | | |
@@ -226,7 +226,7 @@ This subset celebrates GTA: San Andreas's legendary cheat code system. Instead o
 | | **Pedestrians Have Weapons** | | |
 | 🟨🔴📈🔢 | SURROUNDEDBYNUTTERS | Kill 25 armed pedestrians with Pedestrians Have Weapons active | 2 |
 | | **Chaos Mode** | | |
-| 🟨🔴📈⏱️ | ROUGHNEIGHBOURHOOD | Activate Chaos Mode and survive for 5 minutes | 1 |
+| 🟨🔴📈⏱️ | ROUGHNEIGHBOURHOOD | Activate Chaos Mode and survive for 5 minutes | 2 |
 | 🟨🔴📈🔢 | The Purge | Kill 100 pedestrians during Chaos Mode | 2 |
 | 🟨🔴📈🔢 | San Andreas Chainsaw Massacre | Get 20 chainsaw kills during Chaos Mode | 2 |
 | 🟨🔴 | Maximum Carnage | Have Pedestrian Riot, Chaos Mode, and Aggressive Traffic all active at once | 1 |
@@ -259,7 +259,7 @@ This subset celebrates GTA: San Andreas's legendary cheat code system. Instead o
 | 🟨🔴 | WANNABEINMYGANG | Recruit 7 enemy gang members and start a gang war | 1 |
 | | **Recruit Anyone (Rocket Launcher)** | | |
 | 🟨🔴📈🔢 | ROCKETMAYHEM | Cause 15 vehicle explosions with Rocket Launcher recruits | 2 |
-| 🟨🔴 | Rocket Civilians | Get killed by friendly fire from rocket-launcher recruits | 3 |
+| 🟨🔴 | Rocket Civilians | Get killed by friendly fire from rocket-launcher recruits | 2 |
 
 ### 🌙 Time and Weather
 | Status | Title | Description | Points |
@@ -274,7 +274,7 @@ This subset celebrates GTA: San Andreas's legendary cheat code system. Instead o
 | 🟥🔴 | SPEEDITUP | *(Achievements to be added)* | - |
 | | **Slow Motion** | | |
 | 🟨🔴 | SLOWITDOWN | Complete a drive-by while Slow Motion is active | 1 |
-| 🟨🔴📈🔢 | Bullet Time | Kill 10 enemies while Slow Motion is active | 1 |
+| 🟨🔴📈🔢 | Bullet Time | Kill 10 enemies while Slow Motion is active | 2 |
 | | **Faster Clock** | | |
 | 🟨🔴📈🔢 | YSOHNUL | Watch the sun set 3 times with Faster Clock active | 1 |
 | | **Foggy Weather** | | |
@@ -282,7 +282,7 @@ This subset celebrates GTA: San Andreas's legendary cheat code system. Instead o
 | | **Overcast Weather** | | |
 | 🟥🔴 | ALNSFMZO | *(Achievements to be added)* | - |
 | | **Sandstorm** | | |
-| 🟥🔴 | Darude | Drive through the Sandstorm for 3 minutes and 52 seconds without damaging your vehicle | - |
+| 🟥🔴 | Darude | Drive through the Sandstorm for 3 minutes and 52 seconds without damaging your vehicle | 3 |
 | | **Rainy Weather** | | |
 | 🟥🔴 | STAYINANDWATCHTV| *(Achievements to be added)* | - |
 | | **Stormy Weather** | | |
@@ -290,7 +290,7 @@ This subset celebrates GTA: San Andreas's legendary cheat code system. Instead o
 | | **Sunny Weather** | | |
 | 🟥🔴 | PLEASANTLYWARM | *(Achievements to be added)* | - |
 | | **Very Sunny Weather** | | |
-| 🟥🔴 | TOODAMNHOT | Activate Very Sunny Weather on the beach wearing only boxers | - |
+| 🟥🔴 | TOODAMNHOT | Activate Very Sunny Weather on the beach wearing only boxers | 1 |
 
 ### 🎮 Meta / Cheat tracking
 | Status | Title | Description | Points |
@@ -306,7 +306,7 @@ This subset celebrates GTA: San Andreas's legendary cheat code system. Instead o
 | --- | --- | --- | --- |
 | 🟨🔴 | Cheater's Demolition Derby | Destroy 500 vehicles with cheats active | 3 |
 | 🟨🔴 | Cheater's Armageddon | Cause $5,000,000+ in property damage with cheats active | 2 |
-| 🟨🔴 | Cheater's Headhunter | Get 100 headshots with cheats active | 3 |
+| 🟨🔴 | Cheater's Headhunter | Get 100 headshots with cheats active | 5 |
 | 🟨🔴 | Cheater's Escape Artist | Evade 50 wanted stars with cheats active | 2 |
 
 ---

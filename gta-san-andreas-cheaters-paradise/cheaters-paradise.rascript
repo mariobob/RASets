@@ -311,7 +311,7 @@ achievement(
 achievement(
     title = "Greedy Bastard",
     description = "Use the Health, Armor, and Money cheat 100 times in a single session",
-    points = 2,
+    points = 3,
     trigger = measured(tally(100, hesoyam_used()))
 )
 
@@ -349,7 +349,7 @@ achievement(
 achievement(
     title = "AEZAKMI",
     description = "Complete a mission while the Lock Wanted Level cheat is active with 6-star wanted level",
-    points = 2,
+    points = 3,
     trigger = once(cheat_active(CHEAT_WANTED_LOCK) && 
                    player_wanted() >= 6 && 
                    prev(dword(InActiveMission)) == 0 && 
@@ -435,7 +435,7 @@ achievement(
 achievement(
     title = "WORSHIPME",
     description = "Recruit 7 homies with Maximum Respect active",
-    points = 2,
+    points = 1,
     trigger = cheat_active(CHEAT_MAX_RESPECT)
               // TODO: Add && recruited_homies >= 7 when address found
 )
@@ -446,7 +446,7 @@ achievement(
 achievement(
     title = "HELLOLADIES",
     description = "Go on a date with Maximum Sex Appeal active",
-    points = 2,
+    points = 1,
     trigger = cheat_active(CHEAT_MAX_SEX_APPEAL)
               // TODO: Add && on_date() when address found
 )
@@ -469,7 +469,7 @@ achievement(
 achievement(
     title = "Ironic Appetite",
     description = "Eat until you vomit while Never Get Hungry is active",
-    points = 2,
+    points = 1,
     trigger = cheat_active(CHEAT_NEVER_HUNGRY) &&
               player_vomited()
 )
@@ -481,7 +481,7 @@ achievement(
 achievement(
     title = "To Infinity and Beyond",
     description = "Reach 300m altitude with the Jetpack",
-    points = 3,
+    points = 1,
     trigger = jetpack_time_ms() > 0 &&
               player_above_ground() > 300.0 &&
               times_cheated() > 0
@@ -490,7 +490,7 @@ achievement(
 achievement(
     title = "Jetpack Addict",
     description = "Spend 30 minutes on the Jetpack with cheats active",
-    points = 2,
+    points = 3,
     trigger = times_cheated() > 0 &&
               crossed_threshold(JetpackTime, 1800000)
 )
@@ -505,7 +505,7 @@ achievement(
 achievement(
     title = "STINGLIKEABEE",
     description = "Kill 50 pedestrians with Super Punch",
-    points = 2,
+    points = 3,
     trigger = trigger_when(measured(tally(50,
                   kill_increased() &&
                   cheat_active(CHEAT_SUPER_PUNCH)
@@ -550,7 +550,7 @@ achievement(
 achievement(
     title = "FULLCLIP",
     description = "Fire 1000 bullets with Infinite Ammo active",
-    points = 1,
+    points = 2,
     trigger = trigger_when(measured(tally(1000,
                   bullet_fired() &&
                   cheat_active(CHEAT_INFINITE_AMMO)
@@ -573,7 +573,7 @@ achievement(
 achievement(
     title = "ONECANHURTME",
     description = "Get killed while (Almost) Infinite Health is active",
-    points = 1,
+    points = 2,
     trigger = cheat_active(CHEAT_INFINITE_HEALTH) &&
               player_wasted()
 )
@@ -581,7 +581,7 @@ achievement(
 achievement(
     title = "Untouchable",
     description = "Survive 5 minutes with Infinite Health and 6-star wanted level",
-    points = 1,
+    points = 2,
     trigger = once(cheat_active(CHEAT_INFINITE_HEALTH) && player_wanted() >= 6) &&
               trigger_when(measured(repeated(minutes_to_frames(5),
                   cheat_active(CHEAT_INFINITE_HEALTH) &&
@@ -655,7 +655,7 @@ achievement(
 achievement(
     title = "CHITTYCHITTYBANGBANG",
     description = "Fly for 20 minutes total with Flying Cars cheat active",
-    points = 1,
+    points = 2,
     trigger = measured(repeated(minutes_to_frames(20),
                   cheat_active(CHEAT_FLYING_CARS) &&
                   in_vehicle() &&
@@ -940,7 +940,7 @@ achievement(
 achievement(
     title = "Michael Bay Simulator",
     description = "Cause 15 vehicle explosions in 1 minute with Explode All Cars cheat",
-    points = 3,
+    points = 2,
     trigger = once(cheat_just_activated(CHEAT_CARS_EXPLODE_BUMP)) &&
               trigger_when(measured(tally(15,
                   cheat_active(CHEAT_CARS_EXPLODE_BUMP) &&
@@ -958,7 +958,7 @@ achievement(
 achievement(
     title = "WHEELSONLYPLEASE",
     description = "Drive for 10 minutes total with Invisible Cars active",
-    points = 1,
+    points = 2,
     trigger = measured(repeated(minutes_to_frames(10),
                   cheat_active(CHEAT_INVISIBLE_CARS) &&
                   in_vehicle() &&
@@ -1003,7 +1003,7 @@ achievement(
 achievement(
     title = "GHOSTTOWN",
     description = "Enter 5 vehicles with No Pedestrians / Reduced Traffic active",
-    points = 1,
+    points = 2,
     trigger = trigger_when(measured(tally(5,
                   just_entered_vehicle() &&
                   cheat_active(CHEAT_REDUCED_TRAFFIC)
@@ -1069,7 +1069,7 @@ achievement(
 achievement(
     title = "ROUGHNEIGHBOURHOOD",
     description = "Activate Chaos Mode and survive for 5 minutes",
-    points = 1,
+    points = 2,
     trigger = once(cheat_just_activated(CHEAT_CHAOS_MODE)) &&
               trigger_when(measured(repeated(minutes_to_frames(5),
                   cheat_active(CHEAT_CHAOS_MODE) &&
@@ -1280,7 +1280,7 @@ achievement(
 achievement(
     title = "Rocket Civilians",
     description = "Get killed by friendly fire from rocket-launcher recruits",
-    points = 3,
+    points = 2,
     trigger = cheat_active(CHEAT_RECRUIT_ROCKET) &&
               player_wasted()
               // TODO: Add && killed_by_explosion() when address found
@@ -1335,7 +1335,7 @@ achievement(
 achievement(
     title = "Bullet Time",
     description = "Kill 10 enemies while Slow Motion is active",
-    points = 1,
+    points = 2,
     trigger = trigger_when(measured(tally(10,
                   kill_increased() &&
                   cheat_active(CHEAT_SLOW_MOTION)
@@ -1444,7 +1444,7 @@ achievement(
 achievement(
     title = "Cheater's Headhunter",
     description = "Get 100 headshots with cheats active",
-    points = 3,
+    points = 5,
     trigger = times_cheated() > 0 &&
               crossed_threshold(Headshots, 100)
 )

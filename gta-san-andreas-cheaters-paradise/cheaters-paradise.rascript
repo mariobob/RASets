@@ -336,12 +336,24 @@ achievement(
 )
 
 // --- Commit Suicide ---
-// TODO: Add achievements
-// - GOODBYECRUELWORLD: Commit suicide using the cheat while on parachute
+
+// TODO: Need parachute detection to verify player is on parachute when using cheat
+achievement(
+    title = "GOODBYECRUELWORLD",
+    description = "Commit suicide using the cheat while on parachute",
+    points = 1,
+    trigger = always_false()  // TODO: Add trigger
+)
 
 // --- Hitman Level For All Weapons ---
-// TODO: Add achievements
-// - PROFESSIONALKILLER: Get a kill with each weapon class after activating Hitman Level
+
+// TODO: Need to track kills with each weapon class after cheat activation
+achievement(
+    title = "PROFESSIONALKILLER",
+    description = "Get a kill with each weapon class after activating Hitman Level",
+    points = 2,
+    trigger = always_false()  // TODO: Add trigger
+)
 
 // --- Lock Wanted Level ---
 
@@ -360,12 +372,24 @@ achievement(
 )
 
 // --- Wanted Level Up (+2 Stars) ---
-// TODO: Add achievements
-// - TURNUPTHEHEAT: Use the Wanted Level Up cheat while inside a Police Station
+
+// TODO: Need interior/location detection for Police Station
+achievement(
+    title = "TURNUPTHEHEAT",
+    description = "Use the Wanted Level Up cheat while inside a Police Station",
+    points = 1,
+    trigger = always_false()  // TODO: Add trigger
+)
 
 // --- Remove Wanted Level ---
-// TODO: Add achievements
-// - Too Hot To Handle: Use the Wanted Level Down cheat 20 times in a single session
+
+// TODO: Need Remove Wanted Level cheat flag detection
+achievement(
+    title = "Too Hot To Handle",
+    description = "Use the Wanted Level Down cheat 20 times in a single session",
+    points = 1,
+    trigger = always_false()  // TODO: Add trigger
+)
 
 // TODO: Need to check that Remove Wanted Level cheat was used, otherwise player can escape the wanted level by dying or respraying vehicle
 achievement(
@@ -395,8 +419,14 @@ achievement(
 )
 
 // --- Maximum Fat ---
-// TODO: Add achievements
-// - WHOATEALLTHEPIES: Enter a restaurant after activating Maximum Fat
+
+// TODO: Need restaurant interior detection
+achievement(
+    title = "WHOATEALLTHEPIES",
+    description = "Enter a restaurant after activating Maximum Fat",
+    points = 1,
+    trigger = always_false()  // TODO: Add trigger
+)
 
 // --- Infinite Lung Capacity ---
 
@@ -426,8 +456,14 @@ achievement(
 )
 
 // --- Maximum Muscle ---
-// TODO: Add achievements
-// - BUFFMEUP: Activate Maximum Muscle while inside the gym
+
+// TODO: Need gym interior detection
+achievement(
+    title = "BUFFMEUP",
+    description = "Activate Maximum Muscle while inside the gym",
+    points = 1,
+    trigger = always_false()  // TODO: Add trigger
+)
 
 // --- Maximum Respect ---
 
@@ -452,17 +488,42 @@ achievement(
 )
 
 // --- Maximum Stamina ---
-// TODO: Add achievements
-// - ICANGOALLNIGHT: Activate Maximum Stamina and fall off the treadmill in the gym
+
+// TODO: Need treadmill state detection
+achievement(
+    title = "ICANGOALLNIGHT",
+    description = "Activate Maximum Stamina and fall off the treadmill in the gym",
+    points = 1,
+    trigger = always_false()  // TODO: Add trigger
+)
 
 // --- Maximum Vehicle Skills ---
-// TODO: Add achievements
-// - NATURALTALENT: Flip your vehicle after activating Maximum Vehicle Skills
+
+// TODO: Need vehicle flip detection
+achievement(
+    title = "NATURALTALENT",
+    description = "Flip your vehicle after activating Maximum Vehicle Skills",
+    points = 1,
+    trigger = always_false()  // TODO: Add trigger
+)
 
 // --- Minimum Muscle and Fat ---
-// TODO: Add achievements
-// - Speedrun Diet: Go from maximum fat to minimum using cheats in under 5 seconds
-// - Skeleton Mode: Activate Minimum Muscle and Fat cheat and have one of your homies take a picture of you
+
+// TODO: Need body stat values for fat transition detection
+achievement(
+    title = "Speedrun Diet",
+    description = "Go from maximum fat to minimum using cheats in under 5 seconds",
+    points = 1,
+    trigger = always_false()  // TODO: Add trigger
+)
+
+// TODO: Need photo taken by homie detection
+achievement(
+    title = "Skeleton Mode",
+    description = "Have one of your homies take a picture of you with Minimum Muscle and Fat",
+    points = 1,
+    trigger = always_false()  // TODO: Add trigger
+)
 
 // --- Never Get Hungry ---
 
@@ -475,8 +536,14 @@ achievement(
 )
 
 // --- Spawn Jetpack ---
-// TODO: Add achievements
-// - ROCKETMAN: Fly from Los Santos to Las Venturas using only the Jetpack
+
+// TODO: Need city zone detection for Los Santos to Las Venturas
+achievement(
+    title = "ROCKETMAN",
+    description = "Fly from Los Santos to Las Venturas using only the Jetpack",
+    points = 2,
+    trigger = always_false()  // TODO: Add trigger
+)
 
 achievement(
     title = "To Infinity and Beyond",
@@ -496,9 +563,22 @@ achievement(
 )
 
 // --- Spawn Parachute ---
-// TODO: Add achievements
-// - LETSGOBASEJUMPING: Spawn a Parachute and land on Maze Bank Tower
-// - Skyfall Survivor: Deploy a spawned Parachute mid-air after jumping without one
+
+// TODO: Need building/location detection for Maze Bank Tower
+achievement(
+    title = "LETSGOBASEJUMPING",
+    description = "Spawn a Parachute and land on Maze Bank Tower",
+    points = 2,
+    trigger = always_false()  // TODO: Add trigger
+)
+
+// TODO: Need parachute deploy detection
+achievement(
+    title = "Skyfall Survivor",
+    description = "Deploy a spawned Parachute mid-air after jumping without one",
+    points = 1,
+    trigger = always_false()  // TODO: Add trigger
+)
 
 // --- Super Punch ---
 
@@ -595,17 +675,42 @@ achievement(
 )
 
 // --- Weapons 1 (Brass Knuckles, Baseball Bat, Pistol, Shotgun, Micro SMG, AK47, Rifle, Rocket Launcher, Molotov, Spray Can) ---
-// TODO: Add achievements
-// - THUGSARMOURY: Get 10 Molotov kills within 20 seconds of activating Weapons 1 cheat
+
+// TODO: Need Weapons 1 cheat flag and Molotov kill detection
+achievement(
+    title = "THUGSARMOURY",
+    description = "Get 10 Molotov kills within 20 seconds of activating Weapons 1 cheat",
+    points = 2,
+    trigger = always_false()  // TODO: Add trigger
+)
 
 // --- Weapons 2 (Fist, Knife, Desert Eagle, Sawn-Off Shotgun, TEC 9, M4, Sniper Rifle, Flamethrower, Fire Extinguisher, Grenades) ---
-// TODO: Add achievements
-// - PROFESSIONALSKIT: Get a Fire Extinguisher kill within 10 seconds of activating Weapons 2
+
+// TODO: Need Weapons 2 cheat flag and Fire Extinguisher kill detection
+achievement(
+    title = "PROFESSIONALSKIT",
+    description = "Get a Fire Extinguisher kill within 10 seconds of activating Weapons 2",
+    points = 2,
+    trigger = always_false()  // TODO: Add trigger
+)
 
 // --- Weapons 3 (Fist, Chainsaw, Silenced Pistol, SPAS 12, SMG, M4, Heat-Seeking Rocket Launcher, Satchel Charges) ---
-// TODO: Add achievements
-// - NUTTERSTOYS: Get a Chainsaw kill within 10 seconds of activating Weapons 3 cheat
-// - UZUMYMW: Blow yourself up with Bazooka within 5 seconds of activating Weapons 3
+
+// TODO: Need Weapons 3 cheat flag
+achievement(
+    title = "NUTTERSTOYS",
+    description = "Get a Chainsaw kill within 10 seconds of activating Weapons 3 cheat",
+    points = 2,
+    trigger = always_false()  // TODO: Add trigger
+)
+
+// TODO: Need Weapons 3 cheat flag and self-explosion detection
+achievement(
+    title = "UZUMYMW",
+    description = "Blow yourself up with Bazooka within 5 seconds of activating Weapons 3",
+    points = 2,
+    trigger = always_false()  // TODO: Add trigger
+)
 
 // =============================================================================
 // ACHIEVEMENTS - VEHICLE CHEATS
@@ -688,7 +793,13 @@ achievement(
 // NOTE: This cheat code is the same as "Sports Cars Traffic" on PS2. Skipping.
 
 // --- Improved Suspension ---
-// TODO: Add achievements
+// TODO: Need creative achievement idea
+achievement(
+    title = "Suspended",
+    description = "",
+    points = 1,
+    trigger = always_false()  // TODO: Add trigger
+)
 
 // --- Perfect Handling ---
 
@@ -749,93 +860,292 @@ achievement(
 // =============================================================================
 
 // --- Spawn Bloodring Banger ---
-// TODO: Add achievements
-// - OLDSPEEDDEMON: Destroy your spawned Bloodring Banger within 5 seconds
+
+// TODO: Need spawn cheat detection and vehicle destruction timing
+achievement(
+    title = "OLDSPEEDDEMON",
+    description = "Destroy your spawned Bloodring Banger within 5 seconds",
+    points = 2,
+    trigger = always_false()  // TODO: Add trigger
+)
 
 // --- Spawn Caddy ---
-// TODO: Add achievements
-// - 18HOLES: Spawn a Caddy on the golf course
-// - Hole in One: Drive a spawned Caddy into the ocean
+
+// TODO: Need golf course zone detection
+achievement(
+    title = "18HOLES",
+    description = "Spawn a Caddy on the golf course",
+    points = 1,
+    trigger = always_false()  // TODO: Add trigger
+)
+
+// TODO: Need water/ocean detection while in Caddy
+achievement(
+    title = "Hole in One",
+    description = "Drive a spawned Caddy into the ocean",
+    points = 1,
+    trigger = always_false()  // TODO: Add trigger
+)
 
 // --- Spawn Dozer ---
-// TODO: Add achievements
-// - ITSALLBULL: Hit 50 vehicles with a spawned Dozer
-// - Bob the Destroyer: Drive into oncoming traffic for 2 minutes using a spawned Dozer
+
+// TODO: Need spawn cheat detection and vehicle collision tracking
+achievement(
+    title = "ITSALLBULL",
+    description = "Hit 50 vehicles with a spawned Dozer",
+    points = 3,
+    trigger = always_false()  // TODO: Add trigger
+)
+
+// TODO: Need oncoming traffic detection
+achievement(
+    title = "Bob the Destroyer",
+    description = "Drive into oncoming traffic for 2 minutes using a spawned Dozer",
+    points = 2,
+    trigger = always_false()  // TODO: Add trigger
+)
 
 // --- Spawn Hunter ---
-// TODO: Add achievements
-// - OHDUDE: Spawn a Hunter and crash it within 20 seconds
-// - Apache Warfare: Complete a Vigilante mission using a spawned Hunter
-// - Gatling Gunner: Get 50 kills with a spawned Hunter
+
+// TODO: Need spawn cheat detection and crash timing
+achievement(
+    title = "OHDUDE",
+    description = "Spawn a Hunter and crash it within 20 seconds",
+    points = 2,
+    trigger = always_false()  // TODO: Add trigger
+)
+
+// TODO: Need Vigilante mission detection
+achievement(
+    title = "Apache Warfare",
+    description = "Complete a Vigilante mission using a spawned Hunter",
+    points = 2,
+    trigger = always_false()  // TODO: Add trigger
+)
+
+// TODO: Need spawn cheat detection for Hunter kills
+achievement(
+    title = "Gatling Gunner",
+    description = "Get 50 kills with a spawned Hunter",
+    points = 3,
+    trigger = always_false()  // TODO: Add trigger
+)
 
 // --- Spawn Hydra ---
-// TODO: Add achievements
-// - JUMPJET: Spawn a Hydra in the middle of Grove Street
-// - Top Gun: Destroy 10 police helicopters with a spawned Hydra
-// - Kamikaze: Crash a spawned Hydra into a police boat
+
+// TODO: Need Grove Street zone detection
+achievement(
+    title = "JUMPJET",
+    description = "Spawn a Hydra in the middle of Grove Street",
+    points = 1,
+    trigger = always_false()  // TODO: Add trigger
+)
+
+// TODO: Need police helicopter destruction detection
+achievement(
+    title = "Top Gun",
+    description = "Destroy 10 police helicopters with a spawned Hydra",
+    points = 3,
+    trigger = always_false()  // TODO: Add trigger
+)
+
+// TODO: Need police boat collision detection
+achievement(
+    title = "Kamikaze",
+    description = "Crash a spawned Hydra into a police boat",
+    points = 3,
+    trigger = always_false()  // TODO: Add trigger
+)
 
 // --- Spawn Monster Truck ---
-// TODO: Add achievements
-// - MONSTERMASH: Run over 20 vehicles with a spawned Monster Truck
+
+// TODO: Need spawn cheat detection and vehicle crush tracking
+achievement(
+    title = "MONSTERMASH",
+    description = "Run over 20 vehicles with a spawned Monster Truck",
+    points = 2,
+    trigger = always_false()  // TODO: Add trigger
+)
 
 // --- Spawn Quad ---
-// TODO: Add achievements
-// - FOURWHEELFUN: Perform a stoppie front flip on a spawned Quad
+
+// TODO: Need stoppie/flip detection
+achievement(
+    title = "FOURWHEELFUN",
+    description = "Perform a stoppie front flip on a spawned Quad",
+    points = 2,
+    trigger = always_false()  // TODO: Add trigger
+)
 
 // --- Spawn Hotring Racer #1 ---
-// TODO: Add achievements
-// - NOTFORPUBLICROADS: Flip your spawned Hotring Racer within 20 seconds
+
+// TODO: Need spawn cheat detection and vehicle flip timing
+achievement(
+    title = "NOTFORPUBLICROADS",
+    description = "Flip your spawned Hotring Racer within 20 seconds",
+    points = 2,
+    trigger = always_false()  // TODO: Add trigger
+)
 
 // --- Spawn Hotring Racer #2 ---
-// TODO: Add achievements
-// - JUSTTRYANDSTOPME: TODO
+
+// TODO: Need creative achievement idea
+achievement(
+    title = "JUSTTRYANDSTOPME",
+    description = "",
+    points = 1,
+    trigger = always_false()  // TODO: Add trigger
+)
 
 // --- Spawn Rancher ---
-// TODO: Add achievements
-// - DOUGHNUTHANDICAP: Get a longest 2 wheels time of 3 seconds with a spawned Rancher
+
+// TODO: Need 2-wheel time stat detection
+achievement(
+    title = "DOUGHNUTHANDICAP",
+    description = "Get a longest 2 wheels time of 3 seconds with a spawned Rancher",
+    points = 3,
+    trigger = always_false()  // TODO: Add trigger
+)
 
 // --- Spawn Rhino ---
-// TODO: Add achievements
-// - TIMETOKICKASS: Destroy 100 vehicles with a spawned Rhino Tank
-// - Tank You Very Much: Spawn a Rhino Tank inside a Pay 'N' Spray
+
+// TODO: Need spawn cheat detection for Rhino kills
+achievement(
+    title = "TIMETOKICKASS",
+    description = "Destroy 100 vehicles with a spawned Rhino Tank",
+    points = 3,
+    trigger = always_false()  // TODO: Add trigger
+)
+
+// TODO: Need Pay 'N' Spray interior detection
+achievement(
+    title = "Tank You Very Much",
+    description = "Spawn a Rhino Tank inside a Pay 'N' Spray",
+    points = 1,
+    trigger = always_false()  // TODO: Add trigger
+)
 
 // --- Spawn Romero ---
-// TODO: Add achievements
-// - WHERESTHEFUNERAL: Drive a spawned Romero to the cemetery
-// - Death Delivery: Run over 10 pedestrians with a spawned Romero
+
+// TODO: Need cemetery zone detection
+achievement(
+    title = "WHERESTHEFUNERAL",
+    description = "Drive a spawned Romero to the cemetery",
+    points = 1,
+    trigger = always_false()  // TODO: Add trigger
+)
+
+// TODO: Need spawn cheat detection for Romero kills
+achievement(
+    title = "Death Delivery",
+    description = "Run over 10 pedestrians with a spawned Romero",
+    points = 2,
+    trigger = always_false()  // TODO: Add trigger
+)
 
 // --- Spawn Stretch Limo ---
-// TODO: Add achievements
-// - CELEBRITYSTATUS: Pick up a girlfriend in a spawned Stretch limousine
-// - Celebrity Status Achieved: Drive a spawned Stretch into a Pay 'N' Spray with 5+ stars
+
+// TODO: Need girlfriend pickup detection
+achievement(
+    title = "CELEBRITYSTATUS",
+    description = "Pick up a girlfriend in a spawned Stretch limousine",
+    points = 1,
+    trigger = always_false()  // TODO: Add trigger
+)
+
+// TODO: Need Pay 'N' Spray detection with wanted level
+achievement(
+    title = "Celebrity Status Achieved",
+    description = "Drive a spawned Stretch into a Pay 'N' Spray with 5+ stars",
+    points = 2,
+    trigger = always_false()  // TODO: Add trigger
+)
 
 // --- Spawn Stunt Plane ---
-// TODO: Add achievements
-// - FLYINGTOSTUNT: Fly under the Gant Bridge with a spawned Stunt Plane
-// - Stunt Coordinator: Perform 10 barrel rolls with a spawned Stunt Plane in one flight
+
+// TODO: Need Gant Bridge zone detection
+achievement(
+    title = "FLYINGTOSTUNT",
+    description = "Fly under the Gant Bridge with a spawned Stunt Plane",
+    points = 2,
+    trigger = always_false()  // TODO: Add trigger
+)
+
+// TODO: Need barrel roll detection
+achievement(
+    title = "Stunt Coordinator",
+    description = "Perform 10 barrel rolls with a spawned Stunt Plane in one flight",
+    points = 2,
+    trigger = always_false()  // TODO: Add trigger
+)
 
 // --- Spawn Tanker Truck ---
-// TODO: Add achievements
-// - HITTHEROADJACK: Do a stunt jump with a spawned Tanker
-// - Hazmat Havoc: Drive a spawned Tanker into a gas station
+
+// TODO: Need stunt jump detection with Tanker
+achievement(
+    title = "HITTHEROADJACK",
+    description = "Do a stunt jump with a spawned Tanker",
+    points = 2,
+    trigger = always_false()  // TODO: Add trigger
+)
+
+// TODO: Need gas station zone detection
+achievement(
+    title = "Hazmat Havoc",
+    description = "Drive a spawned Tanker into a gas station",
+    points = 1,
+    trigger = always_false()  // TODO: Add trigger
+)
 
 // --- Spawn Trashmaster ---
-// TODO: Add achievements
-// - TRUEGRIME: (TODO: Think of interesting achievement with Trashmaster)
-// - Garbage Day: Run over 25 pedestrians with a spawned Trashmaster
+
+// TODO: Need creative achievement idea
+achievement(
+    title = "TRUEGRIME",
+    description = "",
+    points = 1,
+    trigger = always_false()  // TODO: Add trigger
+)
+
+// TODO: Need spawn cheat detection for Trashmaster kills
+achievement(
+    title = "Garbage Day",
+    description = "Run over 25 pedestrians with a spawned Trashmaster",
+    points = 2,
+    trigger = always_false()  // TODO: Add trigger
+)
 
 // --- Spawn Vortex ---
-// TODO: Add achievements
-// - IWANTTOHOVER: Take a spawned Vortex from land to water to land again in one continuous journey
-// - Hover Lord: Fly a Vortex from the top of the Maze Bank Tower to (TODO: Place to land Vortex)
+
+// TODO: Need terrain type (land/water) detection
+achievement(
+    title = "IWANTTOHOVER",
+    description = "Take a spawned Vortex from land to water to land again in one continuous journey",
+    points = 2,
+    trigger = always_false()  // TODO: Add trigger
+)
+
+// TODO: Need Maze Bank Tower zone detection and landing location
+achievement(
+    title = "Hover Lord",
+    description = "Fly a Vortex from the top of the Maze Bank Tower to (TODO: Place to land Vortex)",
+    points = 1,
+    trigger = always_false()  // TODO: Add trigger
+)
 
 // =============================================================================
 // ACHIEVEMENTS - THEMES / PEDESTRIAN BEHAVIOR
 // =============================================================================
 
 // --- Aggressive Drivers ---
-// TODO: Add achievements
-// - ALLDRIVERSARECRIMINALS: TODO
+
+// TODO: Need creative achievement idea
+achievement(
+    title = "ALLDRIVERSARECRIMINALS",
+    description = "",
+    points = 1,
+    trigger = always_false()  // TODO: Add trigger
+)
 
 // --- Aggressive Traffic ---
 
@@ -866,8 +1176,14 @@ achievement(
 )
 
 // --- Junk Cars Traffic ---
-// TODO: Add achievements
-// - BGKGTJH: Activate Junk Cars Traffic and (TODO)
+
+// TODO: Need creative achievement idea
+achievement(
+    title = "BGKGTJH",
+    description = "",
+    points = 1,
+    trigger = always_false()  // TODO: Add trigger
+)
 
 // --- Black Cars ---
 
@@ -1151,8 +1467,14 @@ achievement(
 )
 
 // --- Rural Traffic ---
-// TODO: Add achievements
-// - EVERYONEISPOOR: TODO
+
+// TODO: Need creative achievement idea
+achievement(
+    title = "EVERYONEISPOOR",
+    description = "",
+    points = 1,
+    trigger = always_false()  // TODO: Add trigger
+)
 
 // --- Rural Theme ---
 
@@ -1312,12 +1634,24 @@ achievement(
 )
 
 // --- Cloudy Weather ---
-// TODO: Add achievements
-// - DULLDULLDAY: Activate Cloudy Weather and (TODO)
+
+// TODO: Need Cloudy Weather cheat flag
+achievement(
+    title = "DULLDULLDAY",
+    description = "",
+    points = 1,
+    trigger = always_false()  // TODO: Add trigger
+)
 
 // --- Fast Motion ---
-// TODO: Add achievements
-// - SPEEDITUP: Activate Fast Motion and (TODO)
+
+// TODO: Need Fast Motion cheat flag
+achievement(
+    title = "SPEEDITUP",
+    description = "",
+    points = 1,
+    trigger = always_false()  // TODO: Add trigger
+)
 
 // --- Slow Motion ---
 
@@ -1355,32 +1689,74 @@ achievement(
 )
 
 // --- Foggy Weather ---
-// TODO: Add achievements
-// - CANTSEEWHEREIMGOING: Activate Foggy Weather and (TODO)
+
+// TODO: Need Foggy Weather cheat flag
+achievement(
+    title = "CANTSEEWHEREIMGOING",
+    description = "",
+    points = 1,
+    trigger = always_false()  // TODO: Add trigger
+)
 
 // --- Overcast Weather ---
-// TODO: Add achievements
-// - ALNSFMZO: Activate Overcast Weather and (TODO)
+
+// TODO: Need Overcast Weather cheat flag
+achievement(
+    title = "ALNSFMZO",
+    description = "",
+    points = 1,
+    trigger = always_false()  // TODO: Add trigger
+)
 
 // --- Sandstorm ---
-// TODO: Add achievements
-// - Darude: Drive through the Sandstorm for 3 minutes and 52 seconds without damaging your vehicle
+
+// TODO: Need Sandstorm cheat flag and vehicle damage detection
+achievement(
+    title = "Darude",
+    description = "Drive through the Sandstorm for 3 minutes and 52 seconds without damaging your vehicle",
+    points = 3,
+    trigger = always_false()  // TODO: Add trigger
+)
 
 // --- Rainy Weather ---
-// TODO: Add achievements
-// - STAYINANDWATCHTV: Activate Rainy Weather and (TODO) (TODO: Cheat doesn't work, code is overridden by "Foggy Weather")
+
+// TODO: Cheat code overridden by Foggy Weather on PS2
+achievement(
+    title = "STAYINANDWATCHTV",
+    description = "",
+    points = 1,
+    trigger = always_false()  // TODO: Add trigger
+)
 
 // --- Stormy Weather ---
-// TODO: Add achievements
-// - SCOTTISHSUMMER: Activate Stormy Weather and (TODO)
+
+// TODO: Need Stormy Weather cheat flag
+achievement(
+    title = "SCOTTISHSUMMER",
+    description = "",
+    points = 1,
+    trigger = always_false()  // TODO: Add trigger
+)
 
 // --- Sunny Weather ---
-// TODO: Add achievements
-// - PLEASANTLYWARM: Activate Sunny Weather and (TODO)
+
+// TODO: Need Sunny Weather cheat flag
+achievement(
+    title = "PLEASANTLYWARM",
+    description = "",
+    points = 1,
+    trigger = always_false()  // TODO: Add trigger
+)
 
 // --- Very Sunny Weather ---
-// TODO: Add achievements
-// - TOODAMNHOT: Activate Very Sunny Weather on the beach wearing only boxers
+
+// TODO: Need Very Sunny Weather cheat flag and clothing detection
+achievement(
+    title = "TOODAMNHOT",
+    description = "Activate Very Sunny Weather on the beach wearing only boxers",
+    points = 1,
+    trigger = always_false()  // TODO: Add trigger
+)
 
 // =============================================================================
 // ACHIEVEMENTS - META / CHEAT TRACKING

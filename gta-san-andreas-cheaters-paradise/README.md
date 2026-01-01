@@ -3,8 +3,8 @@
 
 | Set meta info | Value |
 | --- | --- |
-| Number of achievements | 129 |
-| Total score | 237 |
+| Number of achievements | 143 |
+| Total score | 237+ |
 | Game ID | 2772 |
 | Subset type | Bonus/Challenge |
 
@@ -124,7 +124,7 @@ This subset celebrates GTA: San Andreas's legendary cheat code system. Instead o
 | 🟨🔴 | Flying Dutchman | Reach 100m altitude with Flying Cars cheat active (in a car) | 2 |
 | 🟨🔴 | Need for Altitude | Reach maximum altitude (200m+) with Flying Cars | 3 |
 | | **Improved Suspension** | | |
-| 🟥🔴 | *(TODO)* | *(Achievements to be added)* | - |
+| 🟥🔴 | Suspended | *(Achievements to be added)* | - |
 | | **Perfect Handling** | | |
 | 🟨🔴 | STICKLIKEGLUE | Activate Perfect Vehicle Handling | 1 |
 | | **Full Weapon Aiming in Vehicles** | | |

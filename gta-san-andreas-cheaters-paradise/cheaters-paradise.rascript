@@ -383,14 +383,6 @@ achievement(
 
 // --- Remove Wanted Level ---
 
-// TODO: Need Remove Wanted Level cheat flag detection
-achievement(
-    title = "Too Hot To Handle",
-    description = "Use the Wanted Level Down cheat 20 times in a single session",
-    points = 1,
-    trigger = always_false()  // TODO: Add trigger
-)
-
 // TODO: Need to check that Remove Wanted Level cheat was used, otherwise player can escape the wanted level by dying or respraying vehicle
 achievement(
     title = "TURNDOWNTHEHEAT",
@@ -399,6 +391,14 @@ achievement(
     trigger = prev(player_wanted()) >= 6 &&
               player_wanted() < 6 &&
               cheat_used()
+)
+
+// TODO: Need Remove Wanted Level cheat flag detection
+achievement(
+    title = "Too Hot To Handle",
+    description = "Use the Wanted Level Down cheat 20 times in a single session",
+    points = 1,
+    trigger = always_false()  // TODO: Add trigger
 )
 
 // --- Maximum Wanted Level ---

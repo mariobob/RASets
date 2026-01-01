@@ -9,8 +9,8 @@
 111000007:"0=1":"PROFESSIONALKILLER":"Get a kill with each weapon class after activating Hitman Level": : ::Author:2:0:0:0:0:0
 111000008:"N:0xH88d741=1_N:0xX19eb73c>=6_N:d0xX6b2654=0_0xX6b2654=1.1._T:d0xX6b2654=1_T:0xX6b2654=0_R:0xH88d741!=1_R:0xX19eb73c<6":"AEZAKMI":"Complete a mission while the Lock Wanted Level cheat is active with 6-star wanted level": : ::Author:3:0:0:0:0:0
 111000009:"0=1":"TURNUPTHEHEAT":"Use the Wanted Level Up cheat while inside a Police Station": : ::Author:1:0:0:0:0:0
-111000010:"0=1":"Too Hot To Handle":"Use the Wanted Level Down cheat 20 times in a single session": : ::Author:1:0:0:0:0:0
-111000011:"d0xX19eb73c>=6_0xX19eb73c<6_d0xX8022f4<0xX8022f4":"TURNDOWNTHEHEAT":"Escape a 6-star wanted level by using cheats": : ::Author:1:0:0:0:0:0
+111000010:"d0xX19eb73c>=6_0xX19eb73c<6_d0xX8022f4<0xX8022f4":"TURNDOWNTHEHEAT":"Escape a 6-star wanted level by using cheats": : ::Author:1:0:0:0:0:0
+111000011:"0=1":"Too Hot To Handle":"Use the Wanted Level Down cheat 20 times in a single session": : ::Author:1:0:0:0:0:0
 111000012:"0xX19eb73c>=6.1._I:0xX7095d0_R:0xH000568=55_R:0xX19eb73c<6SN:0xX19eb73c>=6_N:0xH6ffab0=0_I:0xX7095d0_M:0xH000568!=55.18000.ST:0=1":"BRINGITON":"Destroy 10 military vehicles during Maximum Wanted Level": : ::Author:2:0:0:0:0:0
 111000013:"0=1":"WHOATEALLTHEPIES":"Enter a restaurant after activating Maximum Fat": : ::Author:1:0:0:0:0:0
 111000014:"N:0xH88d73e=1_M:0xH6ffab0=0.10800.":"Deep Diver":"Stay underwater for 3 minutes using Infinite Lung Capacity": : ::Author:2:0:0:0:0:0

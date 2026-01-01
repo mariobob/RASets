@@ -284,7 +284,7 @@ This subset celebrates GTA: San Andreas's legendary cheat code system. Instead o
 | | **Sandstorm** | | |
 | 🟥🔴 | Darude | Drive through the Sandstorm for 3 minutes and 52 seconds without damaging your vehicle | 3 |
 | | **Rainy Weather** | | |
-| 🟥🔴 | STAYINANDWATCHTV| *(Achievements to be added)* | - |
+| 🟥🔴 | STAYINANDWATCHTV | *(Achievements to be added)* | - |
 | | **Stormy Weather** | | |
 | 🟥🔴 | SCOTTISHSUMMER | *(Achievements to be added)* | - |
 | | **Sunny Weather** | | |

@@ -247,6 +247,11 @@ function player_wanted() => dword(PlayerWantedStars)
 function kill_count() => dword(KillsByPlayer)
 function kill_increased() => prev(kill_count()) < kill_count()
 
+// Vehicles destroyed
+function vehicles_destroyed() => dword(VehiclesDestroyed)
+function vehicle_destroyed() => prev(vehicles_destroyed()) < vehicles_destroyed()
+function vehicles_destroyed_at_once(n) => prev(vehicles_destroyed()) + n <= vehicles_destroyed()
+
 // Times cheated
 function times_cheated() => dword(TimesCheated)
 function cheat_used() => prev(times_cheated()) < times_cheated()
@@ -849,7 +854,7 @@ achievement(
     description = "Destroy 100 vehicles by ramming with CJ's Car is Invincible active",
     points = 3,
     trigger = trigger_when(measured(tally(100,
-                  prev(dword(VehiclesDestroyed)) < dword(VehiclesDestroyed) &&
+                  vehicle_destroyed() &&
                   in_vehicle() &&
                   cheat_active(CHEAT_INVINCIBLE_CAR)
               )))
@@ -1201,7 +1206,7 @@ achievement(
     description = "Cause 10 explosions with Funhouse Theme active",
     points = 2,
     trigger = trigger_when(measured(tally(10,
-                  prev(dword(VehiclesDestroyed)) < dword(VehiclesDestroyed) &&
+                  vehicle_destroyed() &&
                   cheat_active(CHEAT_FUNHOUSE)
               )))
 )
@@ -1250,7 +1255,7 @@ achievement(
     trigger = in_vehicle() &&
               !player_wasted() &&
               cheat_used() &&
-              prev(dword(VehiclesDestroyed)) + 3 <= dword(VehiclesDestroyed)
+              vehicles_destroyed_at_once(3)
 )
 
 achievement(
@@ -1260,7 +1265,7 @@ achievement(
     trigger = once(cheat_just_activated(CHEAT_CARS_EXPLODE_BUMP)) &&
               trigger_when(measured(tally(15,
                   cheat_active(CHEAT_CARS_EXPLODE_BUMP) &&
-                  prev(dword(VehiclesDestroyed)) < dword(VehiclesDestroyed)
+                  vehicle_destroyed()
               ))) &&
               never(repeated(minutes_to_frames(1),
                   cheat_active(CHEAT_CARS_EXPLODE_BUMP) &&
@@ -1592,7 +1597,7 @@ achievement(
     description = "Cause 15 vehicle explosions with Rocket Launcher recruits",
     points = 2,
     trigger = trigger_when(measured(tally(15,
-                  prev(dword(VehiclesDestroyed)) < dword(VehiclesDestroyed) &&
+                  vehicle_destroyed() &&
                   cheat_active(CHEAT_RECRUIT_ROCKET)
               )))
 )

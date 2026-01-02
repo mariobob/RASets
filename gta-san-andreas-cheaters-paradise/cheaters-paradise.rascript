@@ -122,57 +122,71 @@ WEAPON_CHAINSAW          = 0x155   // Chainsaw (341) - slot 2
 WEAPON_MINIGUN           = 0x16a   // Minigun (362) - slot 7
 
 // =============================================================================
-// PLAYER STATS & STATE
+// MEMORY ADDRESSES - GAME STATE
 // =============================================================================
 
-// Money
+// --- Game flow ---
+InActiveMission          = 0x6b2654  // [32-bit] 0x01 when in active mission
+PauseFlag                = 0x6ffab0  // [8-bit] Pause flag
+
+// --- Clock & Time ---
+ClockHours               = 0x66b7ac  // [32-bit] Clock - Hours
+ClockMinutes             = 0x66b7b0  // [32-bit] Clock - Minutes
+ClockMilliseconds        = 0x66b7b4  // [32-bit] Clock - Milliseconds
+CurrentDay               = 0x66b7b8  // [32-bit] Current day (0x4=Wednesday)
+
+// --- World ---
+MoonSize                 = 0x666c4c  // [32-bit] Size of the moon (0 to 7)
+
+// =============================================================================
+// MEMORY ADDRESSES - PLAYER
+// =============================================================================
+
+// --- Player pointer (dynamic data) ---
+PlayerPointer            = 0x7095d0  // [32-bit] Pointer to player pedestrian data
+                                     // +0x568 = [8-bit] Player state (0x37 = Wasted)
+                                     // +0x580 = [32-bit] HP
+                                     // +0x588 = [32-bit] Armor
+                                     // +0x14 -> +0x30 = X, +0x34 = Y, +0x38 = Z (floats)
+                                     // +0x5cc = Pointer to current vehicle
+
+// --- Player resources ---
 PlayerMoney              = 0x7096b4  // [32-bit] Cash (static)
 
-// Wanted level
-PlayerWantedLevel        = 0x66bc80  // [8-bit] Wanted level (static, may need 0x19eb73c for stars on screen)
+// --- Wanted level ---
+PlayerWantedLevel        = 0x66bc80  // [8-bit] Wanted level (static)
 PlayerWantedStars        = 0x19eb73c // [32-bit] Stars displayed on screen
 
-// Kill stats
-KillsByOthers            = 0x8022b0  // [32-bit] People wasted by others
-KillsByPlayer            = 0x8022b4  // [32-bit] People wasted by CJ
+// --- Weapons ---
+CurrentWeaponSlot        = 0x7095f4  // [8-bit] Current weapon slot
+BulletsInRound           = 0xdf09e0  // [32-bit] Bullets left in current round
 
-// Cumulative stats
+// --- Player actions ---
+EatingCounter            = 0x6b2a78  // [32-bit] Eating counter before throwing up
+
+// =============================================================================
+// MEMORY ADDRESSES - STATISTICS
+// =============================================================================
+
+// --- Combat stats ---
+KillsByPlayer            = 0x8022b4  // [32-bit] People wasted by CJ
+KillsByOthers            = 0x8022b0  // [32-bit] People wasted by others
+Headshots                = 0x8022d8  // [32-bit] Number of headshots
+BulletsFired             = 0x8022c8  // [32-bit] Bullets fired total
+
+// --- Destruction stats ---
 VehiclesDestroyed        = 0x8022b8  // [32-bit] Road vehicles destroyed
 PropertyDamage           = 0x8022c4  // [32-bit] Cost of property damaged
-Headshots                = 0x8022d8  // [32-bit] Number of headshots
+
+// --- Wanted stats ---
 StarsEvaded              = 0x8022e0  // [32-bit] Total wanted stars evaded
+
+// --- Activity stats ---
 JetpackTime              = 0x802384  // [32-bit] Time on jetpack (in milliseconds)
 TimeUnderwater           = 0x80225c  // [Float] Time spent underwater
 
-// Cheat counter
+// --- Cheat stats ---
 TimesCheated             = 0x8022f4  // [32-bit] Times cheated stat
-
-// Weapon state
-CurrentWeaponSlot        = 0x7095f4  // [8-bit] Current weapon slot
-BulletsInRound           = 0xdf09e0  // [32-bit] Bullets left in current round
-BulletsFired             = 0x8022c8  // [32-bit] Bullets fired total
-
-// Game state
-InActiveMission          = 0x6b2654  // [32-bit] 0x01 when in active mission
-PauseFlag                = 0x6ffab0  // [8-bit] Pause flag
-EatingCounter            = 0x6b2a78  // Eating counter before throwing up
-
-// Clock
-ClockHours               = 0x66b7ac  // Clock - Hours
-ClockMinutes             = 0x66b7b0  // Clock - Minutes
-ClockMilliseconds        = 0x66b7b4  // Clock - Milliseconds
-CurrentDay               = 0x66b7b8  // Current day (0x4=Wednesday)
-
-// Moon
-MoonSize                 = 0x666c4c  // [32-bit] Size of the moon (0 to 7)
-
-// Player pointer (for dynamic data like health, position)
-PlayerPointer            = 0x7095d0  // [32-bit] Pointer to player pedestrian data
-                                     // +0x580 = [32-bit] HP
-                                     // +0x588 = [32-bit] Armor
-                                     // +0x568 = [8-bit] Player state (0x37 = Wasted)
-                                     // +0x14 -> +0x30 = X, +0x34 = Y, +0x38 = Z (floats)
-                                     // +0x5cc = Pointer to current vehicle
 
 // =============================================================================
 // HELPER FUNCTIONS

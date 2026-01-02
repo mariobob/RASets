@@ -19,72 +19,69 @@
 // CHEAT ACTIVATION FLAGS
 // =============================================================================
 // Each cheat has its own address, value 0x01 when active
-// These are PERSISTENT flags that stay on until game reload (for most)
+// These are PERSISTENT flags that stay on until save/game reload (for most)
 
-// Time/clock cheats
-CHEAT_FASTER_CLOCK       = 0x88d70b  // Time goes by faster
-
-// Pedestrian cheats (some cannot be turned off)
-CHEAT_PED_RIOT           = 0x88d70e  // Pedestrians riot (CANNOT TURN OFF)
-CHEAT_PEDS_ATTACK        = 0x88d70f  // Pedestrians attack you (CANNOT TURN OFF)
-CHEAT_PEDS_WEAPONS       = 0x88d710  // Pedestrians wield weapons
-CHEAT_ALL_ELVIS          = 0x88d727  // All pedestrians are Elvis
-CHEAT_PEDS_ATTACK_GUNS   = 0x88d728  // Pedestrians attack you with guns
-CHEAT_BEACH_PARTY        = 0x88d729  // Beach party mode (bikinis, beach cars)
-CHEAT_GANG_MODE          = 0x88d72a  // Gang members spawn faster
-CHEAT_GANG_CONTROL       = 0x88d72b  // All peds become brawling gang members
-CHEAT_TRIAD_THEME        = 0x88d72c  // Asians with katanas, black vehicles
-CHEAT_KINKY_THEME        = 0x88d72d  // Attract prostitutes with sex toys/gimp suit
-
-// Vehicle cheats
-CHEAT_INVISIBLE_CARS     = 0x88d71b  // All vehicles invisible (except motorcycles)
-CHEAT_PERFECT_HANDLING   = 0x88d71c  // Improved car handling
-CHEAT_GREEN_LIGHTS       = 0x88d71e  // All traffic lights are green
-CHEAT_AGGRESSIVE_TRAFFIC = 0x88d71f  // Aggressive Drivers
-CHEAT_PINK_CARS          = 0x88d720  // All vehicles become pink
-CHEAT_BLACK_CARS         = 0x88d721  // All vehicles become black
-CHEAT_DRIVE_ON_WATER     = 0x88d722  // Cars can drive on water
-CHEAT_FLYING_BOATS       = 0x88d723  // Flying Boats
-CHEAT_JUNK_CARS          = 0x88d72e  // All traffic is junk cars
-CHEAT_FAST_CARS          = 0x88d72f  // Improved car speed
-CHEAT_FLYING_CARS        = 0x88d730  // Flying Cars
-CHEAT_SUPER_BUNNY_HOP    = 0x88d731  // Jump ~100 feet on a bicycle
-CHEAT_CARS_EXPLODE_BUMP  = 0x88d734  // Bumping into a car makes it explode
-CHEAT_ALL_NITRO          = 0x88d735  // All cars have nitro
-CHEAT_MOON_GRAVITY       = 0x88d736  // Bumping cars makes them float away
-
-// Time/weather cheats
-CHEAT_ALWAYS_MIDNIGHT    = 0x88d737  // Always midnight (clock is 00:00)
-CHEAT_ALWAYS_2100        = 0x88d738  // Dusk/Evening (21:00)
-// Note: Weather cheats (foggy, stormy, sunny, sandstorm) are different addresses
-
-// Player ability cheats
+// Player cheats
+CHEAT_ADRENALINE         = 0x88d747  // Adrenaline pill effect
 CHEAT_MEGA_JUMP          = 0x88d73c  // Jump ~10 times higher
-CHEAT_INFINITE_HEALTH    = 0x88d73d  // Infinite health (lose from explosions, drowning, falling)
-CHEAT_INFINITE_LUNG      = 0x88d73e  // Infinite lung capacity
 CHEAT_WANTED_LOCK        = 0x88d741  // Locks wanted level at current level
-CHEAT_SUPER_PUNCH        = 0x88d743  // Super-powerful punches
-CHEAT_NEVER_HUNGRY       = 0x88d744  // Never become hungry
-CHEAT_CHAOS_MODE         = 0x88d745  // Enable Chaos Mode
-CHEAT_FUNHOUSE           = 0x88d746  // Fast food workers/clowns theme
-CHEAT_SLOW_MOTION        = 0x88d747  // Adrenaline pill effect (slow motion)
-CHEAT_INFINITE_AMMO      = 0x88d748  // Infinite ammunition
-CHEAT_FREE_AIM           = 0x88d749  // Full weapon aiming while driving
-CHEAT_REDUCED_TRAFFIC    = 0x88d74a  // Most pedestrians and traffic vanish
-CHEAT_RURAL_THEME        = 0x88d74b  // Traffic is country vehicles
-CHEAT_RECRUIT_PISTOL     = 0x88d74c  // All wield 9mm pistols and are recruitable
-CHEAT_RECRUIT_ROCKET     = 0x88d74e  // All wield Rocket Launchers and are recruitable
+CHEAT_INFINITE_LUNG      = 0x88d73e  // Infinite lung capacity
 CHEAT_MAX_RESPECT        = 0x88d74f  // Maximum Respect
 CHEAT_MAX_SEX_APPEAL     = 0x88d750  // Maximum Sex Appeal
-CHEAT_PROSTITUTES_PAY    = 0x88d75a  // Prostitutes pay you
-CHEAT_TAXI_NITRO         = 0x88d75b  // All taxis have nitro and jump
+CHEAT_NEVER_HUNGRY       = 0x88d744  // Never become hungry
+CHEAT_SUPER_PUNCH        = 0x88d743  // Super-powerful punches
+CHEAT_INFINITE_AMMO      = 0x88d748  // Infinite ammunition
+CHEAT_INFINITE_HEALTH    = 0x88d73d  // Infinite health (lose from explosions, drowning, falling)
 
-// TODO: These are documented effects but flag addresses need verification. After verification, sort them out to appropriate sections.
-CHEAT_ADRENALINE         = 0x88d747  // Same as slow motion? (TAKEACHILLPILL) - verify
+// Vehicle cheats
+CHEAT_ALL_NITRO          = 0x88d735  // All cars have nitro
+CHEAT_DRIVE_ON_WATER     = 0x88d722  // Cars can drive on water
+CHEAT_FLYING_BOATS       = 0x88d723  // Flying Boats
+CHEAT_FLYING_CARS        = 0x88d730  // Flying Cars
+CHEAT_FAST_CARS          = 0x88d72f  // Sports Cars Traffic / Improved car speed
+CHEAT_PERFECT_HANDLING   = 0x88d71c  // Improved car handling
+CHEAT_FREE_AIM           = 0x88d749  // Full weapon aiming while driving
+CHEAT_SUPER_BUNNY_HOP    = 0x88d731  // Jump ~100 feet on a bicycle
+CHEAT_TAXI_NITRO         = 0x88d75b  // All taxis have nitro and jump
+CHEAT_CARS_EXPLODE_BUMP  = 0x88d734  // Bumping into a car makes it explode
 CHEAT_INVINCIBLE_CAR     = 0x88d733  // Carl's car invincible (TOUCHMYCARYOUDIE) - needs verification
-CHEAT_GANG_WARS          = 0x88d72b  // Gang wars break out (ONLYHOMIESALLOWED) - may overlap GANG_CONTROL
-CHEAT_GANGS_ONLY         = 0x88d72b  // No citizens, gang gunfights (BETTERSTAYINDOORS) - needs verification
+
+// Themes / Pedestrian behavior cheats
+CHEAT_AGGRESSIVE_TRAFFIC = 0x88d71f  // Aggressive Drivers
+CHEAT_BEACH_PARTY        = 0x88d729  // Beach party mode (bikinis, beach cars)
+CHEAT_JUNK_CARS          = 0x88d72e  // All traffic is junk cars
+CHEAT_BLACK_CARS         = 0x88d721  // All vehicles become black
+CHEAT_FUNHOUSE           = 0x88d746  // Fast food workers/clowns theme
+CHEAT_MOON_GRAVITY       = 0x88d736  // Bumping cars makes them float away
+CHEAT_PED_RIOT           = 0x88d70e  // Pedestrians riot (CANNOT TURN OFF)
+CHEAT_INVISIBLE_CARS     = 0x88d71b  // All vehicles invisible (except motorcycles)
+CHEAT_KINKY_THEME        = 0x88d72d  // Attract prostitutes with sex toys/gimp suit
+CHEAT_PROSTITUTES_PAY    = 0x88d75a  // Prostitutes pay you
+CHEAT_REDUCED_TRAFFIC    = 0x88d74a  // Most pedestrians and traffic vanish
+CHEAT_ALL_ELVIS          = 0x88d727  // All pedestrians are Elvis
+CHEAT_PEDS_ATTACK        = 0x88d70f  // Pedestrians attack you (CANNOT TURN OFF)
 CHEAT_PEDS_ATTACK_MELEE  = 0x88d70f  // Peds attack with melee (may be same as PEDS_ATTACK)
+CHEAT_PEDS_ATTACK_GUNS   = 0x88d728  // Pedestrians attack you with guns
+CHEAT_PEDS_WEAPONS       = 0x88d710  // Pedestrians wield weapons
+CHEAT_CHAOS_MODE         = 0x88d745  // Enable Chaos Mode
+CHEAT_PINK_CARS          = 0x88d720  // All vehicles become pink
+CHEAT_RURAL_THEME        = 0x88d74b  // Traffic is country vehicles
+CHEAT_GREEN_LIGHTS       = 0x88d71e  // All traffic lights are green
+CHEAT_TRIAD_THEME        = 0x88d72c  // Asians with katanas, black vehicles
+
+// Gang cheats
+CHEAT_GANG_MODE          = 0x88d72a  // Gang members spawn faster
+CHEAT_GANG_WARS          = 0x88d72b  // Gang wars break out (ONLYHOMIESALLOWED) - may overlap GANG_CONTROL
+CHEAT_GANG_CONTROL       = 0x88d72b  // All peds become brawling gang members
+CHEAT_GANGS_ONLY         = 0x88d72b  // No citizens, gang gunfights (BETTERSTAYINDOORS) - needs verification
+CHEAT_RECRUIT_PISTOL     = 0x88d74c  // All wield 9mm pistols and are recruitable
+CHEAT_RECRUIT_ROCKET     = 0x88d74e  // All wield Rocket Launchers and are recruitable
+
+// Time and weather cheats
+CHEAT_ALWAYS_MIDNIGHT    = 0x88d737  // Always midnight (clock is 00:00)
+CHEAT_ALWAYS_2100        = 0x88d738  // Dusk/Evening (21:00)
+CHEAT_SLOW_MOTION        = 0x88d747  // Gameplay in slow motion
+CHEAT_FASTER_CLOCK       = 0x88d70b  // Time goes by faster
 
 // Cheat input buffer (for detecting cheat entry)
 CHEAT_INPUT_BUFFER       = 0x88d760  // [12 bytes] Last 12 button presses for cheat detection

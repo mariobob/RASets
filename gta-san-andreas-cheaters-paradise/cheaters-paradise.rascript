@@ -226,7 +226,7 @@ function player_pos_z() => float(player_pos_ptr() + 0x38)
 // Height above ground - for "flying" or "in air" detection
 // TODO: Currently uses absolute Z which can false trigger on mountains/hills.
 //       Needs replacing with actual height-above-ground criteria.
-function player_above_ground() => player_pos_z()
+function player_height_z() => player_pos_z()
 
 // Current vehicle (0 = on foot)
 function current_vehicle_ptr() => dword(dword(PlayerPointer) + 0x5cc)
@@ -257,7 +257,7 @@ function hesoyam_used() => (prev(player_money()) + 250000 == player_money()) ||
                             cheat_used())
 
 // --- Wanted level ---
-function player_wanted() => dword(PlayerWantedStars)
+function wanted_stars() => dword(PlayerWantedStars)
 
 // --- Weapons ---
 function current_weapon_slot() => byte(CurrentWeaponSlot)
@@ -284,11 +284,11 @@ function jetpack_time_increased() => prev(jetpack_time_ms()) < jetpack_time_ms()
 function kill_count() => dword(KillsByPlayer)
 function kill_increased() => prev(kill_count()) < kill_count()
 function bullets_fired() => dword(BulletsFired)
-function bullet_fired() => prev(bullets_fired()) < bullets_fired()
+function bullet_just_fired() => prev(bullets_fired()) < bullets_fired()
 
 // --- Destruction stats ---
 function vehicles_destroyed() => dword(VehiclesDestroyed)
-function vehicle_destroyed() => prev(vehicles_destroyed()) < vehicles_destroyed()
+function vehicle_just_destroyed() => prev(vehicles_destroyed()) < vehicles_destroyed()
 function vehicles_destroyed_at_once(n) => prev(vehicles_destroyed()) + n <= vehicles_destroyed()
 
 // --- Cheat stats ---
@@ -339,7 +339,7 @@ achievement(
     description = "Activate Mega Jump and reach a height of 100+ meters",
     points = 1,
     trigger = cheat_active(CHEAT_MEGA_JUMP) &&
-              player_above_ground() >= 100.0
+              player_height_z() >= 100.0
 )
 
 achievement(
@@ -347,8 +347,8 @@ achievement(
     description = "Fall from 100+ meters with Mega Jump active and survive",
     points = 1,
     trigger = cheat_active(CHEAT_MEGA_JUMP) &&
-              prev(player_above_ground()) >= 100.0 &&
-              player_above_ground() < 20.0 &&
+              prev(player_height_z()) >= 100.0 &&
+              player_height_z() < 20.0 &&
               !player_wasted()
 )
 
@@ -380,12 +380,12 @@ achievement(
     description = "Complete a mission while the Lock Wanted Level cheat is active with 6-star wanted level",
     points = 3,
     trigger = once(cheat_active(CHEAT_WANTED_LOCK) && 
-                   player_wanted() >= 6 && 
+                   wanted_stars() >= 6 && 
                    prev(dword(InActiveMission)) == 0 && 
                    dword(InActiveMission) == 1) &&
               trigger_when(prev(dword(InActiveMission)) == 1 && dword(InActiveMission) == 0) &&
               never(!cheat_active(CHEAT_WANTED_LOCK)) &&
-              never(player_wanted() < 6)
+              never(wanted_stars() < 6)
 )
 
 // --- Wanted Level Up (+2 Stars) ---
@@ -405,8 +405,8 @@ achievement(
     title = "TURNDOWNTHEHEAT",
     description = "Escape a 6-star wanted level by using cheats",
     points = 1,
-    trigger = prev(player_wanted()) >= 6 &&
-              player_wanted() < 6 &&
+    trigger = prev(wanted_stars()) >= 6 &&
+              wanted_stars() < 6 &&
               cheat_used()
 )
 
@@ -425,14 +425,14 @@ achievement(
     title = "BRINGITON",
     description = "Destroy 10 military vehicles during Maximum Wanted Level",
     points = 2,
-    trigger = once(player_wanted() >= 6) &&
+    trigger = once(wanted_stars() >= 6) &&
               trigger_when(measured(repeated(minutes_to_frames(5),
-                  player_wanted() >= 6 &&
+                  wanted_stars() >= 6 &&
                   not_paused() &&
                   !player_wasted()
               ))) &&
               never(player_wasted()) &&
-              never(player_wanted() < 6)
+              never(wanted_stars() < 6)
 )
 
 // --- Maximum Fat ---
@@ -567,7 +567,7 @@ achievement(
     description = "Reach 300m altitude with the Jetpack",
     points = 1,
     trigger = jetpack_time_ms() > 0 &&
-              player_above_ground() > 300.0 &&
+              player_height_z() > 300.0 &&
               times_cheated() > 0
 )
 
@@ -649,7 +649,7 @@ achievement(
     description = "Fire 1000 bullets with Infinite Ammo active",
     points = 2,
     trigger = trigger_when(measured(tally(1000,
-                  bullet_fired() &&
+                  bullet_just_fired() &&
                   cheat_active(CHEAT_INFINITE_AMMO)
               )))
 )
@@ -679,15 +679,15 @@ achievement(
     title = "Untouchable",
     description = "Survive 5 minutes with Infinite Health and 6-star wanted level",
     points = 2,
-    trigger = once(cheat_active(CHEAT_INFINITE_HEALTH) && player_wanted() >= 6) &&
+    trigger = once(cheat_active(CHEAT_INFINITE_HEALTH) && wanted_stars() >= 6) &&
               trigger_when(measured(repeated(minutes_to_frames(5),
                   cheat_active(CHEAT_INFINITE_HEALTH) &&
-                  player_wanted() >= 6 &&
+                  wanted_stars() >= 6 &&
                   not_paused() &&
                   !player_wasted()
               ))) &&
               never(player_wasted()) &&
-              never(player_wanted() < 6) &&
+              never(wanted_stars() < 6) &&
               never(!cheat_active(CHEAT_INFINITE_HEALTH))
 )
 
@@ -769,7 +769,7 @@ achievement(
     points = 1,
     trigger = cheat_active(CHEAT_FLYING_BOATS) &&
               in_vehicle() &&
-              player_above_ground() > 30.0
+              player_height_z() > 30.0
 )
 
 // --- Flying Cars ---
@@ -781,7 +781,7 @@ achievement(
     trigger = measured(repeated(minutes_to_frames(20),
                   cheat_active(CHEAT_FLYING_CARS) &&
                   in_vehicle() &&
-                  player_above_ground() > 50.0 &&
+                  player_height_z() > 50.0 &&
                   not_paused()
               ))
 )
@@ -793,7 +793,7 @@ achievement(
     trigger = cheat_active(CHEAT_FLYING_CARS) &&
               in_vehicle() &&
               !on_bicycle() &&
-              player_above_ground() > 100.0
+              player_height_z() > 100.0
 )
 
 achievement(
@@ -803,7 +803,7 @@ achievement(
     trigger = cheat_active(CHEAT_FLYING_CARS) &&
               in_vehicle() &&
               !on_bicycle() &&
-              player_above_ground() > 200.0
+              player_height_z() > 200.0
 )
 
 // --- Spawn Sport Cars ---
@@ -852,7 +852,7 @@ achievement(
     points = 2,
     trigger = cheat_active(CHEAT_SUPER_BUNNY_HOP) &&
               on_bicycle() &&
-              player_above_ground() > 50.0
+              player_height_z() > 50.0
 )
 
 // --- Taxi Missions Completed ---
@@ -866,7 +866,7 @@ achievement(
     description = "Destroy 100 vehicles by ramming with CJ's Car is Invincible active",
     points = 3,
     trigger = trigger_when(measured(tally(100,
-                  vehicle_destroyed() &&
+                  vehicle_just_destroyed() &&
                   in_vehicle() &&
                   cheat_active(CHEAT_INVINCIBLE_CAR)
               )))
@@ -1218,7 +1218,7 @@ achievement(
     description = "Cause 10 explosions with Funhouse Theme active",
     points = 2,
     trigger = trigger_when(measured(tally(10,
-                  vehicle_destroyed() &&
+                  vehicle_just_destroyed() &&
                   cheat_active(CHEAT_FUNHOUSE)
               )))
 )
@@ -1277,7 +1277,7 @@ achievement(
     trigger = once(cheat_just_activated(CHEAT_CARS_EXPLODE_BUMP)) &&
               trigger_when(measured(tally(15,
                   cheat_active(CHEAT_CARS_EXPLODE_BUMP) &&
-                  vehicle_destroyed()
+                  vehicle_just_destroyed()
               ))) &&
               never(repeated(minutes_to_frames(1),
                   cheat_active(CHEAT_CARS_EXPLODE_BUMP) &&
@@ -1480,7 +1480,7 @@ achievement(
     trigger = cheat_active(CHEAT_FLYING_CARS) &&
               cheat_active(CHEAT_PINK_CARS) &&
               in_vehicle() &&
-              player_above_ground() > 30.0
+              player_height_z() > 30.0
 )
 
 // --- Rural Traffic ---
@@ -1609,7 +1609,7 @@ achievement(
     description = "Cause 15 vehicle explosions with Rocket Launcher recruits",
     points = 2,
     trigger = trigger_when(measured(tally(15,
-                  vehicle_destroyed() &&
+                  vehicle_just_destroyed() &&
                   cheat_active(CHEAT_RECRUIT_ROCKET)
               )))
 )
@@ -1877,7 +1877,7 @@ rich_presence_conditional_display(
     "CJ driving {0} | 🎮 {1} cheats used | ⭐ {2} | ${3}",
     rich_presence_lookup("Vehicle", current_vehicle_id(), VehicleLookup, "a vehicle"),
     rich_presence_value("CheatsUsed", times_cheated()),
-    rich_presence_value("Wanted", player_wanted()),
+    rich_presence_value("Wanted", wanted_stars()),
     rich_presence_value("Money", player_money())
 )
 
@@ -1885,14 +1885,14 @@ rich_presence_conditional_display(
     jetpack_time_increased(),
     "CJ flying with Jetpack ✈️ | 🎮 {0} cheats used | ⭐ {1} | ${2}",
     rich_presence_value("CheatsUsed", times_cheated()),
-    rich_presence_value("Wanted", player_wanted()),
+    rich_presence_value("Wanted", wanted_stars()),
     rich_presence_value("Money", player_money())
 )
 
 rich_presence_display(
     "CJ on foot | 🎮 {0} cheats used | ⭐ {1} | ${2}",
     rich_presence_value("CheatsUsed", times_cheated()),
-    rich_presence_value("Wanted", player_wanted()),
+    rich_presence_value("Wanted", wanted_stars()),
     rich_presence_value("Money", player_money())
 )
 
@@ -1901,7 +1901,7 @@ rich_presence_display(
 // =============================================================================
 //
 // HIGH PRIORITY:
-// Height Above Ground / Wheels On Ground - to fix player_above_ground() (currently uses absolute Z)
+// Height Above Ground / Wheels On Ground - to fix player_height_z() (currently uses absolute Z)
 // HESOYAM cheat flag - instant-effect cheats may not have flags, need verification
 // Is Underwater - for Deep Diver proper detection
 // Is On Water Surface - for Jesus Mode water driving

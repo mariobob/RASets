@@ -20,68 +20,135 @@
 // =============================================================================
 // Each cheat has its own address, value 0x01 when active
 // These are PERSISTENT flags that stay on until save/game reload (for most)
+// Some cheats are ONE-TIME effects (not toggle flags)
 
+// Placeholder for unknown/unverified addresses
+CHEAT_UNKNOWN            = 0x000000  // Placeholder - address not yet found
+
+// -----------------------------------------------------------------------------
 // Player cheats
-CHEAT_ADRENALINE         = 0x88d747  // Adrenaline pill effect
-CHEAT_MEGA_JUMP          = 0x88d73c  // Jump ~10 times higher
-CHEAT_WANTED_LOCK        = 0x88d741  // Locks wanted level at current level
-CHEAT_INFINITE_LUNG      = 0x88d73e  // Infinite lung capacity
-CHEAT_MAX_RESPECT        = 0x88d74f  // Maximum Respect
-CHEAT_MAX_SEX_APPEAL     = 0x88d750  // Maximum Sex Appeal
-CHEAT_NEVER_HUNGRY       = 0x88d744  // Never become hungry
-CHEAT_SUPER_PUNCH        = 0x88d743  // Super-powerful punches
-CHEAT_INFINITE_AMMO      = 0x88d748  // Infinite ammunition
-CHEAT_INFINITE_HEALTH    = 0x88d73d  // Infinite health (lose from explosions, drowning, falling)
+// -----------------------------------------------------------------------------
+CHEAT_ADRENALINE         = 0x88d747  // Slow motion pill effect (TAKEACHILLPILL)
+CHEAT_HESOYAM            = CHEAT_UNKNOWN  // [ONE-TIME] Armor, health, $250,000 + repairs vehicle
+CHEAT_MEGA_JUMP          = 0x88d73c  // CJ jumps 10x higher (KANGAROO)
+CHEAT_SUICIDE            = CHEAT_UNKNOWN  // [ONE-TIME] Commit suicide (GOODBYECRUELWORLD)
+CHEAT_HITMAN_LEVEL       = CHEAT_UNKNOWN  // [ONE-TIME] Hitman level for all weapons (PROFESSIONALKILLER)
+CHEAT_WANTED_LOCK        = 0x88d741  // Lock wanted level at current stars (AEZAKMI)
+CHEAT_WANTED_UP          = CHEAT_UNKNOWN  // [ONE-TIME] Raise wanted level by 2 stars (TURNUPTHEHEAT)
+CHEAT_WANTED_DOWN        = CHEAT_UNKNOWN  // [ONE-TIME] Remove wanted level (TURNDOWNTHEHEAT)
+CHEAT_WANTED_MAX         = CHEAT_UNKNOWN  // [ONE-TIME] Six-star wanted level (BRINGITON)
+CHEAT_MAX_FAT            = CHEAT_UNKNOWN  // [ONE-TIME] Maximum fat (WHOATEALLTHEPIES)
+CHEAT_INFINITE_LUNG      = 0x88d73e  // Infinite lung capacity (MANFROMATLANTIS)
+CHEAT_MAX_MUSCLE         = CHEAT_UNKNOWN  // [ONE-TIME] Maximum muscle (BUFFMEUP)
+CHEAT_MAX_RESPECT        = 0x88d74f  // [ONE-TIME] Maximum respect (WORSHIPME)
+CHEAT_MAX_SEX_APPEAL     = 0x88d750  // [ONE-TIME] Maximum sex appeal (HELLOLADIES)
+CHEAT_MAX_STAMINA        = CHEAT_UNKNOWN  // [ONE-TIME] Maximum stamina (ICANGOALLNIGHT) - same code as Taxi
+CHEAT_MAX_VEHICLE_SKILL  = CHEAT_UNKNOWN  // [ONE-TIME] Max driving/flying/bike/cycling (NATURALTALENT)
+CHEAT_MIN_MUSCLE_FAT     = CHEAT_UNKNOWN  // [ONE-TIME] Minimum fat and muscle (LEANANDMEAN)
+CHEAT_NEVER_HUNGRY       = 0x88d744  // CJ never gets hungry (IAMNEVERHUNGRY)
+CHEAT_SPAWN_JETPACK      = CHEAT_UNKNOWN  // [ONE-TIME] Spawn Jetpack (ROCKETMAN)
+CHEAT_SPAWN_PARACHUTE    = CHEAT_UNKNOWN  // [ONE-TIME] Spawn Parachute (LETSGOBASEJUMPING)
+CHEAT_SUPER_PUNCH        = 0x88d743  // Super punches - one hit kills (STINGLIKEABEE)
+CHEAT_INFINITE_AMMO      = 0x88d748  // Unlimited ammo, no reload (FULLCLIP)
+CHEAT_INFINITE_HEALTH    = 0x88d73d  // Unlimited health (except explosions/drowning/falling)
+CHEAT_WEAPONS_1          = CHEAT_UNKNOWN  // [ONE-TIME] Tier 1: Brass Knuckles, Bat, Pistol, Shotgun, etc
+CHEAT_WEAPONS_2          = CHEAT_UNKNOWN  // [ONE-TIME] Tier 2: Knife, Desert Eagle, Sawn-Off, TEC 9, etc
+CHEAT_WEAPONS_3          = CHEAT_UNKNOWN  // [ONE-TIME] Tier 3: Chainsaw, Silenced 9mm, SPAS 12, etc
+CHEAT_WEAPONS_4          = CHEAT_UNKNOWN  // N/A on PS2
+CHEAT_INVULNERABILITY    = CHEAT_UNKNOWN  // N/A on PS2
 
+// -----------------------------------------------------------------------------
 // Vehicle cheats
-CHEAT_ALL_NITRO          = 0x88d735  // All cars have nitro
-CHEAT_DRIVE_ON_WATER     = 0x88d722  // Cars can drive on water
-CHEAT_FLYING_BOATS       = 0x88d723  // Flying Boats
-CHEAT_FLYING_CARS        = 0x88d730  // Flying Cars
-CHEAT_FAST_CARS          = 0x88d72f  // Sports Cars Traffic / Improved car speed
-CHEAT_PERFECT_HANDLING   = 0x88d71c  // Improved car handling
-CHEAT_FREE_AIM           = 0x88d749  // Full weapon aiming while driving
-CHEAT_SUPER_BUNNY_HOP    = 0x88d731  // Jump ~100 feet on a bicycle
-CHEAT_TAXI_NITRO         = 0x88d75b  // All taxis have nitro and jump
-CHEAT_CARS_EXPLODE_BUMP  = 0x88d734  // Bumping into a car makes it explode
-CHEAT_INVINCIBLE_CAR     = 0x88d733  // Carl's car invincible (TOUCHMYCARYOUDIE) - needs verification
+// -----------------------------------------------------------------------------
+CHEAT_ALL_NITRO          = 0x88d735  // All cars have nitrous (SPEEDFREAK)
+CHEAT_DRIVE_ON_WATER     = 0x88d722  // Cars drive on water
+CHEAT_FLYING_BOATS       = 0x88d723  // Flying boats (FLYINGFISH)
+CHEAT_FLYING_CARS        = 0x88d730  // Flying cars (CHITTYCHITTYBANGBANG)
+CHEAT_SPORTS_CARS        = 0x88d72f  // Sports car traffic (EVERYONEISRICH)
+CHEAT_IMPROVED_SUSPEND   = CHEAT_UNKNOWN  // Improved suspension (STICKLIKEGLUE)
+CHEAT_PERFECT_HANDLING   = 0x88d71c  // Perfect handling (STICKLIKEGLUE)
+CHEAT_FREE_AIM           = 0x88d749  // Full weapon aiming in vehicles (IWANNADRIVEBY)
+CHEAT_SUPER_BUNNY_HOP    = 0x88d731  // Massive bicycle bunny hops - 100ft (CJPHONEHOME)
+CHEAT_TAXI_NITRO         = 0x88d75b  // Taxi missions completed / taxis have nitro+jump
+CHEAT_INVINCIBLE_CAR     = 0x88d734  // Carl's car invincible, destroys on touch (TOUCHMYCARYOUDIE)
 
+// -----------------------------------------------------------------------------
+// Vehicle spawn cheats (all are one-time spawns)
+// -----------------------------------------------------------------------------
+CHEAT_SPAWN_BLOODRING    = CHEAT_UNKNOWN  // [ONE-TIME] Spawn Bloodring Banger (OLDSPEEDDEMON)
+CHEAT_SPAWN_CADDY        = CHEAT_UNKNOWN  // [ONE-TIME] Spawn Caddy (18HOLES)
+CHEAT_SPAWN_DOZER        = CHEAT_UNKNOWN  // [ONE-TIME] Spawn Dozer (ITSALLBULL)
+CHEAT_SPAWN_HUNTER       = CHEAT_UNKNOWN  // [ONE-TIME] Spawn Hunter (OHDUDE)
+CHEAT_SPAWN_HYDRA        = CHEAT_UNKNOWN  // [ONE-TIME] Spawn Hydra (JUMPJET)
+CHEAT_SPAWN_MONSTER      = CHEAT_UNKNOWN  // [ONE-TIME] Spawn Monster Truck (MONSTERMASH)
+CHEAT_SPAWN_QUAD         = CHEAT_UNKNOWN  // [ONE-TIME] Spawn Quad (FOURWHEELFUN)
+CHEAT_SPAWN_HOTRING_1    = CHEAT_UNKNOWN  // [ONE-TIME] Spawn Hotring Racer #1 (NOTFORPUBLICROADS)
+CHEAT_SPAWN_HOTRING_2    = CHEAT_UNKNOWN  // [ONE-TIME] Spawn Hotring Racer #2 (JUSTTRYANDSTOPME)
+CHEAT_SPAWN_RANCHER      = CHEAT_UNKNOWN  // [ONE-TIME] Spawn Rancher (DOUGHNUTHANDICAP)
+CHEAT_SPAWN_RHINO        = CHEAT_UNKNOWN  // [ONE-TIME] Spawn Rhino tank (TIMETOKICKASS)
+CHEAT_SPAWN_ROMERO       = CHEAT_UNKNOWN  // [ONE-TIME] Spawn Romero hearse (WHERESTHEFUNERAL)
+CHEAT_SPAWN_STRETCH      = CHEAT_UNKNOWN  // [ONE-TIME] Spawn Stretch limo (CELEBRITYSTATUS)
+CHEAT_SPAWN_STUNTPLANE   = CHEAT_UNKNOWN  // [ONE-TIME] Spawn Stunt Plane (FLYINGTOSTUNT)
+CHEAT_SPAWN_TANKER       = CHEAT_UNKNOWN  // [ONE-TIME] Spawn Tanker with trailer (HITTHEROADJACK)
+CHEAT_SPAWN_TRASHMASTER  = CHEAT_UNKNOWN  // [ONE-TIME] Spawn Trashmaster (TRUEGRIME)
+CHEAT_SPAWN_VORTEX       = CHEAT_UNKNOWN  // [ONE-TIME] Spawn Vortex hovercraft (IWANTTOHOVER)
+
+// -----------------------------------------------------------------------------
 // Themes / Pedestrian behavior cheats
-CHEAT_AGGRESSIVE_TRAFFIC = 0x88d71f  // Aggressive Drivers
-CHEAT_BEACH_PARTY        = 0x88d729  // Beach party mode (bikinis, beach cars)
-CHEAT_JUNK_CARS          = 0x88d72e  // All traffic is junk cars
-CHEAT_BLACK_CARS         = 0x88d721  // All vehicles become black
-CHEAT_FUNHOUSE           = 0x88d746  // Fast food workers/clowns theme
-CHEAT_MOON_GRAVITY       = 0x88d736  // Bumping cars makes them float away
-CHEAT_PED_RIOT           = 0x88d70e  // Pedestrians riot (CANNOT TURN OFF)
-CHEAT_INVISIBLE_CARS     = 0x88d71b  // All vehicles invisible (except motorcycles)
-CHEAT_KINKY_THEME        = 0x88d72d  // Attract prostitutes with sex toys/gimp suit
-CHEAT_PROSTITUTES_PAY    = 0x88d75a  // Prostitutes pay you
-CHEAT_REDUCED_TRAFFIC    = 0x88d74a  // Most pedestrians and traffic vanish
-CHEAT_ALL_ELVIS          = 0x88d727  // All pedestrians are Elvis
-CHEAT_PEDS_ATTACK        = 0x88d70f  // Pedestrians attack you (CANNOT TURN OFF)
-CHEAT_PEDS_ATTACK_MELEE  = 0x88d70f  // Peds attack with melee (may be same as PEDS_ATTACK)
-CHEAT_PEDS_ATTACK_GUNS   = 0x88d728  // Pedestrians attack you with guns
-CHEAT_PEDS_WEAPONS       = 0x88d710  // Pedestrians wield weapons
-CHEAT_CHAOS_MODE         = 0x88d745  // Enable Chaos Mode
-CHEAT_PINK_CARS          = 0x88d720  // All vehicles become pink
-CHEAT_RURAL_THEME        = 0x88d74b  // Traffic is country vehicles
-CHEAT_GREEN_LIGHTS       = 0x88d71e  // All traffic lights are green
-CHEAT_TRIAD_THEME        = 0x88d72c  // Asians with katanas, black vehicles
+// -----------------------------------------------------------------------------
+CHEAT_AGGRESSIVE_DRIVERS = 0x88d71f  // Aggressive drivers (ALLDRIVERSARECRIMINALS)
+CHEAT_AGGRESSIVE_TRAFFIC = 0x88d71f  // Aggressive traffic - same effect as above
+CHEAT_BEACH_PARTY        = 0x88d729  // Beach party theme (LIFESABEACH)
+CHEAT_JUNK_CARS          = 0x88d72e  // Beater/cheap traffic (BGKGTJH)
+CHEAT_BLACK_CARS         = 0x88d721  // Black traffic (SOLONGASITSBLACK)
+CHEAT_FUNHOUSE           = 0x88d746  // Carnival/funhouse theme - clowns (CRAZYTOWN)
+CHEAT_MOON_GRAVITY       = 0x88d736  // Cars float away when hit (BUBBLECARS)
+CHEAT_PED_RIOT           = 0x88d70e  // Pedestrians riot (STATEOFEMERGENCY) - PERMANENT
+CHEAT_BLOW_UP_CARS       = CHEAT_UNKNOWN  // [ONE-TIME] Explode all vehicles (ALLCARSGOBOOM)
+CHEAT_INVISIBLE_CARS     = 0x88d71b  // Invisible cars - wheels only (WHEELSONLYPLEASE)
+CHEAT_KINKY_THEME        = 0x88d72d  // Kinky/pimp mode - gimp suit (LOVECONQUERSALL)
+CHEAT_PROSTITUTES_PAY    = 0x88d75a  // Prostitutes pay CJ
+CHEAT_REDUCED_TRAFFIC    = 0x88d74a  // No pedestrians, reduced traffic (GHOSTTOWN)
+CHEAT_ALL_ELVIS          = 0x88d727  // Pedestrians are Elvis (BLUESUEDESHOES)
+CHEAT_PEDS_ATTACK        = 0x88d70f  // Pedestrians attack CJ (STOPPICKINGONME) - PERMANENT
+CHEAT_PEDS_ATTACK_GUNS   = 0x88d728  // Pedestrians attack CJ with guns (ATTACKOFTHEVILLAGEPEOPLE)
+CHEAT_PEDS_WEAPONS       = 0x88d710  // Pedestrians have weapons (SURROUNDEDBYNUTTERS)
+CHEAT_CHAOS_MODE         = 0x88d745  // Pedestrians riot with golf club (ROUGHNEIGHBOURHOOD)
+CHEAT_PINK_CARS          = 0x88d720  // Pink traffic (PINKISTHENEWCOOL)
+CHEAT_RURAL_TRAFFIC      = 0x88d74b  // Rural traffic (EVERYONEISPOOR)
+CHEAT_RURAL_THEME        = 0x88d74b  // Rural theme - overalls (HICKSVILLE) - same as above
+CHEAT_SPORTS_TRAFFIC     = 0x88d72f  // Sports car traffic - same as CHEAT_SPORTS_CARS
+CHEAT_GREEN_LIGHTS       = 0x88d71e  // Traffic lights always green (DONTTRYANDSTOPME)
+CHEAT_TRIAD_THEME        = 0x88d72c  // Triad theme - katanas, black vehicles (NINJATOWN)
 
+// -----------------------------------------------------------------------------
 // Gang cheats
-CHEAT_GANG_MODE          = 0x88d72a  // Gang members spawn faster
-CHEAT_GANG_WARS          = 0x88d72b  // Gang wars break out (ONLYHOMIESALLOWED) - may overlap GANG_CONTROL
-CHEAT_GANG_CONTROL       = 0x88d72b  // All peds become brawling gang members
-CHEAT_GANGS_ONLY         = 0x88d72b  // No citizens, gang gunfights (BETTERSTAYINDOORS) - needs verification
-CHEAT_RECRUIT_PISTOL     = 0x88d74c  // All wield 9mm pistols and are recruitable
-CHEAT_RECRUIT_ROCKET     = 0x88d74e  // All wield Rocket Launchers and are recruitable
+// -----------------------------------------------------------------------------
+CHEAT_GANG_MODE          = 0x88d72a  // Gang members spawn faster (MROEMZH)
+CHEAT_GANG_WARS          = 0x88d72b  // Gang wars break out (ONLYHOMIESALLOWED)
+CHEAT_GANGS_WORKERS      = 0x88d72a  // Gangs and workers - same as GANG_MODE
+CHEAT_GANGS_ONLY         = 0x88d72b  // No citizens, only gang gunfights (BETTERSTAYINDOORS)
+CHEAT_RECRUIT_PISTOL     = 0x88d74c  // Recruit anyone with pistols (WANNABEINMYGANG)
+CHEAT_RECRUIT_ROCKET     = 0x88d74e  // Recruit anyone with rocket launchers (ROCKETMAYHEM)
+CHEAT_RECRUIT_AK47       = CHEAT_UNKNOWN  // N/A on PS2
 
+// -----------------------------------------------------------------------------
 // Time and weather cheats
-CHEAT_ALWAYS_MIDNIGHT    = 0x88d737  // Always midnight (clock is 00:00)
-CHEAT_ALWAYS_2100        = 0x88d738  // Dusk/Evening (21:00)
-CHEAT_SLOW_MOTION        = 0x88d747  // Gameplay in slow motion
-CHEAT_FASTER_CLOCK       = 0x88d70b  // Time goes by faster
+// -----------------------------------------------------------------------------
+CHEAT_ALWAYS_MIDNIGHT    = 0x88d737  // Always midnight 00:00 (NIGHTPROWLER)
+CHEAT_ALWAYS_2100        = 0x88d738  // Always 21:00 with orange sky (DONTBRINGONTHENIGHT)
+CHEAT_WEATHER_CLOUDY     = CHEAT_UNKNOWN  // Cloudy weather (DULLDULLDAY)
+CHEAT_FAST_MOTION        = CHEAT_UNKNOWN  // Fast gameplay (SPEEDITUP)
+CHEAT_SLOW_MOTION        = 0x88d747  // Slow gameplay (SLOWITDOWN)
+CHEAT_FASTER_CLOCK       = 0x88d70b  // Speed up time (TIMEJUSTFLIESBY)
+CHEAT_WEATHER_FOGGY      = CHEAT_UNKNOWN  // Foggy weather (CANTSEEWHEREIMGOING)
+CHEAT_WEATHER_OVERCAST   = CHEAT_UNKNOWN  // Overcast weather (DULLDULLDAY)
+CHEAT_WEATHER_SANDSTORM  = CHEAT_UNKNOWN  // Sandstorm (SANDINMYEARS)
+CHEAT_WEATHER_RAINY      = CHEAT_UNKNOWN  // Rainy weather (STAYINANDWATCHTV)
+CHEAT_WEATHER_STORMY     = CHEAT_UNKNOWN  // Stormy weather (SCOTTISHSUMMER)
+CHEAT_WEATHER_SUNNY      = CHEAT_UNKNOWN  // Sunny weather (PLEASANTLYWARM)
+CHEAT_WEATHER_VERY_SUNNY = CHEAT_UNKNOWN  // Very sunny weather (TOODAMNHOT)
+CHEAT_ADVANCE_4HRS       = CHEAT_UNKNOWN  // N/A on PS2
 
 // Cheat input buffer (for detecting cheat entry)
 CHEAT_INPUT_BUFFER       = 0x88d760  // [12 bytes] Last 12 button presses for cheat detection
@@ -1274,16 +1341,16 @@ achievement(
     title = "Michael Bay Simulator",
     description = "Cause 15 vehicle explosions in 1 minute with Explode All Cars cheat",
     points = 2,
-    trigger = once(cheat_just_activated(CHEAT_CARS_EXPLODE_BUMP)) &&
+    trigger = once(cheat_just_activated(CHEAT_INVINCIBLE_CAR)) &&
               trigger_when(measured(tally(15,
-                  cheat_active(CHEAT_CARS_EXPLODE_BUMP) &&
+                  cheat_active(CHEAT_INVINCIBLE_CAR) &&
                   vehicle_just_destroyed()
               ))) &&
               never(repeated(minutes_to_frames(1),
-                  cheat_active(CHEAT_CARS_EXPLODE_BUMP) &&
+                  cheat_active(CHEAT_INVINCIBLE_CAR) &&
                   not_paused()
               )) &&
-              never(!cheat_active(CHEAT_CARS_EXPLODE_BUMP))
+              never(!cheat_active(CHEAT_INVINCIBLE_CAR))
 )
 
 // --- Invisible Cars ---
@@ -1515,7 +1582,7 @@ achievement(
     points = 2,
     trigger = trigger_when(measured(tally(10,
                   just_entered_vehicle() &&
-                  cheat_active(CHEAT_FAST_CARS)
+                  cheat_active(CHEAT_SPORTS_CARS)
               )))
 )
 

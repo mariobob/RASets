@@ -50,7 +50,7 @@
 111000048:"d0xH88d71c=0_0xH88d71c=1":"STICKLIKEGLUE":"Activate Perfect Vehicle Handling": : ::Author:1:0:0:0:0:0
 111000049:"1=1SN:d0xX8022b4<0xX8022b4_I:0xX7095d0_N:0xX0005cc!=0_M:0xH88d749=1.25.ST:0=1":"IWANNADRIVEBY":"Get 25 drive-by kills with Full Weapon Aiming in Vehicles": : ::Author:2:0:0:0:0:0
 111000050:"0xH88d731=1_I:0xX7095d0_I:0xX000014_fF000038>f50.0SI:0xX7095d0_I:0xX0005cc_0x 000022=481SI:0xX7095d0_I:0xX0005cc_0x 000022=509SI:0xX7095d0_I:0xX0005cc_0x 000022=510":"E.T. Phone Home":"Activate Super Bunny Hop and jump over a building on a bike": : ::Author:2:0:0:0:0:0
-111000051:"1=1SN:d0xX8022b8<0xX8022b8_I:0xX7095d0_N:0xX0005cc!=0_M:0xH88d733=1.100.ST:0=1":"TOUCHMYCARYOUDIE":"Destroy 100 vehicles by ramming with CJ's Car is Invincible active": : ::Author:3:0:0:0:0:0
+111000051:"1=1SN:d0xX8022b8<0xX8022b8_I:0xX7095d0_N:0xX0005cc!=0_M:0xH88d734=1.100.ST:0=1":"TOUCHMYCARYOUDIE":"Destroy 100 vehicles by ramming with CJ's Car is Invincible active": : ::Author:3:0:0:0:0:0
 111000052:"0=1":"OLDSPEEDDEMON":"Destroy your spawned Bloodring Banger within 5 seconds": : ::Author:2:0:0:0:0:0
 111000053:"0=1":"18HOLES":"Spawn a Caddy on the golf course": : ::Author:1:0:0:0:0:0
 111000054:"0=1":"Hole in One":"Drive a spawned Caddy into the ocean": : ::Author:1:0:0:0:0:0

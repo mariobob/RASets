@@ -192,12 +192,25 @@ TimesCheated             = 0x8022f4  // [32-bit] Times cheated stat
 // HELPER FUNCTIONS
 // =============================================================================
 
-// Cheat flag accessors (each is a separate byte address)
+// --- Cheat flag accessors ---
 function cheat_active(addr) => byte(addr) == 1
 function cheat_just_activated(addr) => prev(byte(addr)) == 0 && byte(addr) == 1
 function cheat_just_deactivated(addr) => prev(byte(addr)) == 1 && byte(addr) == 0
 
-// Player stats (using pointer)
+// --- Game flow ---
+function in_mission() => dword(InActiveMission) == 1
+function is_paused() => byte(PauseFlag) == 1
+function not_paused() => byte(PauseFlag) == 0
+
+// --- Clock & time ---
+function game_hour() => byte(ClockHours)
+function game_minute() => byte(ClockMinutes)
+
+// Frame timing (assuming 60fps for NTSC, 50fps for PAL)
+function seconds_to_frames(s) => s * 60
+function minutes_to_frames(m) => m * 60 * 60
+
+// --- Player pointer (dynamic data) ---
 function player_health() => dword(dword(PlayerPointer) + 0x580)
 function player_armor() => dword(dword(PlayerPointer) + 0x588)
 function player_state() => byte(dword(PlayerPointer) + 0x568)
@@ -221,51 +234,16 @@ function in_vehicle() => current_vehicle_ptr() != 0
 function on_foot() => current_vehicle_ptr() == 0
 function just_entered_vehicle() => prev(current_vehicle_ptr()) == 0 && current_vehicle_ptr() != 0
 
+// Vehicle model ID (16-bit value at vehicle_ptr + 0x22)
+function current_vehicle_id() => word(current_vehicle_ptr() + 0x22)
+
 // Bicycle detection
 function on_bicycle() => current_vehicle_id() == VEHICLE_BMX ||
                          current_vehicle_id() == VEHICLE_BIKE ||
                          current_vehicle_id() == VEHICLE_MOUNTAIN_BIKE
 
-// Vehicle model ID (16-bit value at vehicle_ptr + 0x22)
-function current_vehicle_id() => word(current_vehicle_ptr() + 0x22)
-
-// Jetpack time (in milliseconds, increases while using jetpack)
-function jetpack_time_ms() => dword(JetpackTime)
-function jetpack_time_increased() => prev(jetpack_time_ms()) < jetpack_time_ms()
-
-// Weapon info
-function current_weapon_slot() => byte(CurrentWeaponSlot)
-function bullets_in_clip() => dword(BulletsInRound)
-function bullets_fired() => dword(BulletsFired)
-function bullet_fired() => prev(bullets_fired()) < bullets_fired()
-
-// Weapon structure: PlayerPointer + 0x5e0 + (slot * 28) + 0 = Weapon ID
-// Slot 2 (heavy melee): offset = 2 * 28 = 0x38 -> PlayerPointer + 0x618
-// Slot 7 (heavy weapons): offset = 7 * 28 = 0xC4 -> PlayerPointer + 0x6A4
-function weapon_in_slot_2() => word(dword(PlayerPointer) + 0x618)
-function weapon_in_slot_7() => word(dword(PlayerPointer) + 0x6A4)
-function using_katana() => current_weapon_slot() == 2 && weapon_in_slot_2() == WEAPON_KATANA
-function using_chainsaw() => current_weapon_slot() == 2 && weapon_in_slot_2() == WEAPON_CHAINSAW
-function using_minigun() => current_weapon_slot() == 7 && weapon_in_slot_7() == WEAPON_MINIGUN
-
-// Money
+// --- Player resources ---
 function player_money() => dword(PlayerMoney)
-
-// Wanted level
-function player_wanted() => dword(PlayerWantedStars)
-
-// Kill count
-function kill_count() => dword(KillsByPlayer)
-function kill_increased() => prev(kill_count()) < kill_count()
-
-// Vehicles destroyed
-function vehicles_destroyed() => dword(VehiclesDestroyed)
-function vehicle_destroyed() => prev(vehicles_destroyed()) < vehicles_destroyed()
-function vehicles_destroyed_at_once(n) => prev(vehicles_destroyed()) + n <= vehicles_destroyed()
-
-// Times cheated
-function times_cheated() => dword(TimesCheated)
-function cheat_used() => prev(times_cheated()) < times_cheated()
 
 // HESOYAM detection (gives $250,000, full health and armor)
 // NOTE: Unlike toggle cheats (Infinite Health, Flying Cars), we cannot use cheat_just_activated().
@@ -278,23 +256,46 @@ function hesoyam_used() => (prev(player_money()) + 250000 == player_money()) ||
                             prev(player_health()) < player_health() &&
                             cheat_used())
 
-// Mission state
-function in_mission() => dword(InActiveMission) == 1
-function is_paused() => byte(PauseFlag) == 1
-function not_paused() => byte(PauseFlag) == 0
+// --- Wanted level ---
+function player_wanted() => dword(PlayerWantedStars)
 
-// Eating - counter resets to 0 when player vomits
+// --- Weapons ---
+function current_weapon_slot() => byte(CurrentWeaponSlot)
+function bullets_in_clip() => dword(BulletsInRound)
+
+// Weapon structure: PlayerPointer + 0x5e0 + (slot * 28) + 0 = Weapon ID
+// Slot 2 (heavy melee): offset = 2 * 28 = 0x38 -> PlayerPointer + 0x618
+// Slot 7 (heavy weapons): offset = 7 * 28 = 0xC4 -> PlayerPointer + 0x6A4
+function weapon_in_slot_2() => word(dword(PlayerPointer) + 0x618)
+function weapon_in_slot_7() => word(dword(PlayerPointer) + 0x6A4)
+function using_katana() => current_weapon_slot() == 2 && weapon_in_slot_2() == WEAPON_KATANA
+function using_chainsaw() => current_weapon_slot() == 2 && weapon_in_slot_2() == WEAPON_CHAINSAW
+function using_minigun() => current_weapon_slot() == 7 && weapon_in_slot_7() == WEAPON_MINIGUN
+
+// --- Player actions ---
 function eating_counter() => dword(EatingCounter)
 function player_vomited() => prev(eating_counter()) > 0 && eating_counter() == 0
 
-// Game clock
-function game_hour() => byte(ClockHours)
-function game_minute() => byte(ClockMinutes)
+// Jetpack time
+function jetpack_time_ms() => dword(JetpackTime)
+function jetpack_time_increased() => prev(jetpack_time_ms()) < jetpack_time_ms()
 
-// Frame timing (assuming 60fps for NTSC, 50fps for PAL)
-function seconds_to_frames(s) => s * 60
-function minutes_to_frames(m) => m * 60 * 60
+// --- Combat stats ---
+function kill_count() => dword(KillsByPlayer)
+function kill_increased() => prev(kill_count()) < kill_count()
+function bullets_fired() => dword(BulletsFired)
+function bullet_fired() => prev(bullets_fired()) < bullets_fired()
 
+// --- Destruction stats ---
+function vehicles_destroyed() => dword(VehiclesDestroyed)
+function vehicle_destroyed() => prev(vehicles_destroyed()) < vehicles_destroyed()
+function vehicles_destroyed_at_once(n) => prev(vehicles_destroyed()) + n <= vehicles_destroyed()
+
+// --- Cheat stats ---
+function times_cheated() => dword(TimesCheated)
+function cheat_used() => prev(times_cheated()) < times_cheated()
+
+// --- Utility ---
 // Threshold crossing helpers - triggers exactly once when value crosses threshold
 function crossed_threshold(addr, threshold) => prev(dword(addr)) < threshold && dword(addr) >= threshold
 
